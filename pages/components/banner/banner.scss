@@ -1,0 +1,141 @@
+.banner {
+  position: relative;
+  font-family: $font-family-title;
+  @include navbarGap;
+  &__form {
+    @include absCenter;
+    top: 120px;
+    background: rgba(40, 40, 40, 0.8);
+    width: 310px;
+    padding: 15px;
+    @include tablet {
+      top: 190px;
+    }
+    @include desktopSmall {
+      top: 110px;
+      display: flex;
+      width: 720px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 18px 4% 38px;
+    }
+    @include desktopMedium {
+      top: 170px;
+    }
+    @include desktopLarge {
+      top: 190px;
+    }
+    @include desktopMega {
+      top: 260px;
+    }
+    h2 {
+      @include showTextShadow;
+      font-size: $font-size-large;
+      text-align: center;
+      @include desktopSmall {
+        width: 100%;
+        font-size: $font-size-mega;
+      }
+      @include desktopMedium {
+        font-size: calculateRem(30px);
+        letter-spacing: 1.2px;
+      }
+    }
+    select {
+      height: 43px;
+      background: white;
+      width: 210px;
+      border: 1px solid $color-green;
+      color: #585858;
+      font-size: $font-size-medium;
+      text-indent: 14px;
+      width: 80%;
+      margin-left: 10%;
+      @include desktopSmall {
+        padding-left: 20px;
+        height: 50px;
+        margin-left: 0;
+        width: 40%;
+        @include backgroundIcon("location.svg", 22px, 10px center);
+      }
+    }
+    &-radios {
+      width: 50%;
+      margin: 17px 10% 17px;
+      display: flex;
+      justify-content: space-between;
+      @include desktopSmall {
+        margin-top: 0;
+        width: 20%;
+        margin-left: 0;
+        margin-right: 0;
+      }
+      &-radio {
+        * {
+          display: block;
+        }
+      }
+      input {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        display: inline-block;
+        position: relative;
+        background-color: white;
+        color: $color-green;
+        top: 0;
+        border: 0;
+        left: 22%;
+        border-radius: 6px;
+        cursor: pointer;
+        margin-right: 5px;
+        outline: none;
+        height: 31px;
+        width: 25px;
+      }
+      input:checked::before {
+        position: absolute;
+        left: 7px;
+        top: 3px;
+        font-size: $font-size-xxlarge;
+        content: "\02143";
+        transform: rotate(40deg);
+        font-weight: 900;
+      }
+      input:hover {
+        background-color: #f7f7f7;
+      }
+      input:checked {
+        background-color: #f1f1f1;
+      }
+      label {
+        font-weight: 900;
+        cursor: pointer;
+        color: white;
+        font-size: calculateRem(13px);
+        width: 47px;
+        text-align: center;
+      }
+    }
+    button {
+      font-family: $font-family-title;
+      width: 80%;
+      height: 42px;
+      margin-left: 10%;
+      background-color: $color-yellow;
+      outline: 1px solid $color-yellow;
+      color: #fff;
+      font-weight: 900;
+      border: none;
+      font-size: $font-size-large;
+      letter-spacing: 1.2px;
+      padding-top: 3px;
+      text-transform: uppercase;
+      @include desktopSmall {
+        height: 48px;
+        width: 25%;
+        margin-left: 0;
+      }
+    }
+  }
+}
