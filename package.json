@@ -1,9 +1,13 @@
 {
   "name": "Valorys-App",
   "version": "1.0.0",
+  "engines": {
+    "node": "10.15.3",
+    "npm": "6.x"
+  },
   "main": "index.js",
   "repository": "",
-  "author": "cihangir bozdogan",
+  "author": "akadri",
   "license": "ISC",
   "scripts": {
     "dev": "cross-env NODE_ENV=development PORT=3000 nodemon server/index.js",
