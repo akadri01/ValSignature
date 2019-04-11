@@ -1,5 +1,7 @@
-node_modules/
-.next/
-node_modules
+node_modules/*
+!/node_modules/@zeit
 !/node_modules/@zeit*
+.next/
+
+
 
