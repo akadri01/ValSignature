@@ -42,9 +42,7 @@ class Navigation extends Component {
             </div>
           </div>
           <nav className="navigation__navbar" id="navMenu">
-            
-            
-            
+
             {this.props.localUser ? (
               this.isProfilePage
             ) : (
