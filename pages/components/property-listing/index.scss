@@ -1,0 +1,208 @@
+.listing {
+  margin-top: 60px;
+  color: $color-black;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  @include desktopSmall {
+    padding-bottom: 50px;
+  }
+  &--title {
+    font-size: $font-size-xlarge;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  &--no-result-img {
+    display: block;
+    margin: 12vh auto 20vh;
+    width: 240px;
+  }
+  &__filter {
+    &--expose-filter-btn {
+      @include backgroundIcon("controls.svg", 24px, 5px 10px);
+      background-color: transparent;
+      text-align: right;
+      border: $gray-border;
+      display: block;
+      width: 80px;
+      height: 44px;
+      text-transform: uppercase;
+      font-size: $font-size-small;
+      margin-left: calc(100% - 80px);
+      &:hover {
+        border-color: $color-green;
+      }
+    }
+    &-form {
+      height: 0;
+      opacity: 0;
+      transition: height 0.3s $transition, opacity 0.4s $transition 0.1s;
+      overflow: hidden;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      @include desktopSmall {
+        max-width: 980px;
+        margin: 0 auto;
+      }
+      .redux-input-container {
+        width: 49%;
+        @include desktopSmall {
+          margin-bottom: 0;
+          width: 16.5%;
+        }
+      }
+      &-btn {
+        width: 49% !important;
+        margin-top: 26px;
+        background: url("/static/images/icons/right-fat-arrow-white.svg")
+          $color-yellow no-repeat 16% center !important;
+        background-size: 18px !important;
+        font-size: $font-size-medium !important;
+        height: 33px !important;
+        @include desktopSmall {
+          width: 13% !important;
+        }
+      }
+    }
+  }
+  &__sort {
+    width: 250px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+    font-family: $font-family-title;
+    label {
+      font-size: $font-size-medium;
+      padding-top: 6px;
+      width: 56px;
+    }
+    select {
+      width: 196px;
+      height: 27px;
+      padding-top: 2px;
+      padding-bottom: 2px;
+      background: transparent;
+      border: $gray-border;
+      color: #7a7a7a;
+      text-indent: 5px;
+      font-size: $font-size-large;
+    }
+  }
+  &__container {
+    @include desktopSmall {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    &-item {
+      display: block;
+      margin-bottom: 30px;
+      position: relative;
+      @include tablet {
+        display: flex;
+        border-bottom: $gray-border;
+        border-top: $gray-border;
+        margin-bottom: 10px;
+        &:hover {
+          border-bottom: 1px solid $color-yellow;
+          border-top: 1px solid $color-yellow;
+        }
+      }
+      @include desktopSmall {
+        width: 47%;
+      }
+      &-img {
+        max-width: 100%;
+      }
+      &-info {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        @include tablet {
+          padding: 13px 0 0 20px;
+          width: 100%;
+        }
+        &-title {
+          font-size: $font-size-medium;
+          font-family: $font-family-body;
+          margin-top: 0;
+          margin-bottom: 5px;
+          @include tablet {
+            font-size: $font-size-large;
+            margin-bottom: 10px;
+          }
+        }
+        &-location {
+          font-size: $font-size-small;
+          text-transform: capitalize;
+        }
+        &-icons {
+          margin-top: 22px;
+          @include tablet {
+            margin-top: 30px;
+          }
+          span {
+            font-family: $font-family-title;
+            font-size: $font-size-medium;
+            padding: 12px 0 3px 28px;
+            margin-right: 19px;
+          }
+          &-rooms {
+            @include backgroundIcon("rooms.svg", 22px, 0 center);
+          }
+          &-area {
+            @include backgroundIcon("area.svg", 22px, 0 center);
+          }
+          &-floor {
+            @include backgroundIcon("floor.svg", 22px, 0 center);
+          }
+        }
+        &-price {
+          font-size: $font-size-mega;
+          font-weight: 900;
+          float: left;
+          margin-top: 16px;
+          @include tablet {
+            margin-top: 23px;
+          }
+        }
+        &-date {
+          margin-top: 8px;
+          float: right;
+          font-size: $font-size-medium;
+          color: #9ca7af;
+          padding: 12px 0 10px 25px;
+          @include backgroundIcon("calendar.svg", 20px, 0 center);
+          @include tablet {
+            margin-top: 16px;
+          }
+        }
+        &-age {
+          position: absolute;
+          top: 5px;
+          left: -5px;
+          padding: 3px 6px 1px;
+          font-size: $font-size-small;
+          background-color: $color-yellow;
+          box-shadow: 2px 2px 0 #d8a23e;
+          color: $color-black;
+          font-weight: 900;
+        }
+      }
+      &--type {
+        font-weight: 900;
+        display: block;
+        width: 80px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: $color-yellow;
+        color: $color-black;
+        font-size: $font-size-small;
+        padding-top: 4px;
+        text-align: center;
+        padding-bottom: 2px;
+      }
+    }
+  }
+}
