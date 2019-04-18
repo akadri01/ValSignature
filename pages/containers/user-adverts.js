@@ -1,7 +1,7 @@
 import { Component, Fragment } from "react";
 import _isEmpty from "lodash.isempty";
 import isAuthorized from "../helpers/auth-on-client.js";
-//import UserAdvertsComponent from "../components/user/user-adverts/user-adverts";
+import UserAdvertsComponent from "../components/user/user-adverts/user-adverts";
 
 export default class UserAdverts extends Component {
   state = {

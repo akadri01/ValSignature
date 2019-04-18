@@ -2,7 +2,7 @@ import { Component, Fragment } from "react";
 import Router from "next/router";
 import _isEmpty from "lodash.isempty";
 import { getUserDataFromLocalStorage } from "../helpers/localStorage.js";
-//import EditAdvertComponent from "../components/user/edit-advert/edit-advert.js";
+import EditAdvertComponent from "../components/user/edit-advert/edit-advert.js";
 
 export default class EditAdvertContainer extends Component {
   state = {
