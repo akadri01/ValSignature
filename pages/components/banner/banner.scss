@@ -1,6 +1,6 @@
 .banner {
   position: relative;
-  font-family: $font-family-title;
+  font-family: sans-serif;
   @include navbarGap;
   &__form {
     @include absCenter;
@@ -45,7 +45,7 @@
       height: 43px;
       background: white;
       width: 210px;
-      border: 1px solid $color-green;
+      border: 1px solid $color-red;
       color: #585858;
       font-size: $font-size-medium;
       text-indent: 14px;
@@ -82,7 +82,7 @@
         display: inline-block;
         position: relative;
         background-color: white;
-        color: $color-green;
+        color: $color-red;
         top: 0;
         border: 0;
         left: 22%;
@@ -118,12 +118,12 @@
       }
     }
     button {
-      font-family: $font-family-title;
+      font-family: sans-serif;
       width: 80%;
       height: 42px;
       margin-left: 10%;
-      background-color: $color-yellow;
-      outline: 1px solid $color-yellow;
+      background-color: $color-red;
+      outline: 1px solid $color-red;
       color: #fff;
       font-weight: 900;
       border: none;

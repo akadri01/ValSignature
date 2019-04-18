@@ -3,10 +3,10 @@ import { searchFormSubmit } from "../../helpers/form-handles.js";
 
 export default () => (
   <form className="banner__form" id="searchForm" onSubmit={searchFormSubmit}>
-    <h2>Rechercher des biens en France</h2>
+  
     <select name="location">
-      <option value="">Select location</option>
-      <optgroup label="Towns">
+      <option value="">Localité</option>
+      <optgroup label="Villes">
         <option value="TOWN_Paris">Paris</option>
         <option value="TOWN_La Rochelle">La Rochelle</option>
         <option value="TOWN_Bordeaux">Bordeaux</option>
@@ -33,13 +33,14 @@ export default () => (
           value="sale"
           defaultChecked={true}
         />
-        <label htmlFor="forRent">Vente</label>
+        <label htmlFor="forRent">Habiter</label>
       </div>
       <div className="banner__form-radios-radio">
         <input id="forSale" type="radio" name="advert_type" value="rent" />
-        <label htmlFor="forSale">Location</label>
+        <label htmlFor="forSale">Investir</label>
       </div>
     </div>
     <button type="submit">Rechercher</button>
+    <button type="submit">Recherche avancée</button>
   </form>
 );
