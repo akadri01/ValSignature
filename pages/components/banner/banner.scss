@@ -6,7 +6,7 @@
     @include absCenter;
     top: 120px;
     background: rgba(40, 40, 40, 0.8);
-    width: 310px;
+    width: 370px;
     padding: 15px;
     @include tablet {
       top: 190px;
@@ -118,12 +118,12 @@
       }
     }
     button {
-      font-family: sans-serif;
+      font-family: "Roboto Condensed","Noto Sans Condensed","Noto Sans JP","Noto Sans KR","Noto Sans SC Sliced",sans-serif;
       width: 80%;
       height: 42px;
       margin-left: 10%;
-      background-color: $color-red;
-      outline: 1px solid $color-red;
+      background-color: #bd0021;;
+      outline: 1px solid #bd0021;;
       color: #fff;
       font-weight: 900;
       border: none;
