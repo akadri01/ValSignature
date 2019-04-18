@@ -41,6 +41,6 @@ export default () => (
       </div>
     </div>
     <button type="submit">Rechercher</button>
-    <button type="submit">Recherche avancée</button>
+    
   </form>
 );

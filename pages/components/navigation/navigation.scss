@@ -65,10 +65,10 @@
       font-size: $font-size-small;
       letter-spacing: 0.9px;
       font-weight: 900;
-      font-family: $font-family-title;
+      font-family: "Roboto Condensed","Noto Sans Condensed","Noto Sans JP","Noto Sans KR","Noto Sans SC Sliced",sans-serif;
       padding: 10px 0;
       margin-bottom: 15px;
-      @include hoverGreen;
+      //@include hoverGreen;
       @include desktopSmall {
         margin-top: 15px;
       }
@@ -100,14 +100,14 @@
             font-weight: 900;
             text-transform: uppercase;
             font-size: $font-size-xlarge;
-            border-bottom: 1px solid $color-green;
+            border-bottom: 1px solid #bd0021;
             padding-bottom: 8px;
             color: white;
           }
           a {
             width: 20%;
             display: inline-block;
-            @include hoverGreen;
+            //@include hoverGreen;
             font-size: $font-size-small;
             padding: 4px 0;
             margin-bottom: 6px;
@@ -119,7 +119,7 @@
       button {
         margin-top: 10px;
         padding: 10px 20px;
-        border: 2px solid $color-green;
+        border: 2px solid #bd0021;
         background: transparent;
         @include desktopSmall {
           transform: translateY(3px);

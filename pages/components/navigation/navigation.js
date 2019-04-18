@@ -42,59 +42,9 @@ class Navigation extends Component {
             </div>
           </div>
           <nav className="navigation__navbar" id="navMenu">
-            <Link href="/properties/latest?advert_type=sale">
-              <a className="links">Acheter</a>
-            </Link>
-            <Link href="/properties/latest?advert_type=rent">
-              <a className="links">Louer</a>
-            </Link>
-            <div
-              className="navigation__navbar-location"
-              id="locationDownArrow"
-              onClick={() => {
-                document
-                  .getElementById("locationMegaMenu")
-                  .classList.toggle("show-location-menu");
-                document
-                  .getElementById("locationDownArrow")
-                  .classList.toggle("replace-arrow-with-close");
-              }}
-            >
-              <span className="navigation__navbar-location-title">
-                locations
-              </span>
-              <div
-                className="navigation__navbar-location-menu"
-                id="locationMegaMenu"
-              >
-                <div className="mobile-desktop-frame">
-                  <div className="navigation__navbar-location-menu-items">
-                    <h2>Regions</h2>
-                    {locationRegionSelectField.map(({ value, text }, i) => {
-                      if (i > 0) {
-                        return (
-                          <Link href={`/properties/latest?region=${value}`}>
-                            <a>{text}</a>
-                          </Link>
-                        );
-                      }
-                    })}
-                  </div>
-                  <div className="navigation__navbar-location-menu-items">
-                    <h2>Villes</h2>
-                    {locationTownSelectField.map(({ value, text }, i) => {
-                      if (i > 0) {
-                        return (
-                          <Link href={`/properties/latest?town=${value}`}>
-                            <a>{text}</a>
-                          </Link>
-                        );
-                      }
-                    })}
-                  </div>
-                </div>
-              </div>
-            </div>
+            
+            
+            
             {this.props.localUser ? (
               this.isProfilePage
             ) : (

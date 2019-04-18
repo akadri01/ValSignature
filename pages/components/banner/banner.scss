@@ -1,6 +1,6 @@
 .banner {
   position: relative;
-  font-family: sans-serif;
+  font-family: "Roboto Condensed","Noto Sans Condensed","Noto Sans JP","Noto Sans KR","Noto Sans SC Sliced",sans-serif;
   @include navbarGap;
   &__form {
     @include absCenter;
@@ -45,7 +45,7 @@
       height: 43px;
       background: white;
       width: 210px;
-      border: 1px solid $color-red;
+      border: 1px solid #bd0021;
       color: #585858;
       font-size: $font-size-medium;
       text-indent: 14px;
@@ -122,8 +122,8 @@
       width: 80%;
       height: 42px;
       margin-left: 10%;
-      background-color: #bd0021;;
-      outline: 1px solid #bd0021;;
+      background-color: #bd0021;
+      outline: 1px solid #bd0021;
       color: #fff;
       font-weight: 900;
       border: none;
