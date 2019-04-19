@@ -8,7 +8,7 @@ import UserAdverts from "../containers/user-adverts.js";
 export default () => (
   <Fragment>
     <Head>
-      <title>WeGhana Real Estate</title>
+      <title>Valorys Signature</title>
       <meta name="description" content="Valorys Signature web platform" />
     </Head>
     <Navigation />

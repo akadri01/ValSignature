@@ -15,7 +15,7 @@ class RecentAds extends Component {
         <Waypoint onEnter={_before(2, this.fetchRecentProperties)} />
         <section className="recentAds mobile-desktop-frame">
           <div className="default-group">
-            <h1>Recently added properties in Ghana</h1>
+            <h1>Les meilleures offres</h1>
             <p>
               {!recentProperties || !recentProperties.length
                 ? "No recent properties to view"

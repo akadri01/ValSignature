@@ -8,7 +8,7 @@ import ContactUs from "../components/contact-us/contact-us.js";
 export default () => (
   <Fragment>
     <Head>
-      <title>WeGhana Autotrader</title>
+      <title> Val Signture autotrader</title>
       <meta name="description" content="Valorys Signature web platform" />
     </Head>
     <Navigation />

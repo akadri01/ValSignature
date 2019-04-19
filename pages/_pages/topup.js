@@ -9,7 +9,7 @@ import Footer from "../components/footer/footer";
 export default () => (
   <Fragment>
     <Head>
-      <title>WeGhana Real Estate</title>
+      <title>Valorys Real Estate</title>
       <meta name="description" content="Valorys Signature web platform" />
     </Head>
     <Navigation />
