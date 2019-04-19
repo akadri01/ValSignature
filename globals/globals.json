@@ -1,5 +1,5 @@
 {
   "PAGINATION_QUANTITY": 6,
-  "DOMAIN_NAME": "localhost",
-  "HOST_PORT": "http://localhost:3000"
+  "DOMAIN_NAME": "https://volarys-signature.herokuapp.com",
+  "HOST_PORT": "8081"
 }
