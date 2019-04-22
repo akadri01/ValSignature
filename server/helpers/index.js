@@ -16,6 +16,7 @@ const config = require("../../config/");
 const logger = require("./_logger");
 sendGrid.setApiKey(config.SENDGRID_API_KEY);
 
+
 var helperMethods = {
   logError: (e, msg) => {
     return process.env.NODE_ENV === "development"
@@ -24,7 +25,7 @@ var helperMethods = {
   },
 
   generateUrl: ({ area, price, premises_type, town }) => {
-    const url = `${premises_type}-${area}m2-${town}-${price}cedis-in-ghana-${randomstring.generate(
+    const url = `${premises_type}-${area}m2-${town}-${price}cedis-valorys-${randomstring.generate(
       15
     )}`;
     return urlEncode(url.replace(/\s/g, "-").toLowerCase());
@@ -60,8 +61,8 @@ var helperMethods = {
     const compiledTemplate = hogan.compile(emailTemplateBeforeCompile);
     const msg = {
       to: email,
-      from: "info@weghanaproperty.com",
-      subject: "WeGhana Property Account Confirmation",
+      from: "info@valorys.com",
+      subject: "Valorys Account Confirmation",
       html: compiledTemplate.render({ userId })
     };
     sendGrid.send(msg);
