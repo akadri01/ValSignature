@@ -19,7 +19,6 @@ const Index = () => (
     <Banner />
     <TownNavigation />
     <RecentAds />
-    <BuySellRentTabs />
     <Footer />
   </Fragment>
 );
