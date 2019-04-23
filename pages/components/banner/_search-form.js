@@ -40,7 +40,7 @@ export default () => (
         <label htmlFor="forSale">Investir</label>
       </div>
     </div>
-    <button type="submit">Rechercher</button>
+    <button type="submit">Test</button>
     
   </form>
 );
