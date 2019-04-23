@@ -2,14 +2,16 @@ FROM node:10.15.3
 
 WORKDIR /app
 
-COPY package*.json /app
+COPY package*.json /app/
 RUN npm install
 COPY . /app
 
-RUN next build
+RUN npm run build
 
-EXPOSE 8081
 
-ENV DB_URI=mongodb://localhost/Sapp SESSION_SECRET='secret'
+ENV NODE_ENV=development PORT=3000
+ENV DB_URI=mongodb://mongo/Sapp SESSION_SECRET='secret'
 
-CMD [ "node server/index.js" ] 
+EXPOSE $PORT
+
+CMD [ "npm", "start" ] 
