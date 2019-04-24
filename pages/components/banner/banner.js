@@ -10,7 +10,7 @@ export default () => (
           media: "(max-width: 890px)"
         },
         {
-          srcSet: "/static/images/photos/banner-desktop5.jpg",
+          srcSet: "/static/images/photos/banner-desktop.jpg",
           type: "image/jpg"
         }
       ]}
