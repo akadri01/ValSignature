@@ -13,9 +13,12 @@
     }
     .top {
       .town-nav__town {
-        width: 49.3%;
+        width:50%;
+        margin:0;
       }
+      
     }
+      
     .middle {
       .town-nav__town {
         width: 32.5%;
@@ -40,7 +43,7 @@
       h2 {
         text-align: center;
         font-size: calculateRem(29px);
-        color: white;
+        color: white ;
         @include desktopSmall {
           font-size: calculateRem(32px);
           margin-bottom: 0;

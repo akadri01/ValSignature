@@ -1,7 +1,10 @@
+
+
 export function beautifyPrice(price) {
   price = price + " €";
   return price.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 }
+
 
 export function beautifyDate(isoDate, fullLength) {
   const months = [

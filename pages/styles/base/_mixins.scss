@@ -33,9 +33,9 @@
 }
 
 @mixin navbarGap {
-  margin-top: 60px;
+  //margin-top: 150px;
   @include desktopSmall {
-    margin-top: 63px;
+    margin-top: 60px;
   }
 }
 

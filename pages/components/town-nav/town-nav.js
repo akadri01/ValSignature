@@ -34,7 +34,7 @@ const _paris = insertImageFrame(
 );
 const _larochelle = insertImageFrame(
   "/properties/latest?town=larochelle",
-  "La Rochelle",
+  "Nice",
   "lr-mobile.jpg",
   "lr-desktop.jpg"
 );
@@ -62,23 +62,54 @@ const _marseille = insertImageFrame(
   "marseille-mobile.jpg",
   "marseille-desktop.jpg"
 );
+const _cannes = insertImageFrame(
+  "/properties/latest?town=cannes",
+  "Cannes",
+  "marseille-mobile.jpg",
+  "Cannes-desktop.jpg"
+);
+const _strasbourg = insertImageFrame(
+  "/properties/latest?town=strasboourg",
+  "Strasbourg",
+  "strasbourg-mobile.jpg",
+  "strasbourg-desktop.jpg"
+);
+const _lyon1 = insertImageFrame(
+  "/properties/latest?town=lyon",
+  "Lyon",
+  "strasbourg-mobile.jpg",
+  "lyon1-desktop.jpg"
+);
+const _lyon2 = insertImageFrame(
+  "/properties/latest?town=lyon",
+  "",
+  "strasbourg-mobile.jpg",
+  "lyon2-desktop.jpg"
+);
 
 export default () => (
   <section className="town-nav mobile-desktop-frame">
     <div className="default-group">
-      <h1>Rechercher des biens en France</h1>
-      <p>Propriétés de prestige en France </p>
+      <p> RECHERCHER DES BIENS EN FRANCE OU A L’ETRANGER </p>
+      <h1>Toutes nos opportunités immobilières pour habiter ou investir</h1>
+      <h1>(Biens de prestige, maisons, appartements, surfaces diverses, lofts, bureaux, locaux commerciaux,  parkings)</h1>
+      
+      
       <hr />
     </div>
     <div className="top">
       {_paris}
-      {_larochelle}
+      {_lyon1}
+      {_lyon2}
     </div>
+      
+    
+    
     <div className="middle">
       {_bordeaux}
-      {_nice}
+      {_cannes}
       {_nimes}
     </div>
-    <div className="bottom">{_marseille}</div>
+    <div className="bottom">{_strasbourg}</div>
   </section>
 );

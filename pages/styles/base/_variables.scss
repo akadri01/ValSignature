@@ -1,6 +1,7 @@
 // Colors
 $color-black: #282828;
-$color-green: #bd0021;
+//$color-green: #bd0021;
+$color-green: #D73B10;
 $color-yellow: #f9b942;
 $color-gray: #d0d6db;
 $color-red: #ff4800;
@@ -8,8 +9,8 @@ $color-light-gray: #7e9296;
 $gray-border: 1px solid #e5e5e5;
 
 // Typography
-$font-family-body: "Arial", sans-serif;
-$font-family-title: "Roboto Condensed","Noto Sans Condensed","Noto Sans JP","Noto Sans KR","Noto Sans SC Sliced",sans-serif;;
+$font-family-body: "Roboto Condensed","Noto Sans Condensed","Noto Sans JP","Noto Sans KR","Noto Sans SC Sliced",sans-serif;
+$font-family-title: "Roboto Condensed","Noto Sans Condensed","Noto Sans JP","Noto Sans KR","Noto Sans SC Sliced",sans-serif;
 
 $font-size-tiny: calculateRem(10.3px);
 $font-size-small: calculateRem(12px);

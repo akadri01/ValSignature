@@ -1,13 +1,16 @@
 .banner {
-  position: relative;
+  //position: relative;
   font-family: "Roboto Condensed","Noto Sans Condensed","Noto Sans JP","Noto Sans KR","Noto Sans SC Sliced",sans-serif;
-  @include navbarGap;
+  //@include navbarGap;
+  margin-top: 0px;
+  margin: 0; padding: 0; border: none;
   &__form {
     @include absCenter;
-    top: 150px;
+    top: 250px;
     background: rgba(40, 40, 40, 0.8);
     width: 370px;
     padding: 15px;
+    position:absolute;
     @include tablet {
       top: 190px;
     }
@@ -17,10 +20,10 @@
       width: 720px;
       flex-wrap: wrap;
       justify-content: space-between;
-      padding: 18px 4% 38px;
+      padding: 8px;
     }
     @include desktopMedium {
-      top: 170px;
+      top: 170px; 
     }
     @include desktopLarge {
       top: 190px;
@@ -49,15 +52,22 @@
       color: #585858;
       font-size: $font-size-medium;
       text-indent: 14px;
-      width: 80%;
+      //width: 80%;
       margin-left: 10%;
       @include desktopSmall {
-        padding-left: 20px;
+        //padding-left: 20px;
         height: 50px;
         margin-left: 0;
-        width: 40%;
-        @include backgroundIcon("location.svg", 22px, 10px center);
+        width: 100px;
+        //@include backgroundIcon("location.svg", 22px, 10px center);
       }
+    }
+    input  {
+      //padding: 16px;
+      border: 1px solid #bd0021;
+      width: 50% ;
+      //margin-left: 10%;
+      font-size: 17px;
     }
     &-radios {
       width: 50%;
@@ -122,8 +132,8 @@
       width: 80%;
       height: 42px;
       margin-left: 10%;
-      background-color: #bd0021;
-      outline: 1px solid #bd0021;
+      background-color: #D73B10;
+      outline: 1px solid #D73B10;
       color: #fff;
       font-weight: 900;
       border: none;

@@ -1,10 +1,12 @@
 .navigation {
-  background-color: $color-black;
-  position: fixed;
+  background-color: #11ffee00;
+  position: relative;
   z-index: 9;
   width: 100vw;
+  height: 20;
   top: 0;
   left: 0;
+
   .mobile-desktop-frame {
     @include desktopSmall {
       display: flex;
@@ -14,19 +16,23 @@
   &__brand {
     display: flex;
     justify-content: space-between;
+    
     @include desktopSmall {
       width: 30%;
     }
     &-logo {
+      @include absCenter;
       margin-top: 8px;
       @include desktopSmall {
         margin-top: 6px;
       }
       img {
-        width: 178px;
+        width: 350px;
+        margin-top: 80px;
         @include desktopSmall {
-          width: 172px;
-          margin-top: 3px;
+          //width: 400px;
+          //margin-top: 13px;
+          //positition:fixed;
         }
       }
     }
@@ -40,23 +46,27 @@
         margin-bottom: 5px;
         display: block;
         height: 2px;
-        background: white;
+        background: black;
         transition: 0.3s $transition;
       }
     }
   }
   &__navbar {
-    background-color: $color-black;
+    background-color: #11ffee00;
     padding-top: 20px;
     padding-bottom: 20px;
     display: none;
     @include desktopSmall {
-      display: block;
-      padding: 0;
+      //display: block;
+      //display:inline;
+      position : sticky;
+      padding: 100;
+      margin-top: 300px;
       width: 620px;
-      display: flex;
+      //display: flex;
       justify-content: space-between;
     }
+  
     .links,
     .navigation__navbar-location-title,
     button {
@@ -67,8 +77,8 @@
       font-weight: 900;
       font-family: $font-family-title;
       padding: 10px 0;
-      margin-bottom: 15px;
-      color: white;
+      //margin-bottom: 15px;
+      color: black;
       //@include hoverGreen;
       @include desktopSmall {
         margin-top: 15px;
@@ -108,6 +118,7 @@
           a {
             width: 20%;
             display: inline-block;
+            //float:left;
             //@include hoverGreen;
             font-size: $font-size-small;
             padding: 4px 0;
@@ -120,8 +131,11 @@
       button {
         margin-top: 10px;
         padding: 10px 20px;
+        display: block;
+        float:left;
         border: 2px solid $color-green;
         background: transparent;
+        margin : 10px;
         @include desktopSmall {
           transform: translateY(3px);
         }

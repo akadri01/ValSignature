@@ -22,6 +22,8 @@ const ssrRoutes = require("./routes/ssr.js");
 const session = require("express-session");
 const MongoDBStore = require("connect-mongodb-session")(session);
 
+
+
 // Database
 const mongoose = require("mongoose");
 mongoose.connect(process.env.DB_URI, { useNewUrlParser: true  });
@@ -61,6 +63,7 @@ class SetupServer {
     this.server.use(ssrRoutes.getRequestHandler(nextApp));
   }
 
+  
   get determineSession() {
     const prod = session({
       secret: process.env.SESSION_SECRET,
@@ -68,7 +71,7 @@ class SetupServer {
         maxAge: 1000 * 60 * 60 * 24 * 7 // 1 week
       },
       store: new MongoDBStore({
-        uri: DB_URI,
+        uri: process.env.DB_URI  ,
         collection: "s_e_s_s_i_o_n_s"
       }),
       resave: true,

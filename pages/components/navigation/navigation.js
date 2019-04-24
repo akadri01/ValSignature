@@ -21,6 +21,7 @@ class Navigation extends Component {
                   src="/static/images/icons/logo-small.png"
                   alt="Valorys Signature logo"
                   title="Go to home page"
+                  
                 />
               </a>
             </Link>
@@ -46,13 +47,17 @@ class Navigation extends Component {
             {this.props.localUser ? (
               this.isProfilePage
             ) : (
-              <Link href="/user/auth">
-                <a className="links">Connexion</a>
+              <Link href="/user/console">
+                <a className="navigation__navbar-btn">
+                
+                </a>
               </Link>
             )}
-            <Link href="/user/console">
+          
+            <Link href="/user/auth">
               <a className="navigation__navbar-btn">
-                <button>publier votre bien</button>
+                <button>Connexion</button>
+                <button>Publier votre bien</button>
               </a>
             </Link>
           </nav>

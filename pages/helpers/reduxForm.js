@@ -4,17 +4,17 @@ import { popupWindow } from "../helpers/popup";
 // File input
 export class RenderFileInput extends Component {
   approveFileUpload = files => {
-    if (files.length > 6) {
+    if (files.length < 15) {
       return {
         status: false,
-        msg: "Maximum 6 images."
+        msg: "Minimum 15 images."
       };
     }
     for (let i = 0; i < files.length; i++) {
-      if (files[i].size > 786432) {
+      if (files[i].size > 2786432) {
         return {
           status: false,
-          msg: "Maximum image size is 750KB! Please reduce image size."
+          msg: "Maximum image size is 2MB! Please reduce image size."
         };
       }
     }

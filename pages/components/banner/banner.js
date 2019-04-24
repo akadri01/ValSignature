@@ -10,7 +10,7 @@ export default () => (
           media: "(max-width: 890px)"
         },
         {
-          srcSet: "/static/images/photos/banner-desktop.jpg",
+          srcSet: "/static/images/photos/banner-desktop5.jpg",
           type: "image/jpg"
         }
       ]}
@@ -18,5 +18,5 @@ export default () => (
       alt="Rechercher des biens en France"
     />
     <SearchForm />
-  </section>
+  </section> 
 );
