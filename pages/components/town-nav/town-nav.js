@@ -70,7 +70,7 @@ const _cannes = insertImageFrame(
 );
 const _strasbourg = insertImageFrame(
   "/properties/latest?town=strasboourg",
-  "Strasbourg",
+  "Strasburg",
   "strasbourg-mobile.jpg",
   "strasbourg-desktop.jpg"
 );
