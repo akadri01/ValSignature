@@ -1,5 +1,5 @@
 {
   "PAGINATION_QUANTITY": 6,
-  "DOMAIN_NAME": "https://valorys.com",
-  "HOST_PORT": "http://localhost:3000"
+  "DOMAIN_NAME": "https://91.134.136.161",
+  "HOST_PORT": "http://91.134.136.161:3000"
 }
