@@ -43,11 +43,11 @@ export default () => (
               Valorys Signature
             </p>
             <form>
-              <label>Prix d'estimation de votre bien</label>
+              <label>Faites-estimez votre bien</label>
               <input type="number" placeholder=" 25000 euros" />
               <Link href="/user/auth">
                 <a>
-                  <button type="button">Publier votre bien</button>
+                  <button type="button">estimer votre bien</button>
                 </a>
               </Link>
             </form>

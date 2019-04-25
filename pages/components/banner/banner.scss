@@ -49,10 +49,11 @@
     select {
       height: 43px;
       background: white;
-      width: 10%px;
+      width: 40% ;
       border: 0px solid #bd0021;
       color: #585858;
       font-size: $font-size-large;
+      font-family:$font-family-body;
       text-indent: 14px;
       //width: 80%;
       margin-left: 10%;
@@ -60,16 +61,24 @@
         //padding-left: 20px;
         height: 50px;
         margin-left: 0;
-        width: 100px;
+        width: 104px;
+        font-family:$font-family-body;
         //@include backgroundIcon("location.svg", 22px, 10px center);
       }
     }
     input  {
       //padding: 16px;
       border: 0px solid #bd0021;
-      width: 60% ;
+      width: 69% ;
       //margin-left: 10%;
       font-size: $font-size-large;
+      font-family:$font-family-body;
+      @include desktopSmall {
+        //padding-left: 20px;
+        
+        font-family:$font-family-body;
+        //@include backgroundIcon("location.svg", 22px, 10px center);
+      }
     }
     &-radios {
       width: 50%;
@@ -131,7 +140,7 @@
     }
     button {
       font-family: "Roboto Condensed","Noto Sans Condensed","Noto Sans JP","Noto Sans KR","Noto Sans SC Sliced",sans-serif;
-      width: 80%;
+      width: 20%;
       height: 42px;
       margin-left: 10%;
       background-color: #D73B10;
@@ -145,7 +154,7 @@
       text-transform: uppercase;
       @include desktopSmall {
         height: 48px;
-        width: 25%;
+        width: 16%;
         margin-left: 0;
       }
     }

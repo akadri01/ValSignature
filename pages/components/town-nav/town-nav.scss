@@ -27,6 +27,7 @@
     .bottom {
       .town-nav__town {
         width: 66.3%;
+        //height : 150px;
       }
     }
   }
@@ -56,7 +57,7 @@
       }
     
       p {
-        color: black;
+        color: gray;
         text-align: center;
         font-size: $font-size-xlarge;
         font-weight: 900;

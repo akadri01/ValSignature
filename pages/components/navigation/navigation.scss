@@ -27,9 +27,11 @@
         margin-top: 6px;
       }
       img {
-        width: 350px;
+        width: 420px;
         margin-top: 80px;
+        
         @include desktopSmall {
+          right: 150%;
           //width: 400px;
           //margin-top: 13px;
           //positition:fixed;
