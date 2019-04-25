@@ -113,6 +113,6 @@ export default () => (
       {_cannes}
       {_nimes}
     </div>
-    <div className="bottom">{_strasbourg}</div>
+    <div className="bottom">{_strasbourg}{_lyon1}</div>
   </section>
 );
