@@ -1,5 +1,5 @@
 {
   "PAGINATION_QUANTITY": 6,
   "DOMAIN_NAME": "https://35.181.94.65",
-  "HOST_PORT": "http://35.181.94.65:80"
+  "HOST_PORT": "http://localhost:3000"
 }

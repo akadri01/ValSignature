@@ -10,7 +10,7 @@ export default () => (
     <option value="sale">Habiter</option>
         <option value="rent">Investir</option>
     </select>
-    <input type="search" id="address-input" placeholder="Localité?" />
+    <input type="search" id="address-input" placeholder="         Paris" />
 
     <script src="https://cdn.jsdelivr.net/npm/places.js@1.16.4"></script>
     <script src="/algolia.js"></script>

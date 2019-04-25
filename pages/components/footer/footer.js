@@ -17,7 +17,7 @@ export default () => (
       <div className="mobile-desktop-frame">
         <div className="footer__top">
           <div className="footer__top-locations">
-            <h2>Achter, louer des biens en France</h2>
+            <h2>OPPORTUNITES POUR HABITER OU INVESTIR DISPONIBLES A :</h2>
             <div>
               {towns.map(link => {
                 return createLink("properties/latest?", link, "town");
@@ -25,7 +25,7 @@ export default () => (
             </div>
           </div>
           <div className="footer__top-types">
-            <h2>Properties à Paris</h2>
+            <h2>NOTRE SELECTION A PARIS</h2>
             <div>
               {seoLinks.map((link, i) => {
                 return createLink(
@@ -38,7 +38,7 @@ export default () => (
             </div>
           </div>
           <div className="footer__top-advert">
-            <h2>Publier votre bien en accédant au club VIP</h2>
+            <h2>CONFIEZ-NOUS LA VENTE DE VOTRE BIEN</h2>
             <p>
               Valorys Signature
             </p>

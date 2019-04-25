@@ -11,7 +11,7 @@ class Doc extends Document {
             name="viewport"
             content="width=device-width initial-scale=1 shrink-to-fit=no"
           />
-          <meta name="description" content="Ghana Real Estate Platform" />
+          <meta name="description" content="Valorys Real Estate Platform" />
           <link
             rel="icon"
             type="image/x-icon"

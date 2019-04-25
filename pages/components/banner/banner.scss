@@ -2,8 +2,10 @@
   //position: relative;
   font-family: "Roboto Condensed","Noto Sans Condensed","Noto Sans JP","Noto Sans KR","Noto Sans SC Sliced",sans-serif;
   //@include navbarGap;
-  margin-top: 0px;
-  margin: 0; padding: 0; border: none;
+  //margin-top: 0px;
+  //margin: 0; padding: 0; border: none;
+  height: calc( 100vh - navbarHight);
+  position: relative;
   &__form {
     @include absCenter;
     top: 250px;
@@ -47,10 +49,10 @@
     select {
       height: 43px;
       background: white;
-      width: 210px;
-      border: 1px solid #bd0021;
+      width: 10%px;
+      border: 0px solid #bd0021;
       color: #585858;
-      font-size: $font-size-medium;
+      font-size: $font-size-large;
       text-indent: 14px;
       //width: 80%;
       margin-left: 10%;
@@ -64,10 +66,10 @@
     }
     input  {
       //padding: 16px;
-      border: 1px solid #bd0021;
-      width: 50% ;
+      border: 0px solid #bd0021;
+      width: 60% ;
       //margin-left: 10%;
-      font-size: 17px;
+      font-size: $font-size-large;
     }
     &-radios {
       width: 50%;

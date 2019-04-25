@@ -6,7 +6,7 @@ const insertImageFrame = (link, locationName, mobileImg, desktopImg) => (
     <a className="town-nav__town">
       <div className="town-nav__town-content">
         <h2>{locationName}</h2>
-        <p>-</p>
+        
       </div>
       <Picture
         sources={[
@@ -28,55 +28,55 @@ const insertImageFrame = (link, locationName, mobileImg, desktopImg) => (
 
 const _paris = insertImageFrame(
   "/properties/latest?town=paris",
-  "Paris",
+  "PARIS",
   "paris-mobile.jpg",
   "paris-desktop.jpg"
 );
 const _larochelle = insertImageFrame(
   "/properties/latest?town=larochelle",
-  "Nice",
+  "NIICE",
   "lr-mobile.jpg",
   "lr-desktop.jpg"
 );
 const _bordeaux = insertImageFrame(
   "/properties/latest?town=bordeaux",
-  "Bordeaux",
+  "BORDEAUX",
   "bordeaux-mobile.jpg",
   "bordeaux-desktop.jpg"
 );
 const _nice = insertImageFrame(
   "/properties/latest?town=nice",
-  "Nice",
+  "NICE",
   "nice-mobile.jpg",
   "nice-desktop.jpg"
 );
 const _nimes = insertImageFrame(
   "/properties/latest?town=nimes",
-  "Nimes",
+  "NIMES",
   "nimes-mobile.jpg",
   "nimes-desktop.jpg"
 );
 const _marseille = insertImageFrame(
   "/properties/latest?town=marseille",
-  "Marseille",
+  "MARSEILLE",
   "marseille-mobile.jpg",
   "marseille-desktop.jpg"
 );
 const _cannes = insertImageFrame(
   "/properties/latest?town=cannes",
-  "Cannes",
+  "CANNES",
   "marseille-mobile.jpg",
   "cannes-desktop.jpg"
 );
 const _strasbourg = insertImageFrame(
   "/properties/latest?town=strasboourg",
-  "Strasbourg",
+  "STRASBOURG",
   "strasbourg-mobile.jpg",
   "strasbourg-desktop.jpg"
 );
 const _lyon1 = insertImageFrame(
   "/properties/latest?town=lyon",
-  "Lyon",
+  "LYON",
   "strasbourg-mobile.jpg",
   "lyon1-desktop.jpg"
 );
@@ -95,7 +95,10 @@ export default () => (
       <h1>(Biens de prestige, maisons, appartements, surfaces diverses, lofts, bureaux, locaux commerciaux,  parkings)</h1>
       
       
-      <hr />
+      <p />
+      <p />
+      <p />
+      
     </div>
     <div className="top">
       {_paris}

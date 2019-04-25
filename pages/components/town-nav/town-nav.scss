@@ -26,7 +26,7 @@
     }
     .bottom {
       .town-nav__town {
-        width: 100%;
+        width: 66.3%;
       }
     }
   }
@@ -34,23 +34,29 @@
     width: 100%;
     position: relative;
     &:hover > div p {
-      text-decoration: underline;
+      //text-decoration: underline;
     }
     &-content {
       position: absolute;
       width: 100%;
       margin-top: 10%;
       h2 {
-        text-align: center;
+        
         font-size: calculateRem(29px);
         color: white ;
+        position: absolute;
+        top: 150px;
+        left: 20%;
+        font-family: $font-family-body;
         @include desktopSmall {
-          font-size: calculateRem(32px);
+          font-size: calculateRem(21px);
           margin-bottom: 0;
+          font-family: $font-family-body;
         }
       }
+    
       p {
-        color: $color-yellow;
+        color: black;
         text-align: center;
         font-size: $font-size-xlarge;
         font-weight: 900;
