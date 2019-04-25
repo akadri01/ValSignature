@@ -1,4 +1,4 @@
-version: "2"
+version: "3"
 services:
   app:
     container_name: app_valorys
@@ -7,7 +7,7 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - ./app:/app
+      - .:/app
     links:
       - mongo
   mongo:
