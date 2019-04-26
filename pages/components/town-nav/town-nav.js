@@ -92,7 +92,7 @@ export default () => (
     <div className="default-group">
       <p> RECHERCHER DES BIENS EN FRANCE OU A L’ETRANGER </p>
       <h1>Toutes nos opportunités immobilières pour habiter ou investir</h1>
-      <h1>Biens de prestige, maisons, appartements, surfaces diverses, lofts, bureaux, locaux commerciaux,  parkings</h1>
+      <h1>Biens de prestige, maisons, appartements, surfaces diverses, lofts, bureaux, locaux commerciaux,  parkings.</h1>
       
       
       <p />
@@ -113,6 +113,6 @@ export default () => (
       {_cannes}
       {_nimes}
     </div>
-    <div className="bottom">{_strasbourg}{_lyon1}</div>
+    <div className="bottom">{_strasbourg}</div>
   </section>
 );
