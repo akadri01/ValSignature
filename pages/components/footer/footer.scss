@@ -35,7 +35,7 @@
       content: "";
       width: 80px;
       height: 1px;
-      background-color: #009da5;
+      background-color: #D73B10;
     }
     &-locations {
       div {
@@ -91,7 +91,8 @@
         a {
           float: left;
           button {
-            font-size: $font-size-small;
+            font-size: $font-size-tiny;
+            line-height: $font-size-medium;
             text-transform: uppercase;
             font-weight: 900;
             border: none;

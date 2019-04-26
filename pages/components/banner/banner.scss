@@ -1,11 +1,18 @@
+
+
 .banner {
-  //position: relative;
   font-family: "Roboto Condensed","Noto Sans Condensed","Noto Sans JP","Noto Sans KR","Noto Sans SC Sliced",sans-serif;
-  //@include navbarGap;
-  //margin-top: 0px;
-  //margin: 0; padding: 0; border: none;
-  height: calc( 100vh - navbarHight);
   position: relative;
+  width: 100%;
+
+  // added
+    overflow-x: hidden;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    transition: .5s;
+  // added
+
   &__form {
     @include absCenter;
     top: 250px;
@@ -49,11 +56,10 @@
     select {
       height: 43px;
       background: white;
-      width: 40% ;
+      width: 10%px;
       border: 0px solid #bd0021;
       color: #585858;
       font-size: $font-size-large;
-      font-family:$font-family-body;
       text-indent: 14px;
       //width: 80%;
       margin-left: 10%;
@@ -61,24 +67,18 @@
         //padding-left: 20px;
         height: 50px;
         margin-left: 0;
-        width: 104px;
-        font-family:$font-family-body;
-        //@include backgroundIcon("location.svg", 22px, 10px center);
+        width: 17%;
+        @include backgroundIcon("location.svg", 15px, 102px center);
+        -webkit-appearance: none;
+        appearance: none;
       }
     }
     input  {
       //padding: 16px;
       border: 0px solid #bd0021;
-      width: 69% ;
+      width: 65.5% ;
       //margin-left: 10%;
       font-size: $font-size-large;
-      font-family:$font-family-body;
-      @include desktopSmall {
-        //padding-left: 20px;
-        
-        font-family:$font-family-body;
-        //@include backgroundIcon("location.svg", 22px, 10px center);
-      }
     }
     &-radios {
       width: 50%;
@@ -140,12 +140,12 @@
     }
     button {
       font-family: "Roboto Condensed","Noto Sans Condensed","Noto Sans JP","Noto Sans KR","Noto Sans SC Sliced",sans-serif;
-      width: 20%;
+      width: 80%;
       height: 42px;
       margin-left: 10%;
       background-color: #D73B10;
       outline: 1px solid #D73B10;
-      color: #fff;
+      color: black;
       font-weight: 900;
       border: none;
       font-size: $font-size-large;
@@ -154,7 +154,7 @@
       text-transform: uppercase;
       @include desktopSmall {
         height: 48px;
-        width: 16%;
+        width: 17%;
         margin-left: 0;
       }
     }

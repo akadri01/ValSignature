@@ -1,11 +1,12 @@
 .trioTabs {
   display: none;
   justify-content: space-between;
-  width: 950px;
-  margin: 100px auto 0;
-  height: 130px;
+  width: 600px;
+  margin: 200px auto 0;
+  height: 400px;
   @include desktopSmall {
     display: flex;
+    margin: 200px auto 0;
   }
   &__tab {
     cursor: pointer;
@@ -13,13 +14,13 @@
     height: 100px;
     position: relative;
     display: block;
-    padding: 23px 12px;
+    padding: 220px 220px;
     font-size: 14px;
     color: rgba(255, 255, 255, 0.8);
     background-color: $color-green;
     text-align: center;
     transition: 0.3s $transition;
-    @include backgroundIcon("right-fat-arrow-white.svg", 20px, center 62px);
+    //@include backgroundIcon("right-fat-arrow-white.svg", 20px, center 62px);
     border-radius: 6px;
     &:hover {
       background-color: $color-yellow;

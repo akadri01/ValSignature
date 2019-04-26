@@ -26,8 +26,8 @@
     }
     .bottom {
       .town-nav__town {
-        width: 66.3%;
-        //height : 150px;
+        width:50%;
+        margin:0;
       }
     }
   }
@@ -43,7 +43,7 @@
       margin-top: 10%;
       h2 {
         
-        font-size: calculateRem(29px);
+        font-size: calculateRem(17px);
         color: white ;
         position: absolute;
         top: 150px;
@@ -59,11 +59,12 @@
       p {
         color: gray;
         text-align: center;
-        font-size: $font-size-xlarge;
+        font-size: $font-size-mega;
         font-weight: 900;
         @include desktopSmall {
+          
           margin-top: 15px;
-          font-size: $font-size-xxlarge;
+          font-size: $font-size-mega;
         }
       }
     }

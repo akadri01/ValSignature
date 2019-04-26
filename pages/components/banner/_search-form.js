@@ -17,10 +17,7 @@ export default () => (
     
     <button type="submit">RECHERCHER</button>
     
-    
   </form>
 
   
 );
-
-

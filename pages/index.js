@@ -8,6 +8,7 @@ import TownNavigation from "./components/town-nav/town-nav";
 import Footer from "./components/footer/footer";
 import BuySellRentTabs from "./components/trio-tabs/trio-tabs";
 import RecentAds from "./components/recent-ads/recent-ads";
+import YourEmptyComponent from './components/txt-carous/txt-carous';
 
 const Index = () => (
   <Fragment>
@@ -18,6 +19,8 @@ const Index = () => (
     <Navigation />
     <Banner />
     <TownNavigation />
+    <BuySellRentTabs />
+    <YourEmptyComponent/>
     <RecentAds />
     <Footer />
   </Fragment>

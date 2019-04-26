@@ -27,13 +27,11 @@
         margin-top: 6px;
       }
       img {
-        width: 420px;
-        margin-top: 80px;
-        
+        width: 350px;
+        margin-top: 120px;
         @include desktopSmall {
-          right: 150%;
+          // margin-top: 80px;
           //width: 400px;
-          //margin-top: 13px;
           //positition:fixed;
         }
       }

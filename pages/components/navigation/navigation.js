@@ -44,12 +44,12 @@ class Navigation extends Component {
           </div>
           <nav className="navigation__navbar" id="navMenu">
 
-            {this.props.localUser ? (
+          {this.props.localUser ? (
               this.isProfilePage
             ) : (
               <Link href="/user/console">
                 <a className="navigation__navbar-btn">
-                
+                <button>Connexion</button>
                 </a>
               </Link>
             )}

@@ -40,14 +40,15 @@ export default () => (
           <div className="footer__top-advert">
             <h2>CONFIEZ-NOUS LA VENTE DE VOTRE BIEN</h2>
             <p>
-              Valorys Signature
+              
+              <img src="/static/images/icons/icon-small.png" alt="Icon" />
             </p>
             <form>
               <label>Faites-estimez votre bien</label>
-              <input type="number" placeholder=" 25000 euros" />
+              <label type="number" placeholder=" Faites-estimez votre bien" />
               <Link href="/user/auth">
                 <a>
-                  <button type="button">estimer votre bien</button>
+                  <button type="button">Connexion</button>
                 </a>
               </Link>
             </form>
