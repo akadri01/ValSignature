@@ -114,7 +114,8 @@ export default () => (
       <h1>Toutes nos opportunités immobilières pour habiter ou investir</h1>
       <h1>Biens de prestige, maisons, appartements, surfaces diverses, lofts, bureaux, locaux commerciaux,  parkings!</h1>
       <p />
-      <img src="/static/images/icons/favicon-icon.png" alt="Logo" />
+      <hr />
+      
       
       <p />
       <p />

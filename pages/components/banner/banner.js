@@ -3,13 +3,10 @@ import SearchForm from "./_search-form.js";
 
 
 const images = [
-  'banner-12.jpg',
-  'banner-13.jpg',
-  'banner-14.jpg',
-  'banner-1.jpg',
+ 
+ 'banner-1.jpg',
   'banner-2.jpg',
   'banner-3.jpg',
-  'banner-4.jpg',
   'banner-5.jpg',
   'banner-6.jpg',
   'banner-7.jpg',
