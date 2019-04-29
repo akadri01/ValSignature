@@ -4,8 +4,7 @@ import SearchForm from "./_search-form.js";
 
 const images = [
  
- 'banner-1.jpg',
-  'banner-2.jpg',
+  'banner-1.jpg',
   'banner-3.jpg',
   'banner-5.jpg',
   'banner-6.jpg',
@@ -20,7 +19,7 @@ const images = [
 export default class banner extends Component {
   state = {
     counter: 0,
-    sliderTimer: 3000
+    sliderTimer: 4000
   }
   render() {
     return (

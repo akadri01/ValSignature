@@ -29,7 +29,7 @@ class AuthRouter {
 
   authFacebook(req, res) {
     User.handleUserWithFacebook(req.body, user => {
-      if (!user | !user._id) {
+      if (!user || !user._id) {
         return res.json({ saved: false });
       }
       req.session.userData = user;

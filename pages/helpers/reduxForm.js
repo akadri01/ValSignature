@@ -35,7 +35,7 @@ export class RenderFileInput extends Component {
   };
   render() {
     const {
-      input,
+      
       isMultiple,
       label,
       meta: { touched, error }

@@ -35,9 +35,6 @@ export default property => {
     total_bathroom,
     total_floor,
     town,
-    url,
-    user_id,
-    _id,
     user_email,
     user_name
   } = property;

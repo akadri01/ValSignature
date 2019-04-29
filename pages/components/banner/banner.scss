@@ -2,34 +2,43 @@
 
 .banner {
   font-family: "Roboto Condensed","Noto Sans Condensed","Noto Sans JP","Noto Sans KR","Noto Sans SC Sliced",sans-serif;
-  position: relative;
-  width: 100%;
+  //position: relative;
+  //width: 100%;
 
   // added
     overflow-x: hidden;
     height: 100vh;
     background-size: cover;
-    background-position: center;
-    transition: .7s;
+    //background-position: center;
+    transition: 2.5s;
   // added
 
   &__form {
-    @include absCenter;
-    top: 250px;
+    //@include absCenter;
+    
+    display: flex;
+    //top: 250px;
     background: rgba(40, 40, 40, 0.8);
-    width: 370px;
+    width: 560px;
     padding: 15px;
-    position:absolute;
+    position:relative;
+    //bottom : 30%;
+    left:50%;
+    //left:20%;
+    top:70%;
+    transform: translate(-50%, 80%);
+    
     @include tablet {
       top: 190px;
     }
     @include desktopSmall {
-      top: 110px;
+      
       display: flex;
-      width: 720px;
+      width: 900px;
       flex-wrap: wrap;
       justify-content: space-between;
       padding: 8px;
+      position :flex;
     }
     @include desktopMedium {
       top: 170px; 
@@ -70,11 +79,13 @@
         height: 50px;
         margin-left: 0;
         width: 17%;
-        @include backgroundIcon("location.svg", 15px, 102px center);
+        @include backgroundIcon("down-arrow.svg", 20px, 120px center);
         -webkit-appearance: none;
         appearance: none;
+        
       }
     }
+    
     input  {
       //padding: 16px;
       border: 0px solid #bd0021;
@@ -146,16 +157,16 @@
       height: 42px;
       margin-left: 10%;
       background-color: #D73B10;
-      outline: 1px solid #D73B10;
+      //outline: 1px solid #D73B10;
       color: white;
       font-weight: 900;
       border: none;
-      font-size: $font-size-tiny;
+      font-size: $font-size-large;
       letter-spacing: 1.2px;
-      padding-top: 3px;
+      //padding-top: 3px;
       text-transform: uppercase;
       @include desktopSmall {
-        height: 48px;
+        height: 50px;
         width: 17%;
         margin-left: 0;
       }

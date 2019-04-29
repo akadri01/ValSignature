@@ -7,13 +7,12 @@ export default () => (
   <form className="banner__form" id="searchForm" onSubmit={searchFormSubmit}>
   
     <select name="saleorrent">
-    <option value="sale">Habiter</option>
-        <option value="rent">Investir</option>
+    <option value="sale">HABITER</option>
+        <option value="rent">INVESTIR</option>
     </select>
-    <input type="search" id="address-input" placeholder="         Paris" />
+    <input type="search" id="address-input" placeholder="         PARIS" />
 
-    <script src="https://cdn.jsdelivr.net/npm/places.js@1.16.4"></script>
-    <script src="/algolia.js"></script>
+    
     
     <button type="submit">RECHERCHER</button>
     

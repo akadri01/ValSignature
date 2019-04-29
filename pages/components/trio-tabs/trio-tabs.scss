@@ -1,58 +1,12 @@
-.trioTabs {
-  display: none;
-  justify-content: space-between;
-  width: 600px;
-  margin: 200px auto 0;
-  height: 400px;
-  @include desktopSmall {
-    display: flex;
-    margin: 200px auto 0;
-  }
-  &__tab {
-    cursor: pointer;
-    width: 270px;
-    height: 100px;
-    position: relative;
-    display: block;
-    padding: 220px 220px;
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.8);
-    background-color: $color-green;
-    text-align: center;
-    transition: 0.3s $transition;
-    //@include backgroundIcon("right-fat-arrow-white.svg", 20px, center 62px);
-    border-radius: 6px;
-    &:hover {
-      background-color: $color-yellow;
-      height: 116px;
-      background-position: 93% 90%;
-    }
-    &:hover > p {
-      display: block;
-    }
-    &:before {
-      height: 18px;
-      background-color: #d6d6d6;
-      position: absolute;
-      filter: blur(6px);
-      bottom: -35px;
-      left: 0;
-      display: block;
-      width: 100%;
-      pointer-events: none;
-      content: "";
-      border-radius: 50%;
-    }
-    h2 {
-      font-family: $font-family-title;
-      margin-bottom: 5px;
-      margin-top: 6px;
-      font-size: $font-size-xxlarge;
-      word-spacing: 4px;
-    }
-    p {
-      display: none;
-      margin-top: 11px;
-    }
-  }
+.trio {
+  font-family: "Roboto Condensed","Noto Sans Condensed","Noto Sans JP","Noto Sans KR","Noto Sans SC Sliced",sans-serif;
+  //position: relative;
+  //width: 100%;
+
+  // added
+    overflow-x: hidden;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    transition: 2.5s;
 }
