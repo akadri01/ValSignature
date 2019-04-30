@@ -17,7 +17,7 @@
       display: block;
       padding: 23px 12px;
       font-size: 14px;
-      color: white;
+      color: black;
       background-image: url("/static/images/photos/tab1.jpeg");
       text-align: center;
       
@@ -33,7 +33,7 @@
       &:hover > p {
         display: block;
         background: none;
-        color:white;
+        color:black;
         //color:white;
         text-decoration: underline white;
       }

@@ -1,7 +1,7 @@
 .town-nav {
   margin-top: 40px;
   @include desktopSmall {
-    margin-top: 100px;
+    margin-top: 50px;
   }
   @include desktopSmall {
     .top,
@@ -42,22 +42,20 @@
     //background-color:blue;
   }
   hz {
-    position: relative;
-    font-size: $font-size-small;
-    text-transform: uppercase;
-    font-weight: 100;
-    margin-top: 56px;
-    margin-bottom: 24px;
-  }
-  hz::after {
     position: absolute;
-    bottom: -15px;
-    left: -40px;
-    content: "";
-    width: 80px;
-    height: 2px;
+    
+    
+    //display: block;
+    
+    margin-right:auto;
+    margin-right:auto;
     background-color: #D73B10;
+    //text-align: center;
+    //content: "";
+    width: 100px;
+    height: 2px;
   }
+  
   &__town {
     width: 100%;
     position: relative;

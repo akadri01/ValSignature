@@ -109,10 +109,12 @@ export default () => (
   <section className="town-nav mobile-desktop-frame">
      
     <div className="default-group">
-      <img src="/static/images/icons/favicon-icon.png" alt="Icon" />
+    <h1><img src="/static/images/icons/favicon-icon.png" alt="Icon" /></h1>
       <p> RECHERCHER DES BIENS EN FRANCE OU A L’ETRANGER </p>
       <h1>Toutes nos opportunités immobilières pour habiter ou investir</h1>
+      
       <h1>Biens de prestige, maisons, appartements, surfaces diverses, lofts, bureaux, locaux commerciaux,  parking</h1>
+      <h1 />
       <hz></hz>
       
       <p />

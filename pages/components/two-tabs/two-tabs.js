@@ -19,7 +19,7 @@ export default () => {
           
           <h2>Rejoignez le Club Vip !</h2>
           <h3>Bénéficiez d’opportunités d’investissement « hors marché » et échangez avec une sélection de professionnels pour accompagner chaque étape de vos projets.</h3>
-          <p>rechercher maintenant</p>
+          <p>rejoigner le club</p>
         </a>
       </Link>
       <Link href="/properties?advert_type=rent">
@@ -28,7 +28,7 @@ export default () => {
           
           <h2>Confiez-nous la vente de vos biens en exclusivité !</h2>
           <h3>Simple et rapide profitez d’une estimation gratuite. Tout mandat exclusif vous donne accès à des services dédiés : plans 3D, prises de photos professionnelles, visites virtuelles.</h3>
-          <p>rechercher maintenant</p>
+          <p>estimer une vente</p>
         </a>
       </Link>
     </section>
