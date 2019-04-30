@@ -17,7 +17,7 @@ export default () => (
       <div className="mobile-desktop-frame">
         <div className="footer__top">
           <div className="footer__top-locations">
-            <h2>OPPORTUNITES POUR HABITER OU INVESTIR DISPONIBLES A :</h2>
+            <h2>OPPORTUNITES POUR HABITER OU INVESTIR DISPONIBLES A </h2>
             <div>
               {towns.map(link => {
                 return createLink("properties/latest?", link, "town");
@@ -44,8 +44,8 @@ export default () => (
               <img src="/static/images/icons/icon-small.png" alt="Icon" />
             </p>
             <form>
-              <label>Faites-estimez votre bien</label>
-              <label type="number" placeholder=" Faites-estimez votre bien" />
+              <label>Faites-estimer votre bien</label>
+              <label type="number" placeholder=" Faites-estimer votre bien" />
               <Link href="/user/auth">
                 <a>
                   <button type="button">Connexion</button>

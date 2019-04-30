@@ -113,13 +113,11 @@ export default () => (
       <p> RECHERCHER DES BIENS EN FRANCE OU A L’ETRANGER </p>
       <h1>Toutes nos opportunités immobilières pour habiter ou investir</h1>
       <h1>Biens de prestige, maisons, appartements, surfaces diverses, lofts, bureaux, locaux commerciaux,  parking</h1>
-      <p />
-      <hr2 />
-      
+      <hz></hz>
       
       <p />
       <p />
-      <p />
+     
       
     </div>
     <div className="top">

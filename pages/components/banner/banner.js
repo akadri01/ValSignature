@@ -4,15 +4,15 @@ import SearchForm from "./_search-form.js";
 
 const images = [
  
-  'banner-1.jpg',
-  'banner-3.jpg',
-  'banner-5.jpg',
-  'banner-6.jpg',
-  'banner-7.jpg',
-  'banner-8.jpg',
-  'banner-9.jpg',
-  'banner-10.jpg',
-  'banner-11.jpg'
+  'banner-1.jpeg',
+  'banner-2.jpeg',
+  'banner-3.jpeg',
+  'banner-4.jpeg',
+  'banner-5.jpeg',
+  'banner-6.jpeg',
+  'banner-7.jpeg',
+  'banner-8.jpeg',
+  'banner-9.jpeg'
   
 ];
 

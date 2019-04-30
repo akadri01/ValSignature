@@ -1,57 +1,172 @@
 .twoTabs {
-    display: none;
+    //display: none;
     justify-content: space-between;
-    width: 950px;
+    width: 1400px;
     margin: 100px auto 0;
-    height: 130px;
+    
+    height: 200px;
+    filter: brightness(90%);
     @include desktopSmall {
       display: flex;
     }
-    &__tab {
+    &__tab1 {
       cursor: pointer;
-      width: 470px;
-      height: 200px;
+      width: 440px;
+      height: 300px;
       position: relative;
       display: block;
       padding: 23px 12px;
       font-size: 14px;
-      color: rgba(255, 255, 255, 0.8);
-      background-color: gray;
+      color: white;
+      background-image: url("/static/images/photos/tab1.jpeg");
       text-align: center;
-      transition: 0.3s $transition;
       
-      border-radius: 6px;
+      transition: 0.8s $transition;
+     
+     
+      
+      //border-radius: 6px;
       &:hover {
-        background-color: $color-green;
-        height: 200px;
-        background-position: 93% 90%;
+        height: 300px;
+        filter: brightness(100%);
       }
       &:hover > p {
         display: block;
+        background: none;
+        color:white;
+        //color:white;
+        text-decoration: underline white;
       }
       &:before {
-        height: 18px;
-        background-color: #d6d6d6;
-        position: absolute;
-        filter: blur(6px);
-        bottom: -35px;
-        left: 0;
+        
         display: block;
         width: 100%;
-        pointer-events: none;
         content: "";
-        border-radius: 50%;
+        
+        
       }
       h2 {
-        font-family: $font-family-title;
+        font-family: $font-family-body;
         margin-bottom: 5px;
         margin-top: 6px;
-        font-size: $font-size-xxlarge;
-        word-spacing: 4px;
+        //font-size: $font-size-xxlarge;
+        //word-spacing: 4px;
+        //filter: brightness(200%);
       }
       p {
         display: none;
-        margin-top: 11px;
+        margin-top: 40px;
+        color: white;
+        font-size: $font-size-medium;
+        text-transform: uppercase;
+        font-weight:bold;
+        font-family: $font-family-body;
+      }
+    }
+    &__tab2 {
+      cursor: pointer;
+      width: 440px;
+      height: 300px;
+      position: relative;
+      display: block;
+      padding: 23px 12px;
+      font-size: 14px;
+      color: white;
+      background-image: url("/static/images/photos/tab2.jpg");
+      text-align: center;
+      //filter: brightness(50%);
+      transition: 0.8s $transition;
+     
+     
+      
+      //border-radius: 6px;
+      &:hover {
+        height: 300px;
+        filter: brightness(100%);
+      }
+      &:hover > p {
+        display: block;
+        background: none;
+        color:white;
+        //color:white;
+        text-decoration: underline white;
+      }
+      &:before {
+        
+        display: block;
+        width: 100%;
+        content: "";
+        
+        
+      }
+      h2 {
+        font-family: $font-family-body;
+        margin-bottom: 5px;
+        margin-top: 6px;
+        font-size: $font-size-xxlarge;
+        //word-spacing: 4px;
+      }
+      p {
+        display: none;
+        margin-top: 40px;
+        color: white;
+        font-size: $font-size-medium;
+        text-transform: uppercase;
+        font-weight:bold;
+        
+      }
+    }
+    &__tab3{
+      
+      cursor: pointer;
+      width: 440px;
+      height: 300px;
+      position: relative;
+      display: block;
+      padding: 23px 12px;
+      font-size: 14px;
+      color: white;
+      background-image: url("/static/images/photos/tab3.jpg");
+      text-align: center;
+      //filter: brightness(50%);
+      transition: 0.8s $transition;
+     
+     
+      
+      //border-radius: 6px;
+      &:hover {
+        height: 300px;
+        filter: brightness(100%);
+      }
+      &:hover > p {
+        display: block;
+        background: none;
+        color:white;
+        text-decoration: underline white;
+        //color:white;
+      }
+      &:before {
+        
+        display: block;
+        width: 100%;
+        content: "";
+        
+        
+      }
+      h2 {
+        font-family: $font-family-body;
+        margin-bottom: 5px;
+        margin-top: 6px;
+        font-size: $font-size-xxlarge;
+        //word-spacing: 4px;
+      }
+      p {
+        display: none;
+        margin-top: 40px;
+        color: white;
+        font-size: $font-size-medium;
+        text-transform: uppercase;
+        font-weight:bold;
       }
     }
   }

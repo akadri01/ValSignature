@@ -41,6 +41,23 @@
     border-width: 3px;
     //background-color:blue;
   }
+  hz {
+    position: relative;
+    font-size: $font-size-small;
+    text-transform: uppercase;
+    font-weight: 100;
+    margin-top: 56px;
+    margin-bottom: 24px;
+  }
+  hz::after {
+    position: absolute;
+    bottom: -15px;
+    left: -40px;
+    content: "";
+    width: 80px;
+    height: 2px;
+    background-color: #D73B10;
+  }
   &__town {
     width: 100%;
     position: relative;
