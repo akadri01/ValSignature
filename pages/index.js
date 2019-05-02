@@ -10,6 +10,7 @@ import BuySellRentTabs from "./components/trio-tabs/trio-tabs";
 import TwoTabs from "./components/two-tabs/two-tabs";
 import RecentAds from "./components/recent-ads/recent-ads";
 import YourEmptyComponent from './components/txt-carous/txt-carous';
+import Txt from './components/text-up/text-up';
 
 const Index = () => (
   <Fragment>
@@ -21,6 +22,7 @@ const Index = () => (
     <Banner />
     <TownNavigation />
     <BuySellRentTabs />
+    <Txt />
     <TwoTabs />
     <YourEmptyComponent/>
     

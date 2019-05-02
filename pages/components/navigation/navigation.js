@@ -10,7 +10,7 @@ import {
 } from "../shared/data.js";
 
 class Navigation extends Component {
-  render() {
+  render() { 
     return (
       <section className="navigation">
         <div className="mobile-desktop-frame">
@@ -49,15 +49,14 @@ class Navigation extends Component {
             ) : (
               <Link href="/user/console">
                 <a className="navigation__navbar-btn">
-                <button>Connexion</button>
+                <button>Espace VIP</button>
                 </a>
               </Link>
             )}
           
             <Link href="/user/auth">
               <a className="navigation__navbar-btn">
-                <button>Connexion</button>
-                <button>Publier votre bien</button>
+                <button>Proposez une vente</button>
               </a>
             </Link>
           </nav>

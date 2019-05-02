@@ -4,13 +4,15 @@
   font-family: "Roboto Condensed","Noto Sans Condensed","Noto Sans JP","Noto Sans KR","Noto Sans SC Sliced",sans-serif;
   //position: relative;
   //width: 100%;
-
+  //@include navbarGap;
   // added
     overflow-x: hidden;
     height: 100vh;
     background-size: cover;
     background-position: center;
     transition: 2.5s;
+    //opacity: 0.9;
+    position: relative;
   // added
 
   &__form {

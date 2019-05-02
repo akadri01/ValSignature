@@ -2,12 +2,15 @@
     //display: none;
     justify-content: space-between;
     width: 1400px;
-    margin: 100px auto 0;
+    margin: 0px auto 0;
+    margin-bottom: 100px auto 0;
     
     height: 200px;
     filter: brightness(90%);
     @include desktopSmall {
       display: flex;
+      height: 200px;
+      margin-bottom: 100px auto 0;
     }
     &__tab1 {
       cursor: pointer;

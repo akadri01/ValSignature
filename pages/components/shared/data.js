@@ -20,14 +20,14 @@ export const typeLinks = [
 ];
 
 export const seoLinks = [
-  "Acheter maison à Paris",
-  "Acheter appartement à Paris",
-  "Acheter surfaces diverses à Paris",
-  "Acheter loft à Paris",
-  "Achter bureau à Paris",
-  "Acheter locaux commerciaux à Paris",
-  "Acheter parking à Paris",
-  "Investisser à Paris"
+  "Acheter une maison à Paris",
+  "Acheter un appartement à Paris",
+  "Acheter des surfaces diverses à Paris",
+  "Acheter un loft à Paris",
+  "Achter un bureau à Paris",
+  "Acheter des locaux commerciaux à Paris",
+  "Acheter un parking à Paris",
+  "Investir à Paris"
 ];
 
 export const premisesTypeSelectField = [

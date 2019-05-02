@@ -30,8 +30,8 @@
         width: 450px;
         margin-top: 120px;
         @include desktopSmall {
-          // margin-top: 80px;
-          //width: 400px;
+           margin-top: 80px;
+          width: 400px;
           //positition:fixed;
         }
       }
@@ -53,18 +53,30 @@
   }
   &__navbar {
     background-color: #11ffee00;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    display: none;
+    //padding-top: -30px;
+    //padding-bottom: -300px;
+    margin-top: 0;
+    position : absolute;
+    margin-left: 10px;
+    overflow: hidden;
+    //position:relative;
+    float:right;
+    //float: left;
+   // z-index:99999;
+    //display: none;
     @include desktopSmall {
-      //display: block;
+      display: block;
+      margin-left: 980px;
+      //float:left;
+      overflow: hidden;
+      padding-bottom: -300px;
       //display:inline;
-      position : sticky;
-      padding: 100;
-      margin-top: 300px;
-      width: 620px;
+      //position : sticky;
+      //padding: 100;
+      //margin-top: -80px;
+      width: 390px;
       //display: flex;
-      justify-content: space-between;
+      //justify-content: space-between;
     }
   
     .links,
@@ -73,10 +85,10 @@
       display: block;
       text-transform: uppercase;
       font-size: $font-size-small;
-      letter-spacing: 0.9px;
+      letter-spacing: 0px;
       font-weight: 900;
       font-family: $font-family-title;
-      padding: 10px 0;
+      padding: 2px 0;
       //margin-bottom: 15px;
       color: black;
       //@include hoverGreen;
@@ -107,7 +119,7 @@
         }
         &-items {
           width: 47%;
-          h2 {
+          h2 { 
             font-weight: 900;
             text-transform: uppercase;
             font-size: $font-size-xlarge;

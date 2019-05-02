@@ -6,7 +6,7 @@ export default () => {
         <Link href="/user/console">
           <a className="txt-carous">
             <h2>Publier des biens</h2>
-            <p>Post an add to sell or rent your property!</p>
+            <p>LALALALALALALALAALALKAZLAKZE</p>
           </a>
         </Link>
       </section>
