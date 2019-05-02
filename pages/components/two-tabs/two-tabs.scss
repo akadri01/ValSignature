@@ -17,8 +17,8 @@
       display: block;
       padding: 23px 12px;
       font-size: 14px;
-      color: black;
-      background-image: url("/static/images/photos/tab1.jpeg");
+      color: white;
+      background-image: url("/static/images/photos/tab1.jpg");
       text-align: center;
       
       transition: 0.8s $transition;
@@ -33,7 +33,7 @@
       &:hover > p {
         display: block;
         background: none;
-        color:black;
+        color:white;
         //color:white;
         text-decoration: underline white;
       }

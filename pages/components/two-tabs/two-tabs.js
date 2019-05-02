@@ -1,9 +1,13 @@
 import Link from "next/link";
 
-export default () => {
-  return (
+export default () => (
+  
+  
+    
     <section className="twoTabs">
- 
+
+    
+
       <Link href="/properties?advert_type=sale">
         <a className="twoTabs__tab1">
         <h2>--</h2>
@@ -32,5 +36,5 @@ export default () => {
         </a>
       </Link>
     </section>
-  );
-};
+  
+);

@@ -22,9 +22,11 @@ export const typeLinks = [
 export const seoLinks = [
   "Acheter maison à Paris",
   "Acheter appartement à Paris",
-  "Acheter magasin à Paris",
-  "Acheter Bureau à Paris",
-  "Achter des biens à Paris",
+  "Acheter surfaces diverses à Paris",
+  "Acheter loft à Paris",
+  "Achter bureau à Paris",
+  "Acheter locaux commerciaux à Paris",
+  "Acheter parking à Paris",
   "Investisser à Paris"
 ];
 

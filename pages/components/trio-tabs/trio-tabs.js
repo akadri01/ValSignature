@@ -16,8 +16,9 @@ export default class TrioTabs extends Component {
   render() {
     return (
       <section className="trio" style={{backgroundImage: `url(/static/images/photos/${images[this.state.counter]})`}}>
-       <p> TEST SLIDE </p>
-      </section> 
+       <p>  </p>
+      </section>
+       
     )
   }
   componentDidMount() {
@@ -27,5 +28,6 @@ export default class TrioTabs extends Component {
       }));
     },this.state.sliderTimer)
   }
+  
 } 
 

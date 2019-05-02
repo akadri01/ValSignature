@@ -115,6 +115,7 @@ export default () => (
       
       <h1>Biens de prestige, maisons, appartements, surfaces diverses, lofts, bureaux, locaux commerciaux,  parking</h1>
       <h1 />
+      <hr /> 
       <hz></hz>
       
       <p />

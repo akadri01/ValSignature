@@ -44,7 +44,7 @@ export default () => (
               <img src="/static/images/icons/icon-small.png" alt="Icon" />
             </p>
             <form>
-              <label>Faites-estimer votre bien</label>
+              <label>Faites estimer votre bien</label>
               <label type="number" placeholder=" Faites-estimer votre bien" />
               <Link href="/user/auth">
                 <a>
@@ -65,19 +65,19 @@ export default () => (
         />
         <div className="footer-end__links">
           <Link href="/contact-us">
-            <a>Contact us</a>
+            <a>Contactez-nous</a>
           </Link>
           <Link href="/faq">
             <a>FAQ</a>
           </Link>
           <Link href="/about-us">
-            <a>About us</a>
+            <a>Qui sommes-nous?</a>
           </Link>
           <Link href="/terms">
-            <a>Terms & conditions</a>
+            <a>Conditions d'utilisation</a>
           </Link>
           <Link href="/privacy-policy">
-            <a>Privacy policy</a>
+            <a>Politique de confidentialité</a>
           </Link>
         </div>
       </div>
