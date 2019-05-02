@@ -49,14 +49,14 @@ class Navigation extends Component {
             ) : (
               <Link href="/user/console">
                 <a className="navigation__navbar-btn">
-                <button>Espace VIP</button>
+                <button>Espace Client</button>
                 </a>
               </Link>
             )}
           
             <Link href="/user/auth">
               <a className="navigation__navbar-btn">
-                <button>Proposez une vente</button>
+                <button>Proposez votre bien</button>
               </a>
             </Link>
           </nav>

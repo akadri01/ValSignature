@@ -52,7 +52,7 @@
     }
   }
   &__navbar {
-    background-color: #11ffee00;
+    //background-color: #11ffee00;
     //padding-top: -30px;
     //padding-bottom: -300px;
     margin-top: 0;
@@ -89,11 +89,14 @@
       font-weight: 900;
       font-family: $font-family-title;
       padding: 2px 0;
+      //background-color: #4CAF50;
       //margin-bottom: 15px;
-      color: black;
+      color:  white;
+      text-size-adjust: auto;
       //@include hoverGreen;
       @include desktopSmall {
         margin-top: 15px;
+        background-color: black;
       }
     }
     &-location {
@@ -145,9 +148,10 @@
         padding: 10px 20px;
         display: block;
         float:left;
-        border: 2px solid $color-green;
-        background: transparent;
-        margin : 10px;
+        border: 3px solid gray;
+        background: $color-green;
+        margin : 7px;
+        text-size-adjust: auto;
         @include desktopSmall {
           transform: translateY(3px);
         }

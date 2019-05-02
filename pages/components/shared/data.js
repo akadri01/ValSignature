@@ -24,7 +24,7 @@ export const seoLinks = [
   "Acheter un appartement à Paris",
   "Acheter des surfaces diverses à Paris",
   "Acheter un loft à Paris",
-  "Achter un bureau à Paris",
+  "Acheter un bureau à Paris",
   "Acheter des locaux commerciaux à Paris",
   "Acheter un parking à Paris",
   "Investir à Paris"

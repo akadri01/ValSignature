@@ -16,40 +16,37 @@ export default class TrioTabs extends Component {
   render() {
     return (
       <section className="trio" style={{backgroundImage: `url(/static/images/photos/${images[this.state.counter]})`}}>
-       <h1>Test Slider</h1>
+      
 
        <div id="slider">
       <div class="container">
         <div class="slide">
-          <h3>Slide 1</h3>
+        
+          <h3>«Parce que votre temps est précieux, sollicitez le chasseur virtuel,</h3>
           <p>
-            test 1
+          Alors détendez-vous, il chasse pour vous»
           </p>
+          
         </div>
         <div class="slide">
-          <h3>Slide 2</h3>
+         
+          <h3>«Parce qu’un investissement immobilier est un engagement à long terme, </h3>
           <p>
-            test2
+          Profitez de notre expertise pour faire les bons choix »
           </p>
+          
         </div>
         <div class="slide">
-          <h3>Slide 3</h3>
+        <center>
+          <h3>«Difficile de vous projeter à partir d’un plan, </h3>
           <p>
-            test3
+          Visitez votre futur logement ou investissement en immersion »
           </p>
+          </center>
         </div>
-        <div class="slide">
-          <h3>Slide 4</h3>
-          <p>
-            test4
-          </p>
-        </div>
-        <div class="slide">
-          <h3>Slide 5</h3>
-          <p>
-            test5
-          </p>
-        </div>
+        
+       
+        
       </div>
     </div>
   
