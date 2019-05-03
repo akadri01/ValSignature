@@ -38,9 +38,9 @@ export default class TrioTabs extends Component {
         </div>
         <div class="slide">
         <center>
-          <h3>Difficile de vous projeter à partir d’un plan? Découvrez votre futur logement </h3>
+          <h3>Difficile de vous projeter? Découvrez votre futur logement grâce à la réalité virtuelle </h3>
           <p>
-          Grâce à la réalité virtuelle, découvrez une expérience immersive comme si vous y étiez
+          Une expérience immersive comme si vous y étiez
           </p>
           </center>
         </div>
