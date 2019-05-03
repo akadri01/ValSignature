@@ -63,6 +63,7 @@
     "react-dom": "^16.8.3",
     "react-facebook-login": "^4.1.1",
     "react-google-invisible-recaptcha": "^0.2.11",
+    "react-google-location": "^1.2.2",
     "react-image-gallery": "^0.8.16",
     "react-load-script": "0.0.6",
     "react-redux": "^6.0.1",
