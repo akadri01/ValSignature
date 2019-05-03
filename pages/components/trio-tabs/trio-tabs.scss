@@ -11,23 +11,26 @@
     transition: 2.5s;
   /* [SLIDER] */
 #slider,  #slider .slide{
-  margin-right:100px;
-  width: 1000px;
-  height: 350px;
+  margin-right:80px;
+  //top:100px;
+  width: 900px;
+  height: 280px;
   //top:200px;
 }
 #slider {
   overflow: hidden;
-  margin: 180px auto;
+  //position : absolute;
+  margin: 206px auto;
   font-size: 1.2em;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.7);
+  font-family: "Roboto Slab","Noto Sans","Noto Sans JP","Noto Sans KR","Noto Sans SC Sliced",serif;
 }
 #slider .container {
   position: relative;
   width: 9000px; /* Assign an insanely large width */
   top: 10px;
   right: 0;
-  animation: slide-animation 20s infinite;
+  animation: slide-animation 30s infinite;
 }
 #slider .slide {
   position: relative;
@@ -48,10 +51,10 @@
   }
   40% { right: 110%; }
   60% { right: 110%; }
-  80% { right: 210%;
+  80% { right: 215%;
     opacity: 1;
    }
-  100% { right: 210%; 
+  100% { right: 215%; 
     opacity: 0;
    }
 
@@ -65,7 +68,7 @@ h1 {
 h3 {
         
   text-align: center;
-  color:#ff4800;
+  color:white;
   position: absolute;
   top: 10%;
   //left: 20%;

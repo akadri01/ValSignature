@@ -49,7 +49,7 @@ class Navigation extends Component {
             ) : (
               <Link href="/user/console">
                 <a className="navigation__navbar-btn">
-                <button>Espace Client</button>
+                <button>Espace VIP</button>
                 </a>
               </Link>
             )}
