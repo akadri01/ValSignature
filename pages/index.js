@@ -11,7 +11,6 @@ import TwoTabs from "./components/two-tabs/two-tabs";
 import RecentAds from "./components/recent-ads/recent-ads";
 import YourEmptyComponent from './components/txt-carous/txt-carous';
 import Txt from './components/text-up/text-up';
-//import ggComp from './components/ggComp/ggComponent';
 
 const Index = () => (
   <Fragment>
