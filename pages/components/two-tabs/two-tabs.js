@@ -24,13 +24,13 @@ export default () => (
         </a>
       </Link>
       <Link href="/properties?advert_type=rent">
-        <a className="twoTabs__tab3">
+        <div className="twoTabs__tab3"> 
         
             
           <h2>Confiez-nous la vente de vos biens !</h2>
           <h3>Simple et rapide profitez d’une estimation gratuite. Tout mandat exclusif vous donne accès à des services dédiés : plans 3D, photos professionnelles, visites virtuelles.</h3>
           <p>FAITES ESTIMER VOTRE BIEN MAINTENANT</p>
-        </a>
+        </div>
       </Link>
     </section>
   

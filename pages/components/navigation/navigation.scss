@@ -89,12 +89,14 @@
       font-weight: 900;
       font-family: $font-family-title;
       padding: 2px 0;
+     
       //background-color: #4CAF50;
       //margin-bottom: 15px;
       color:  white;
       text-size-adjust: auto;
       //@include hoverGreen;
       @include desktopSmall {
+        
         margin-top: 15px;
         background-color: black;
       }
@@ -152,8 +154,10 @@
         background: rgba(255, 255, 255, .0);
         margin : 2px;
         text-size-adjust: auto;
+        mix-blend-mode: exclusion;
         @include desktopSmall {
           transform: translateY(3px);
+          mix-blend-mode: exclusion;
         }
       }
       button:hover {
