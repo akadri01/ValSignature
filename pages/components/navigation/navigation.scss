@@ -84,16 +84,16 @@
     button {
       display: block;
       text-transform: uppercase;
-      font-size: $font-size-medium;
+      font-size: $font-size-large;
       letter-spacing: 0px;
-      font-weight: 900;
+      font-weight: 1000;
       font-family: $font-family-title;
       padding: 2px 0;
      
       //background-color: #4CAF50;
       //margin-bottom: 15px;
-      color:  white;
-      text-size-adjust: auto;
+      color: rgb(64,65,64);
+      //text-size-adjust: auto;
       //@include hoverGreen;
       @include desktopSmall {
         

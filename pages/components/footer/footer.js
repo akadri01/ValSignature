@@ -44,11 +44,9 @@ export default () => (
               <img src="/static/images/icons/icon-small.png" alt="Icon" />
             </p>
             <form>
-              <label>Faites estimer votre bien</label>
-              <label type="number" placeholder=" Faites-estimer votre bien" />
               <Link href="/user/auth">
                 <a>
-                  <button type="button">Connexion</button>
+                  <button type="button">Faites estimer votre bien</button>
                 </a>
               </Link>
             </form>

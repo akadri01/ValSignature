@@ -1,5 +1,6 @@
 import {Component} from 'react';
 import SearchForm from "./_search-form.js";
+//import Algolia from "./algolia.js";
 
 
 const images = [
@@ -26,6 +27,7 @@ export default class banner extends Component {
       <section className="banner" style={{backgroundImage: `url(/static/images/photos/${images[this.state.counter]})`}}>
         
         <SearchForm />
+       
       </section> 
     )
   }
