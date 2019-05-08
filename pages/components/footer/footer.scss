@@ -91,16 +91,16 @@
         a {
           float: left;
           button {
-            font-size: $font-size-tiny;
+            font-size: $font-size-medium;
             line-height: $font-size-medium;
             text-transform: uppercase;
-            font-weight: 900;
+            //font-weight: 900;
             border: none;
             color: white;
             font-family: $font-family-body;
             height: 39px;
             background: $color-green;
-            width: 150px;
+            width: 180px;
           }
         }
       }

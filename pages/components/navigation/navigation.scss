@@ -92,7 +92,7 @@
      
       //background-color: #4CAF50;
       //margin-bottom: 15px;
-      color: rgb(64,65,64);
+      color: #D73B10;
       //text-size-adjust: auto;
       //@include hoverGreen;
       @include desktopSmall {
@@ -166,7 +166,7 @@
         display: block;
         float:left;
         border: none;
-        background: $color-green;
+        background:rgba(40, 40, 40, 0.8);
         opacity: 1;
         margin : 2px;
         text-size-adjust: auto;
