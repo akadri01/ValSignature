@@ -4,7 +4,7 @@ import isPlural from "../../helpers/isPlural.js";
 export default ({ searchResultsQty, notFoundStr }) => (
   <h1 className="listing--title">
     {searchResultsQty == 0 ? (
-      `No results to show ( ${notFoundStr} )`
+      `Aucun résultat pour ces critères de recherche ( ${notFoundStr} )`
     ) : (
       <Fragment>
         {searchResultsQty} {isPlural(searchResultsQty, "Property", "ies")} to

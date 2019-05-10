@@ -17,23 +17,134 @@
     width: 240px;
   }
   &__filter {
+    &__form {
+     
+      background: rgba(40, 40, 40, 0.8);
+      width: 560px;
+      padding: 15px;
+      //position:relative;
+      //left:50%;
+      //top:95%;
+      transform: translate(20%, 35%);
+      //
+      //background-color: transparent;
+      text-align: center;
+      //border: $gray-border;
+      display: block;
+      //width: 150px;
+      //height: 44px;
+      //text-transform: uppercase;
+      //font-size: $font-size-small;
+      //margin-left: calc(50% - 50px);
+      
+      @include tablet {
+        top: 190px;
+      }
+      @include desktopSmall {
+        
+        display: flex;
+        width: 900px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 8px;
+        position :flex;
+      }
+      @include desktopMedium {
+        top: 170px; 
+      }
+      @include desktopLarge {
+        top: 190px;
+      }
+      @include desktopMega {
+        top: 260px;
+      }
+      h2 {
+        @include showTextShadow;
+        font-size: $font-size-large;
+        text-align: center;
+        @include desktopSmall {
+          width: 100%;
+          font-size: $font-size-mega;
+        }
+        @include desktopMedium {
+          font-size: calculateRem(30px);
+          letter-spacing: 1.2px;
+        }
+        
+      }
+      
+      select {
+        height: 43px;
+        background: white;
+        width: 10%px;
+        border: 0px solid #bd0021;
+        color: #585858;
+        font-size: $font-size-large;
+        text-indent: 14px;
+        //width: 80%;
+        margin-left: 10%;
+        @include desktopSmall {
+          //padding-left: 20px;
+          height: 50px;
+          margin-left: 0;
+          width: 17%;
+          //@include backgroundIcon("down-arrow.svg", 20px, 120px center);
+          -webkit-appearance: none;
+          appearance: none;
+          
+        }
+      }
+      
+      input  {
+        //padding: 16px;
+        border: 0px solid #bd0021;
+        width: 32.7% ;
+        //margin-left: 10%;
+        font-size: $font-size-large;
+      }
+      
+      button {
+        font-family: "Roboto Condensed","Noto Sans Condensed","Noto Sans JP","Noto Sans KR","Noto Sans SC Sliced",sans-serif;
+        width: 80%;
+        height: 42px;
+        margin-left: 10%;
+        background-color: #D73B10;
+        //outline: 1px solid #D73B10;
+        color: white;
+        font-weight: 900;
+        border: none;
+        font-size: $font-size-large;
+        letter-spacing: 0.1px;
+        //padding-top: 3px;
+        text-transform: uppercase;
+        @include desktopSmall {
+          height: 50px;
+          width: 17%;
+          margin-left: 0;
+        }
+      }
+    }
     &--expose-filter-btn {
-      @include backgroundIcon("controls.svg", 24px, 5px 10px);
-      background-color: transparent;
-      text-align: right;
+      //@include backgroundIcon("controls.svg", 24px, 5px 10px);
+      font-family: "Roboto Condensed","Noto Sans Condensed","Noto Sans JP","Noto Sans KR","Noto Sans SC Sliced",sans-serif;
+      background-color: gray;
+      text-align: center;
       border: $gray-border;
       display: block;
-      width: 80px;
-      height: 44px;
+      width: 150px;
+      height: 42px;
       text-transform: uppercase;
       font-size: $font-size-small;
-      margin-left: calc(100% - 80px);
+      margin-top: calc(5% - 90px);
+      margin-left: calc(95% - 90px);
+      font-weight: 900;
+      color: #D73B10;
       &:hover {
         border-color: $color-green;
       }
     }
     &-form {
-      height: 0;
+      height: 40;
       opacity: 0;
       transition: height 0.3s $transition, opacity 0.4s $transition 0.1s;
       overflow: hidden;
@@ -46,19 +157,19 @@
       }
       .redux-input-container {
         width: 49%;
+        
         @include desktopSmall {
           margin-bottom: 0;
           width: 16.5%;
         }
       }
       &-btn {
-        width: 49% !important;
+        width: 80% ;
         margin-top: 26px;
-        background: url("/static/images/icons/right-fat-arrow-white.svg")
-          $color-yellow no-repeat 16% center !important;
-        background-size: 18px !important;
-        font-size: $font-size-medium !important;
-        height: 33px !important;
+        background: $color-green no-repeat 16% center ;
+        background-size: 18px ;
+        font-size: $font-size-medium ;
+        height: 160px ;
         @include desktopSmall {
           width: 13% !important;
         }
@@ -78,7 +189,7 @@
     }
     select {
       width: 196px;
-      height: 27px;
+      height: 60px;
       padding-top: 2px;
       padding-bottom: 2px;
       background: transparent;
@@ -97,12 +208,13 @@
     &-item {
       display: block;
       margin-bottom: 30px;
-      position: relative;
+      margin-top: 50%;
+     position: relative;
       @include tablet {
         display: flex;
         border-bottom: $gray-border;
         border-top: $gray-border;
-        margin-bottom: 10px;
+        margin-bottom: 62px;
         &:hover {
           border-bottom: 1px solid $color-yellow;
           border-top: 1px solid $color-yellow;

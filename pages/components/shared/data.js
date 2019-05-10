@@ -32,12 +32,13 @@ export const seoLinks = [
 
 export const premisesTypeSelectField = [
   { value: "", text: "Select premises type" },
-  { value: "house", text: "House" },
-  { value: "flat", text: "Flat" },
-  { value: "shop", text: "Shop" },
-  { value: "office", text: "Office" },
-  { value: "land", text: "Land" },
-  { value: "building", text: "Building" }
+  { value: "house", text: "Maison" },
+  { value: "flat", text: "Appartement" },
+  { value: "shop", text: "Parking" },
+  { value: "office", text: "Bureau" },
+  { value: "land", text: "Terrain" },
+  { value: "building", text: "Local Commercial" },
+  { value: "surface", text: "Surfaces diverses" }
 ];
 
 export const purposeSelectField = [
