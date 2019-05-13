@@ -99,6 +99,19 @@ export default () => {
                     <label for="scales"></label>                 
         </div>
 
+        <div className="redux-input-container">
+                    <label>Nombre de balcons minimum:</label>
+                    <input name="advert_type" placeholder="minimum" type="number" min="1" max="10"/> 
+        </div>
+        <div className="redux-input-container">
+                    <label>Nombre de parkings minimum:</label>
+                    <input name="advert_type" placeholder="minimum" type="number" min="1" max="10"/> 
+        </div>
+        <div className="redux-input-container">
+                    <label>Nombre de caves minimum:</label>
+                    <input name="advert_type" placeholder="minimum" type="number" min="1" max="10"/> 
+        </div>
+
         
         <button className="listing__filter-form-btn">Recherche avancée</button>
       </form>
