@@ -4,10 +4,10 @@ import { popupWindow } from "../helpers/popup";
 // File input
 export class RenderFileInput extends Component {
   approveFileUpload = files => {
-    if (files.length < 15) {
+    if (files.length > 15) {
       return {
         status: false,
-        msg: "Minimum 15 images."
+        msg: "Max 15 images."
       };
     }
     for (let i = 0; i < files.length; i++) {
