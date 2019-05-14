@@ -1,3 +1,19 @@
+body{ background-color: gray;}
+
+.nav {
+  //overflow: visible;
+  background-color:  rgba(40, 40, 40, 1);
+  margin-top : 50px;
+  width: 102vw;
+  left: 50%;
+  transform: translateX(-7%  );
+  //transform: translateY(-58% );
+  //position:fixed;
+  //top:0;
+  right:0;
+
+  //overflow-y: hidden;
+}
 
 .listing {
   
@@ -22,9 +38,9 @@
     &__form {
      
       background: rgba(40, 40, 40, 0.8);
-      width: 560px;
+      width: 660px;
       padding: 15px;
-      //position:relative;
+      //position:flex;
       //left:50%;
       //top:95%;
       transform: translate(20%, 35%);
@@ -32,12 +48,12 @@
       //background-color: transparent;
       text-align: center;
       //border: $gray-border;
-      display: block;
+      //display: block;
       //width: 150px;
       //height: 44px;
       //text-transform: uppercase;
       //font-size: $font-size-small;
-      //margin-left: calc(50% - 50px);
+      margin-left: calc(0% - 50px);
       
       @include tablet {
         top: 190px;
@@ -45,9 +61,11 @@
       @include desktopSmall {
         
         display: flex;
-        width: 900px;
+        width: 1000px;
         flex-wrap: wrap;
         justify-content: space-between;
+        //padding-right: 100px;
+        //padding-left: 100px;
         padding: 8px;
         position :flex;
       }
@@ -89,7 +107,7 @@
           //padding-left: 20px;
           height: 50px;
           margin-left: 0;
-          width: 17%;
+          width: 13%;
           //@include backgroundIcon("down-arrow.svg", 20px, 120px center);
           -webkit-appearance: none;
           appearance: none;
@@ -100,9 +118,21 @@
       input  {
         //padding: 16px;
         border: 0px solid #bd0021;
-        width: 32.7% ;
+        width: 18.7% ;
+        
         //margin-left: 10%;
         font-size: $font-size-large;
+      }
+
+      input[type=number]::-webkit-inner-spin-button, 
+      input[type=number]::-webkit-outer-spin-button { 
+        -webkit-appearance: none; 
+         margin: 0; 
+      }
+
+      /* For Firefox */
+      input[type='number'] {
+        -moz-appearance:textfield;
       }
       
       button {
@@ -129,20 +159,21 @@
     &--expose-filter-btn {
       //@include backgroundIcon("controls.svg", 24px, 5px 10px);
       font-family: "Roboto Condensed","Noto Sans Condensed","Noto Sans JP","Noto Sans KR","Noto Sans SC Sliced",sans-serif;
-      background-color: gray;
+      background-color: transparent;
       text-align: center;
-      border: $gray-border;
+      border: transparent;
       display: block;
       width: 150px;
       height: 42px;
       text-transform: uppercase;
-      font-size: $font-size-small;
-      margin-top: calc(5% - 90px);
-      margin-left: calc(95% - 90px);
+      font-size: $font-size-large;
+      margin-top: calc(4% - 90px);
+      margin-left: calc(88% - 90px);
       font-weight: 900;
-      color: #D73B10;
+      color: white;
       &:hover {
-        border-color: $color-green;
+        border-color: transparent;
+        text-decoration: underline; 
       }
     }
     &-form {
@@ -169,13 +200,17 @@
       }
       &-btn {
         width: 80% ;
-        margin-top: 26px;
+        margin-top: 20px;
         background: $color-green no-repeat 16% center ;
-        background-size: 18px ;
-        font-size: $font-size-medium ;
-        height: 160px ;
+        background-size: 80px ;
+        font-size: $font-size-large ;
+        height:20%;
         @include desktopSmall {
-          width: 13% !important;
+          width: 16% !important;
+          //background-size: 80px ;
+          //height: 380px ;
+          //height:20%;
+          
         }
       }
     }
@@ -220,8 +255,8 @@
         border-top: $gray-border;
         margin-bottom: 62px;
         &:hover {
-          border-bottom: 1px solid $color-yellow;
-          border-top: 1px solid $color-yellow;
+          border-bottom: 1px solid $color-red;
+          border-top: 1px solid $color-red;
         }
       }
       @include desktopSmall {
@@ -321,4 +356,5 @@
       }
     }
   }
+
 }

@@ -1,7 +1,7 @@
 %redux-form-borders {
   border: $gray-border;
   &:hover {
-    border-color: $color-yellow;
+    //border-color: $color-yellow;
   }
 }
 
@@ -64,20 +64,32 @@
     width: 100%;
   }
   select {
-    font-size: $font-size-medium;
-    padding-left: 28px;
-    @include backgroundIcon("list.svg", 13px, 12px center);
-    @extend %redux-form-borders;
-    height: 33px;
-    width: 100%;
-    background-color: transparent;
+    height: 43px;
+    background: white;
+    width: 33%;
+    border: 0px solid #bd0021;
+    color: #585858;
+    font-size: $font-size-large;
+    text-indent: 14px;
+    //width: 80%;
+    margin-left: 10%;
+    @include desktopSmall {
+      //padding-left: 20px;
+      height: 50px;
+      margin-left: 0;
+      width: 169%;
+      //@include backgroundIcon("down-arrow.svg", 20px, 120px center);
+      -webkit-appearance: none;
+      appearance: none;
+      
+    }
   }
   label {
     font-family: $font-family-title;
-    font-size: $font-size-medium;
+    font-size: $font-size-large;
     color: $color-green;
     display: block;
-    margin: 7px 0 2px;
+    margin: 20px 0 2px;
   }
   .redux-input-container {
     height: 45px;
@@ -123,7 +135,7 @@
     display: inline-block;
     background: $color-green;
     width: 200px;
-    height: 40px;
+    height: 50px;
     border: none;
     text-transform: uppercase;
     font-weight: 900;
