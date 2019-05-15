@@ -11,7 +11,7 @@ import TwoTabs from "./components/two-tabs/two-tabs";
 import RecentAds from "./components/recent-ads/recent-ads";
 import YourEmptyComponent from './components/txt-carous/txt-carous';
 import Txt from './components/text-up/text-up';
-
+import Angolia from "./components/banner/algolia";
 const Index = () => (
   <Fragment>
     <Head>
@@ -20,6 +20,7 @@ const Index = () => (
     </Head>
     <Navigation />
     <Banner />
+    <Angolia />
     <TownNavigation />
     <BuySellRentTabs />
     <Txt />

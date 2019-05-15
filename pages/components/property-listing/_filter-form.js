@@ -12,26 +12,28 @@ export default () => {
             <form className="listing__filter__form" id="searchForm" onSubmit={searchFormSubmit}>
               
               <select name="saleorrent">
-                  <option value="sale">HABITER</option>
-                  <option value="rent">INVESTIR</option>
+                  <option value="sale">Habiter</option>
+                  <option value="rent">Investir</option>
               </select>
 
               
 
-              <input type="search" id="address-input" placeholder="         PARIS" />
+              <input type="search" id="address-input" placeholder="         Localité" />
             
               <select name="premises_type">
-              <option value="house" selected>
-              MAISON
+              <option value="Maison" selected>
+              Type de Biens
             </option>
-            <option value="flat">APPARTEMENT</option>
-            <option value="office">LOFT</option>
-            <option value="land">BIENS DE PRESTIGE</option>
+            <option value="flat">Maison</option>
+            <option value="flat">Appartement</option>
+            <option value="office">Loft</option>
+            <option value="land">Biens de prestige</option>
+            <option value="land">Surfaces diverses</option>
               </select>
 
-              <input type="number" id="Prix" min="1" step="1000" placeholder="     BUDGET MAX" />
+              <input type="number" id="Prix" min="1" step="1000" placeholder="     Budget Max" />
 
-              <input name="advert_type" placeholder=" SURFACE MINIMALE EN M²" type="number" min="20" max="1000"/> 
+              <input name="advert_type" placeholder=" Surface en m²" type="number" min="20" max="1000"/> 
 
 
               <button type="submit">RECHERCHE CLASSIQUE</button>
@@ -40,16 +42,6 @@ export default () => {
 
 
             </form>
-      <button
-        className="listing__filter--expose-filter-btn"
-        onClick={() => {
-          document
-            .getElementById("filterForm")
-            .classList.toggle("display-filter-options");
-        }}
-      >
-        Chasseur virtuel
-      </button>
       <form
         className="listing__filter-form default-redux-form"
         id="filterForm"
@@ -59,7 +51,7 @@ export default () => {
           <label></label>
           <select name="premises_type">
             <option value="house" selected>
-            CRITERES PRIORITAIRES
+            Critères prioritaires
             </option>
             <option value="flat">TEST 2</option>
             <option value="office">TEST 3</option>
@@ -74,7 +66,7 @@ export default () => {
           <label></label>
           <select name="premises_type">
             <option value="house" selected>
-            CRITERES FACULTATIFS
+            Critères facultatifs
             </option>
             <option value="flat">TEST 2</option>
             <option value="office">TEST 3</option>
@@ -89,7 +81,7 @@ export default () => {
           <label></label>
           <select name="premises_type">
             <option value="house" selected>
-            CRITERES REDHIBITOIRES
+            Critères rédhibitoires
             </option>
             <option value="flat">TEST 2</option>
             <option value="office">TEST 3</option>
@@ -100,10 +92,10 @@ export default () => {
           </select>
         </div>
     
-    <button className="listing__filter-form-btn">Recherche avancée</button>
+        <button className="listing__filter-form-btn">Chasseur virtuel</button>
+        
     </form>
     </section>
     </div>
-    
-  );
-};
+     );
+    };

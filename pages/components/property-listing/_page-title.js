@@ -7,8 +7,7 @@ export default ({ searchResultsQty, notFoundStr }) => (
       `Aucun résultat pour ces critères de recherche ( ${notFoundStr} )`
     ) : (
       <Fragment>
-        {searchResultsQty} {isPlural(searchResultsQty, "Property", "ies")} to
-        view
+        {searchResultsQty} {isPlural(searchResultsQty, "Resultat", "s")} trouvé(s)
       </Fragment>
     )}
   </h1>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { searchFormSubmit } from "../../helpers/form-handles.js";
+import Angolia from "./algolia";
 
 
 

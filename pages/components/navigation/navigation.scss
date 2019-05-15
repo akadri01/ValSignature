@@ -89,16 +89,17 @@
       font-weight: 1000;
       font-family: $font-family-title;
       padding: 2px 0;
+      //width : 50%;
      
       //background-color: #4CAF50;
       //margin-bottom: 15px;
       color: #D73B10;
-      //text-size-adjust: auto;
+      //text-size-adjust: 2px;
       //@include hoverGreen;
       @include desktopSmall {
         
         margin-top: 15px;
-        background-color: black;
+        background-color: transparent;
       }
     }
     &-location {

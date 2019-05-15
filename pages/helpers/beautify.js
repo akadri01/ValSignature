@@ -1,7 +1,7 @@
 
 
 export function beautifyPrice(price) {
-  price = price + " €";
+  price = "€ " + price  ;
   return price.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 }
 

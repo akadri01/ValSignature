@@ -78,7 +78,7 @@ export default ({ searchResultsQty, searchQuery }) => {
         <p className="pagination-bar--results">
           <b>{totalPageQty}</b> {isPlural(totalPageQty, "page")} and{" "}
           <b>{searchResultsQty}</b>{" "}
-          {isPlural(searchResultsQty, "property", "ies")} to view
+          {isPlural(searchResultsQty, "resultat", "s")} trouvés
         </p>
       )}
     </section>

@@ -11,7 +11,7 @@ export const towns = [
 ];
 
 export const typeLinks = [
-  "house",
+  "Maison",
   "flat",
   "shop",
   "office",
@@ -32,7 +32,7 @@ export const seoLinks = [
 
 export const premisesTypeSelectField = [
   { value: "", text: "Select premises type" },
-  { value: "house", text: "Maison" },
+  { value: "Maison", text: "Maison" },
   { value: "flat", text: "Appartement" },
   { value: "shop", text: "Parking" },
   { value: "office", text: "Bureau" },

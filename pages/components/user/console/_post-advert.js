@@ -260,7 +260,7 @@ class PostAdvert extends Component {
             <div className="desktop-flex">
               <Field
                 name="price"
-                label=" Price (GH₵)"
+                label=" Price (€)"
                 placeholder=" e.g. 85000"
                 type="number"
                 component={renderFormInput}
@@ -270,7 +270,7 @@ class PostAdvert extends Component {
             <div className="desktop-flex">
               <Field
                 name="area"
-                label=" Area of the premises (m2)"
+                label=" Area of the premises (m²)"
                 placeholder=" e.g. 130"
                 type="number"
                 component={renderFormInput}

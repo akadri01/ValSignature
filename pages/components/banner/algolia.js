@@ -1,47 +1,46 @@
-import React from 'react';
-import AlgoliaPlaces from 'algolia-places-react';
+import {Component} from 'react';
+import Link from "next/link";
+//import {ALGOLIA_API_KEY,ALGOLIA_APP_ID} from '../config/development.js';
+import {InstantSearch, SearchBox, Hits, Highlight,Stats} from 'react-instantsearch/dom';
 
 
 
- 
-class MyAlgolia {
-  render() {
-    return( 
-    <AlgoliaPlaces
-      placeholder='Write an address here'
- 
-      options={{
-        appId: 'my-app-id',
-        apiKey: 'sharing-is-caring',
-        language: 'fr',
-        countries: ['fr'],
-        type: 'city',
-        // Other options from https://community.algolia.com/places/documentation.html#options
-      }}
- 
-      onChange={({ query, rawAnswer, suggestion, suggestionIndex }) => 
-        console.log('Fired when suggestion selected in the dropdown or hint was validated.')}
- 
-      onSuggestions={({ rawAnswer, query, suggestions }) => 
-        console.log('Fired when dropdown receives suggestions. You will receive the array of suggestions that are displayed.')}
- 
-      onCursorChanged={({ rawAnswer, query, suggestion, suggestonIndex }) => 
-        console.log('Fired when arrows keys are used to navigate suggestions.')}
- 
-      onClear={() => 
-        console.log('Fired when the input is cleared.')}
- 
-      onLimit={({ message }) => 
-        console.log('Fired when you reached your current rate limit.')}
- 
-      onError={({ message }) => 
-        console.log('Fired when we could not make the request to Algolia Places servers for any reason but reaching your rate limit.')}
-    />
-  );  
-}
-componentWillMount() {
-  if (typeof window !== 'undefined') {
-      console.log('window.innerHeight', window.innerHeight);
+const Hit = ({hit}) => 
+    <div className="searched">
+      <Link href={`/properties/latest?${hit.type}=${hit.value}&advert_type=sale`}>
+        <a>
+          <div>For Sale</div>
+          <Highlight attribute="text" hit={hit}/>  
+        </a>
+      </Link>
+      <Link href={`/properties/latest?${hit.type}=${hit.value}&advert_type=rent`}>
+        <a>
+          <div>To Rent</div>
+          <Highlight attribute="text" hit={hit}/>  
+        </a>
+      </Link>
+    </div>
+    
+export default class Angolia extends Component {
+  render(){
+    return(
+      <section>
+        <InstantSearch
+          apiKey='pl6JJHSA0ECU'
+          appId='4a7d7781c45f8078b7fb15ccf11fbd7d'
+          indexName="towns-regions"
+          
+        >
+         <SearchBox translations={{placeholder: 'Testing algolia in server'}}/>
+         <Stats/>
+         <Hits hitComponent={Hit}/>
+         <style>{`
+          .searched em {
+            font-weight: 1500;
+          }
+          `}</style>
+        </InstantSearch>
+      </section>
+    )
   }
-}
-}
+} 

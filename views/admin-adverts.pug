@@ -24,7 +24,7 @@ html(lang="en")
         .adverts 
           each advert in adverts
             a(href=`/admin/adverts/advert/${advert._id}`)
-              .name <b>#{advert.date.toString().slice(4,16)}</b> &nbsp; #{advert.reference} <span>#{advert.age} #{advert.price}GH¢ #{advert.town}</span>
+              .name <b>#{advert.date.toString().slice(4,16)}</b> &nbsp; #{advert.reference} <span>#{advert.age} #{advert.price}Euros #{advert.town}</span>
         .buttons
           a(href="/admin/adverts?pagination=prev") prev
           a(href="/admin/adverts?pagination=next") next

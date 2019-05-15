@@ -14,6 +14,8 @@ import NotFoundImg from "./_not-found-img.js";
 export default props => {
   const notFoundStr = createFailedSearchInfo(props.searchQuery);
   return (
+    <div className="body">
+    <div className="body-logo">
     <section className="listing mobile-desktop-frame">
       <FilterForm />
       <PageInfoTitle
@@ -57,37 +59,43 @@ export default props => {
                   <div className="listing__container-item-info">
                     <h2 className="listing__container-item-info-title">
                       {title}
+                      
                     </h2>
+                    
                     <div className="listing__container-item-info-location">{`${premises_type} - ${town}`}</div>
-                    <div className="listing__container-item-info-icons">
-                      <span className="listing__container-item-info-icons-rooms">
-                        {rooms_qty == 0 ? "No rooms" : rooms_qty}
-                      </span>
-                      <span className="listing__container-item-info-icons-area">
-                        {area}m2
-                      </span>
-                      <span className="listing__container-item-info-icons-floor">
-                        {located_floor == 0 ? (
-                          "Entrance"
-                        ) : (
-                          <Fragment>{located_floor}nth floor</Fragment>
-                        )}
-                      </span>
-                    </div>
                     <div className="listing__container-item-info-price">
                       {beautifyPrice(price)}
                     </div>
+                    <div className="listing__container-item-info-icons">
+                      {/*<span className="listing__container-item-info-icons-rooms">
+                      
+                        {rooms_qty == 0 ? "No rooms" : rooms_qty}
+                      </span>*/}
+                      <span className="listing__container-item-info-icons-area">
+                        {area}m²
+                      </span>
+                      <span className="listing__container-item-info-icons-floor">
+                        {located_floor == 0 ? (
+                          "Rez de chausée"
+                        ) : (
+                          <Fragment>{located_floor}ème étage</Fragment>
+                        )}
+                      </span>
+                    </div>
+                    
+                    
+                     {/*     
                     <div className="listing__container-item-info-date">
                       {beautifyDate(date)}
-                    </div>
+                    </div>*/}
                     {age == 0 && (
                       <div className="listing__container-item-info-age">
-                        New build
+                        Nouveau
                       </div>
                     )}
                   </div>
                   <span className="listing__container-item--type">
-                    {advert_type === "rent" ? "Rental " : "For Sale "}
+                    {advert_type === "rent" ? "Rental " : "Nbre d'images "}
                   </span>
                 </a>
               </Link>
@@ -97,5 +105,7 @@ export default props => {
       </div>
       <PaginationBar {...props} />
     </section>
+    </div>
+    </div>
   );
 };

@@ -6,11 +6,11 @@ export default class SortForm extends Component {
     return (
       this.props.searchResultsQty > 0 && (
         <form className="listing__sort" id="sortForm">
-          <label>Sort by:</label>
+          <label>Triés par:</label>
           <select name="sort" onClick={sortPropertyListing}>
-            <option value="latest">Latest adverts</option>
-            <option value="lowest">Price (Lowest)</option>
-            <option value="highest">Price (Highest)</option>
+            <option value="latest"> Les plus récents</option>
+            <option value="lowest">Prix (plus bas)</option>
+            <option value="highest">Prix (plus élevé)</option>
           </select>
         </form>
       )
