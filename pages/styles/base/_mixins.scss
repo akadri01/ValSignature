@@ -9,7 +9,7 @@
 @mixin absCenter {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 15%;
   transform: translate(-50%, -50%);
 }
 
@@ -34,8 +34,12 @@
 
 @mixin navbarGap {
   //margin-top: 150px;
+  
+  
   @include desktopSmall {
     margin-top: 0px;
+    color:black;
+    //background-color:black;
   }
 }
 

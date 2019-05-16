@@ -10,6 +10,8 @@ import PageInfoTitle from "./_page-title.js";
 import SortForm from "./_sort-form.js";
 import FilterForm from "./_filter-form.js";
 import NotFoundImg from "./_not-found-img.js";
+import ImgFix from "./_img-fix.js";
+
 
 export default props => {
   const notFoundStr = createFailedSearchInfo(props.searchQuery);
@@ -17,16 +19,21 @@ export default props => {
     <div className="body">
     <div className="body-logo">
     <section className="listing mobile-desktop-frame">
+   
       <FilterForm />
+      
       <PageInfoTitle
         searchResultsQty={props.searchResultsQty}
         notFoundStr={notFoundStr}
       />
+<ImgFix />
       <SortForm searchResultsQty={props.searchResultsQty} />
+      
       <NotFoundImg
         searchResultsQty={props.searchResultsQty}
         notFoundStr={notFoundStr}
       />
+      
       <div className="listing__container">
         {props.properties.map(
           ({
