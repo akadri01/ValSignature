@@ -4,9 +4,9 @@ import {Component} from 'react';
 
 const images = [
  
-  'sider1.jpg',
+  
   'sider2.jpg',
-  'sider3.jpg',
+  
 ];
 
 export default class ImgFix extends Component {

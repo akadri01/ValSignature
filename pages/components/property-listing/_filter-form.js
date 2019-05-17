@@ -31,7 +31,7 @@ export default () => {
             <option value="land">Surfaces diverses</option>
               </select>
 
-              <input type="number" id="Prix" min="1" step="1000" placeholder="     Budget Max" />
+              <input type="number" id="Prix" min="1" step="1000" placeholder="     Budget " />
 
               <input name="advert_type" placeholder=" Surface en m²" type="number" min="20" max="1000"/> 
 
@@ -58,7 +58,10 @@ export default () => {
             <option value="land">TEST 4</option>
             <option value="building"> TEST 5</option>
             <option value="surface"> TEST 6</option>
-            <option value="shop">TEST 7+</option>
+            <option value="shop">TEST 7</option>
+            <option value="shop">TEST 8</option>
+            <option value="shop">TEST 9</option>
+            <option value="shop">TEST 10</option>
           </select>
         </div>
 
@@ -73,7 +76,10 @@ export default () => {
             <option value="land">TEST 4</option>
             <option value="building">TEST 5</option>
             <option value="surface">TEST 6</option>
-            <option value="shop">TEST 7+</option>
+            <option value="shop">TEST 7</option>
+            <option value="shop">TEST 8</option>
+            <option value="shop">TEST 9</option>
+            <option value="shop">TEST 10</option>
           </select>
         </div>
 
@@ -88,7 +94,10 @@ export default () => {
             <option value="land">TEST 4</option>
             <option value="building">TEST 5</option>
             <option value="surface">TEST 6</option>
-            <option value="shop">TEST 7+</option>
+            <option value="shop">TEST 7</option>
+            <option value="shop">TEST 8</option>
+            <option value="shop">TEST 9</option>
+            <option value="shop">TEST 10</option>
           </select>
         </div>
     

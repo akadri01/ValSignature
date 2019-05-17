@@ -18,7 +18,7 @@ class Navigation extends Component {
             <Link href="/">
               <a className="navigation__brand-logo">
                 <img
-                  src="/static/images/icons/logo-large.png"
+                  src="/static/images/icons/logo-small.png"
                   alt="Valorys Signature logo"
                   title="Go to home page"
                   
