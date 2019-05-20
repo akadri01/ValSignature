@@ -16,7 +16,7 @@ export default class ImgFix extends Component {
   }
   render() {
     return (
-      <section className="trio" style={{backgroundImage: `url(/static/images/photos/${images[this.state.counter]})`}}>
+      <section className="trios" style={{backgroundImage: `url(/static/images/photos/${images[this.state.counter]})`}}>
       
 
       </section>

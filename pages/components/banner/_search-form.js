@@ -8,10 +8,10 @@ export default () => (
   <form className="banner__form" id="searchForm" onSubmit={searchFormSubmit}>
   
     <select name="saleorrent">
-    <option value="sale">HABITER</option>
-        <option value="rent">INVESTIR</option>
+    <option value="sale">Habiter</option>
+        <option value="rent">Investir</option>
     </select>
-    <input type="search" id="address-input" placeholder="         PARIS" />
+    <input type="search" id="address-input" placeholder="         Localité" />
 
     
     

@@ -1,18 +1,17 @@
-.body{ background-color: rgba(230, 230, 230, 1);
+.body{ //background-color: rgba(230, 230, 230, 1);
+  background-color: white;
    
 }
 
 .nav {
   background-color:  rgba(69, 69, 69, 1);
-  margin-top : 10px;
+  margin-top : 0px;
   width: 130vw;
   height:140px;
   //left: 50%;
-  transform: translateX(-8%  );
+  transform: translateX(-8%);
   margin-left:0;
 }
-
-
 
 .listing {
   @include navbarGap;
@@ -399,7 +398,7 @@
 
 }
 
-.trio {
+.trios {
   font-family: "Roboto Condensed","Noto Sans Condensed","Noto Sans JP","Noto Sans KR","Noto Sans SC Sliced",sans-serif;
   //position: relative;
   //width: 100%;
