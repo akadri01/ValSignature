@@ -26,7 +26,7 @@ export default props => {
         searchResultsQty={props.searchResultsQty}
         notFoundStr={notFoundStr}
       />
-<ImgFix />
+      <ImgFix />
       <SortForm searchResultsQty={props.searchResultsQty} />
       
       <NotFoundImg
@@ -58,8 +58,8 @@ export default props => {
             age
           }) => {
             const imageTitle =
-              (advert_type === "rent" ? "Rental " : "For Sale ") +
-              `${premises_type} in ${town}`;
+              (advert_type === "rent" ? "Rental " : "Habiter ");
+              /* + `${premises_type} in ${town}`;*/
             return (
               <Link href={`/property/${url}`}>
                 <a className="listing__container-item">
@@ -69,18 +69,20 @@ export default props => {
                     alt={`Property in ${town}`}
                     title={imageTitle}
                   />
+                  
                   <div className="listing__container-item-info">
                     <h2 className="listing__container-item-info-title">
                       {title}
                       
                     </h2>
                     
-                    <div className="listing__container-item-info-location">{`${premises_type} - ${town}`}</div>
-                    <div className="listing__container-item-info-price">
-                      {beautifyPrice(price)}
-                    </div>
+                    {/* A JSX comment <div className="listing__container-item-info-location">{`${premises_type} - ${town}`}</div>*/}
+                    
                     <div className="listing__container-item-info-icons">
+                      <div className="listing__container-item-info-price">
+                      {beautifyPrice(price)}
                       
+                    </div>
                       <span className="listing__container-item-info-icons-area">
                         {area}m²
                       </span>
@@ -107,22 +109,8 @@ export default props => {
                           <Fragment></Fragment>
                         )}
                       </span>
-                      <span className="listing__container-item-info-icons-3d">
-                        {d3 == "yes" ? (
-                          <span className="listing__container-item-info-icons-3d">
-                          </span>   
-                        ) : (
-                          <Fragment></Fragment>
-                        )}
-                      </span>
-                      <span className="listing__container-item-info-icons-360d">
-                        {rotate == "yes" ? (
-                          <span className="listing__container-item-info-icons-360d">
-                          </span>   
-                        ) : (
-                          <Fragment></Fragment>
-                        )}
-                      </span>
+                       
+                      
                       <h2 className="listing__container-item-info-detail">
                       {detail}
                       </h2>
@@ -132,24 +120,51 @@ export default props => {
                       <h2 className="listing__container-item-info-pret">
                       10 ans : {beautifyPrice(price)}   -15 ans : {beautifyPrice(price)}   -20 ans : {beautifyPrice(price)}   -25 ans : {beautifyPrice(price)}
                       </h2>
+
+                      <span>
+                      <img
+          src="/static/images/icons/logo-small.png"
+          alt="ValorysSignature"
+          width="150px"
+          float="left"
+        />
+                    </span> 
+
+
                     </div>
                     
                     
                      {/*     
                     <div className="listing__container-item-info-date">
                       {beautifyDate(date)}
-                    </div>*/}
+                    </div>
                     {age == 0 && (
                       <div className="listing__container-item-info-age">
                         Nouveau
                       </div>
-                    )}
+                    )}*/}
                   </div>
                   <span className="listing__container-item--type">
                         {garden == "yes" && (
-                          <Fragment>{images.length} images </Fragment>
+                          <Fragment>{images.length}  </Fragment>
                         )}
-                      </span>
+                  </span>
+                  <span className="listing__container-item--3d">
+                        {d3 == "yes" ? (
+                          <span className="listing__container-item-icons2-3d">
+                          </span>   
+                        ) : (
+                          <Fragment></Fragment>
+                        )}
+                  </span>
+                  <span className="listing__container-item--360d">
+                        {d3 == "yes" ? (
+                          <span className="">
+                          </span>   
+                        ) : (
+                          <Fragment></Fragment>
+                        )}
+                  </span>
                 </a>
               </Link>
             );

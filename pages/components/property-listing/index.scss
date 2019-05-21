@@ -28,15 +28,20 @@
    text-align: left;
    padding-left:80px;
    padding-top:10px;
-    margin-top: 100;
+    margin-top: 0px;
     margin-bottom: 10px;
     background-color:  white;
-    font-weight: 10;
+    font-weight: 150;
     width: 120vw;
     height:50px;
     left: 50%;
     transform: translateX(-7%  );
     font-family: $font-family-title;
+    &--titre {
+      font-weight:550;
+      font-family: $font-family-title;
+      font-size:18px;
+    }
   }
   &--no-result-img {
     display: block;
@@ -323,6 +328,19 @@
           
         }
       }
+      &-icons2 {
+        margin-top: 12px;
+        
+        @include tablet {
+          margin-top: 25px;
+          margin-left : 1500px;
+        }
+        &-3d {
+          @include backgroundIcon("3d.svg", 20px, 0 center);
+          //margin-left : 500px;
+          float:left;
+        }
+      }
       &-info {
         //overflow: auto;
         //flex:1;
@@ -348,15 +366,18 @@
         &-detail {
           //text-transform: uppercase;
           //text-transform: uppercase;
+          font-size: 16px;
+          line-height: 1.2;
+          color: #8f8f8f;
           overflow: hidden; 
-          font-weight: 200;
-          font-size: $font-size-tiny;
+          font-weight: 500;
+          //font-size: $font-size-tiny;
           font-family: $font-family-body;
           margin-top: 15px;
           margin-bottom: 5px;
           //color:$color-green;
           @include tablet {
-            font-size: $font-size-tiny;
+            //font-size: $font-size-tiny;
             margin-bottom: 10px;
             overflow: hidden; 
           }
@@ -384,10 +405,11 @@
           text-transform: capitalize;
           margin-bottom: 0px;
         }
+        
         &-icons {
-          margin-top: 22px;
+          margin-top: 12px;
           @include tablet {
-            margin-top: 75px;
+            margin-top: 25px;
           }
           span {
             font-family: $font-family-title;
@@ -405,6 +427,8 @@
             @include backgroundIcon("floor.svg", 22px, 0 center);
           }
           &-vip {
+            margin-left:155px;
+            
             @include backgroundIcon("vip.svg", 28px, 0 center);
           }
           &-3d {
@@ -415,12 +439,15 @@
           }
         }
         &-price {
-          font-size: $font-size-xxlarge;
-          font-weight: 600;
+          font-size: 29px;
+          margin-right: 4%;
+          font-family: $font-family-body;
+          font-weight: 500;
           float: left;
-          margin-top: 16px;
+          //margin-top: 16px;
           @include tablet {
-            margin-top: 23px;
+           // margin-top: 23px;
+           //padding: 2px;
           }
         }
         &-date {
@@ -449,16 +476,46 @@
       &--type {
         font-weight: 900;
         display: block;
-        width: 80px;
+        width: 30px;
         position: absolute;
         bottom: 0;
         left: 0;
         background: $color-yellow;
         color: $color-black;
         font-size: $font-size-small;
-        padding-top: 4px;
+        padding-top: 6px;
         text-align: center;
-        padding-bottom: 2px;
+        padding-bottom: 8px;
+      }
+      &--3d {
+        //@debugfont-weight: 900;
+        //display: block;
+        width: 30px;
+        position: absolute;
+        bottom: 10px;
+        left: 300px;
+        background: transparent;
+        color: $color-black;
+        font-size: $font-size-small;
+        padding-top: 6px;
+        text-align: center;
+        padding-bottom: 8px;
+        @include backgroundIcon("3d.svg", 30px, 0 center);
+      }
+      &--360d {
+        //@debugfont-weight: 900;
+        //display: block;
+        width: 30px;
+        position: absolute;
+        bottom: 10px;
+        left: 260px;
+        background: transparent;
+        color: $color-black;
+        font-size: $font-size-small;
+        padding-top: 6px;
+        text-align: center;
+        padding-bottom: 8px;
+        @include backgroundIcon("360d.svg", 22px, 0 center);
       }
     }
   }
@@ -472,13 +529,14 @@
 
   // added
     overflow-x: hidden;
-    height: 50vh;
-    width:1800px;
+    height: 80vh;
+    width:1600px;
     margin-left:0;
     background-size: cover;
     background-position: center;
     transition: 3.5s;
-    transform: translateX(-8%  );
+    transform: translateX(-10%  );
+    margin-top : 40px;
 
 
 p {

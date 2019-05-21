@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import isPlural from "../../helpers/isPlural.js";
 
-export default ({ searchResultsQty, notFoundStr }) => (
+export default ({ searchResultsQty, notFoundStr, props, town }) => (
   
   <h1 className="listing--title">
     {searchResultsQty == 0 ? (
@@ -9,8 +9,9 @@ export default ({ searchResultsQty, notFoundStr }) => (
     ) : (
       
       <Fragment>
-        
-        {searchResultsQty} {isPlural(searchResultsQty, "Resultat", "s")} trouvé(s)
+          <h1 className="listing--title--titre">Valorys Signature – France – Ile de France – Paris</h1>
+         {searchResultsQty} {isPlural(searchResultsQty, "Resultat", "s")} trouvé(s) pour {town}
+         
       </Fragment>
       
     )}
