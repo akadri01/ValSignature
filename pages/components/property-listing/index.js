@@ -41,12 +41,18 @@ export default props => {
             images,
             img_directory,
             title,
+            detail,
             advert_type,
             premises_type,
-            town,
+            town, 
             price,
             date,
             located_floor,
+            furniture,
+            total_floor,
+            garden,
+            d3,
+            rotate,
             area,
             rooms_qty,
             age
@@ -74,20 +80,58 @@ export default props => {
                       {beautifyPrice(price)}
                     </div>
                     <div className="listing__container-item-info-icons">
-                      {/*<span className="listing__container-item-info-icons-rooms">
                       
-                        {rooms_qty == 0 ? "No rooms" : rooms_qty}
-                      </span>*/}
                       <span className="listing__container-item-info-icons-area">
                         {area}m²
                       </span>
+                      {<span className="listing__container-item-info-icons-rooms">
+                      
+                        {rooms_qty == 0 ?(
+                          "no rooms"
+                        ) : (
+                          <Fragment>{rooms_qty} chambres</Fragment>
+                        )}
+                      </span>}
                       <span className="listing__container-item-info-icons-floor">
-                        {located_floor == 0 ? (
+                        {total_floor == 0 ? (
                           "Rez de chausée"
                         ) : (
-                          <Fragment>{located_floor}ème étage</Fragment>
+                          <Fragment>{total_floor} étages</Fragment>
                         )}
                       </span>
+                      <span className="listing__container-item-info-icons-detail">
+                        {garden == "yes" ? (
+                          <span className="listing__container-item-info-icons-vip">
+                          </span>   
+                        ) : (
+                          <Fragment></Fragment>
+                        )}
+                      </span>
+                      <span className="listing__container-item-info-icons-3d">
+                        {d3 == "yes" ? (
+                          <span className="listing__container-item-info-icons-3d">
+                          </span>   
+                        ) : (
+                          <Fragment></Fragment>
+                        )}
+                      </span>
+                      <span className="listing__container-item-info-icons-360d">
+                        {rotate == "yes" ? (
+                          <span className="listing__container-item-info-icons-360d">
+                          </span>   
+                        ) : (
+                          <Fragment></Fragment>
+                        )}
+                      </span>
+                      <h2 className="listing__container-item-info-detail">
+                      {detail}
+                      </h2>
+                      <h2 className="listing__container-item-info-pret">
+                      Remboursement de prêt indicatif sur :
+                      </h2>
+                      <h2 className="listing__container-item-info-pret">
+                      10 ans : {beautifyPrice(price)}   -15 ans : {beautifyPrice(price)}   -20 ans : {beautifyPrice(price)}   -25 ans : {beautifyPrice(price)}
+                      </h2>
                     </div>
                     
                     
@@ -110,6 +154,7 @@ export default props => {
           }
         )}
       </div>
+      
       <PaginationBar {...props} />
     </section>
     </div>

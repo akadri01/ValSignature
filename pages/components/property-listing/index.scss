@@ -15,6 +15,7 @@
 
 .listing {
   @include navbarGap;
+  
   margin-top: 60px;
   color: $color-black;
   padding-top: 10px;
@@ -259,29 +260,46 @@
       font-size: $font-size-large;
     }
   }
+  &__container2 {
+    @include desktopSmall {
+      
+ 
+  
+      margin-left:0;
+      margin-right:0;
+      right:90%;
+      width: 40%;
+    }
+  }
+
   &__container {
     @include desktopSmall {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      margin-right: 0;
+      //margin-right: 0;
       //height:200px;
       
     }
     &-item {
-      display: block;
       
+      display: flex;
+      overflow: hidden;
       margin-top: 1%;
       margin-left:0;
       position: relative;
       background-color: white;
-      height:250px;
+      //height:2500px;
       //width: 1000px;
       @include tablet {
-       display: flex;
-        margin-left:0;
+       display:  flex;
+       
+
+        //margin-left:0;
         border-bottom: $gray-border;
         border-top: $gray-border;
+        border-right: $gray-border;
+        border-left: $gray-border;
         //margin-bottom: 62px;
         //margin-right:0;
         &:hover {
@@ -293,15 +311,22 @@
         }
       }
       @include desktopSmall {
-        width: 79%;
+        width: 80%;
       }
       &-img {
-        max-width: 100%;
+        max-width: 40%;
+        
+        //max-width: 200%;
+        //max-height:800px;
+        @include desktopSmall {
+          width: 50%;
+          
+        }
       }
       &-info {
         //overflow: auto;
-        
-        white-space: nowrap;
+        //flex:1;
+        //white-space: nowrap;
         text-overflow: ellipsis;
         @include tablet {
           padding: 13px 0 0 20px;
@@ -318,6 +343,39 @@
           @include tablet {
             font-size: $font-size-xlarge;
             margin-bottom: 10px;
+          }
+        }
+        &-detail {
+          //text-transform: uppercase;
+          //text-transform: uppercase;
+          overflow: hidden; 
+          font-weight: 200;
+          font-size: $font-size-tiny;
+          font-family: $font-family-body;
+          margin-top: 15px;
+          margin-bottom: 5px;
+          //color:$color-green;
+          @include tablet {
+            font-size: $font-size-tiny;
+            margin-bottom: 10px;
+            overflow: hidden; 
+          }
+        }
+        &-pret {
+          //text-transform: uppercase;
+          //text-transform: uppercase;
+          overflow: hidden; 
+          font-weight: 400;
+          font-size: $font-size-medium;
+          font-family: $font-family-body;
+          margin-top: 15px;
+          margin-bottom: 5px;
+          background-color: lightgray;
+          //color:$color-green;
+          @include tablet {
+            font-size: $font-size-medium;
+            margin-bottom: 10px;
+            overflow: hidden; 
           }
         }
         &-location {
@@ -345,6 +403,15 @@
           }
           &-floor {
             @include backgroundIcon("floor.svg", 22px, 0 center);
+          }
+          &-vip {
+            @include backgroundIcon("vip.svg", 28px, 0 center);
+          }
+          &-3d {
+            @include backgroundIcon("3d.svg", 22px, 0 center);
+          }
+          &-360d {
+            @include backgroundIcon("360d.svg", 22px, 0 center);
           }
         }
         &-price {

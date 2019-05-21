@@ -61,6 +61,8 @@ class EditAdvert extends Component {
       total_bathroom,
       total_balcony,
       area,
+      d3,
+      rotate,
       furniture,
       garden,
       _id
@@ -81,6 +83,8 @@ class EditAdvert extends Component {
       total_bathroom,
       total_balcony,
       area,
+      d3,
+      rotate,
       furniture,
       garden,
       _id
@@ -274,6 +278,30 @@ class EditAdvert extends Component {
                 name="garden"
                 component={renderSelectField}
                 label="Garden"
+                validate={required()}
+              >
+                {yesNoSelectField.map(option => (
+                  <option value={option.value} key={option.value}>
+                    {option.text}
+                  </option>
+                ))}
+              </Field>
+              <Field
+                name="d3"
+                component={renderSelectField}
+                label="d3"
+                validate={required()}
+              >
+                {yesNoSelectField.map(option => (
+                  <option value={option.value} key={option.value}>
+                    {option.text}
+                  </option>
+                ))}
+              </Field>
+              <Field
+                name="rotate"
+                component={renderSelectField}
+                label="rotate"
                 validate={required()}
               >
                 {yesNoSelectField.map(option => (

@@ -12,6 +12,7 @@ export default ({ searchResultsQty, notFoundStr }) => (
         
         {searchResultsQty} {isPlural(searchResultsQty, "Resultat", "s")} trouvé(s)
       </Fragment>
+      
     )}
   </h1>
 );
