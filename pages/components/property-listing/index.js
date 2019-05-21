@@ -146,8 +146,10 @@ export default props => {
                     )}
                   </div>
                   <span className="listing__container-item--type">
-                    {advert_type === "rent" ? "Rental " : "Nbre d'images "}
-                  </span>
+                        {garden == "yes" && (
+                          <Fragment>{images.length} images </Fragment>
+                        )}
+                      </span>
                 </a>
               </Link>
             );
