@@ -1,0 +1,246 @@
+.twoTabs {
+    //display: none;
+    justify-content: space-between;
+    width: 1400px;
+    margin: 0px auto 0;
+    margin-bottom: 100px auto 0;
+    
+    //@include backgroundIcon("down-arrow.svg", 200px, 120px center);
+    //opacity: 0.8;
+    //@at-rootcolor: rgba(0, 0, 0, 0.2);
+    height: 200px;
+    //filter: brightness(90%);
+    opacity:1;
+    @include desktopSmall {
+      display: flex;
+      height: 200px;
+      margin-bottom: 100px auto 0;
+    }
+    hr {
+      border: 0;
+      border-bottom: 3px solid#ff4800;
+      width: 5rem;
+      margin: 0.75rem auto 2.625rem auto;
+    }
+    &__tab1 {
+      cursor: pointer;
+      width: 440px;
+      height: 300px;
+      position: relative;
+      display: block;
+      padding: 23px 12px;
+      font-size: 14px;
+      color: white;
+      background-image: url("/static/images/photos/tab1.jpg");
+      
+      opacity:0.8;
+      text-align: center;
+      
+      transition: 0.8s $transition;
+     
+      
+      
+      //border-radius: 6px;
+      &:hover {
+        height: 300px;
+        //background: rgba(0, 151, 19, 0.01);
+        opacity:1;
+      }
+      &:hover > p {
+        cursor: pointer;
+        display: block;
+        //background: none;
+        color:white;
+        text-decoration: underline white;
+        //color:white;
+        opacity:1;
+      }
+      &:before {
+        
+        display: block;
+        width: 100%;
+        content: "";
+        position: absolute;
+        background-color: #000;
+        opacity:0.5;
+      }
+      h2 {
+        font-family: $font-family-body;
+        margin-bottom: 5px;
+        margin-top: 6px;
+        font-weight:80;
+        color:white;
+        //font-size: $font-size-xxlarge;
+        //word-spacing: 4px;
+        //filter: brightness(200%);
+      }
+      h3 {
+        font-family: $font-family-body;
+        margin-bottom: 5px;
+        margin-top: 60px;
+        font-weight:4;
+        color:white;
+        //font-size: $font-size-xxlarge;
+        //word-spacing: 4px;
+        //filter: brightness(200%);
+      }
+      p {
+        display: none;
+        margin-top: 40px;
+        color: white;
+        opacity:1;
+        font-size: $font-size-xlarge;
+        text-transform: uppercase;
+        font-weight:bold;
+        //filter: brightness(100%);
+        
+      }
+    }
+    &__tab2 {
+      cursor: pointer;
+      width: 440px;
+      height: 300px;
+      position: relative;
+      display: block;
+      padding: 23px 12px;
+      font-size: 14px;
+      color: white;
+      background-image: url("/static/images/photos/tab2.jpg");
+      text-align: center;
+      //filter: brightness(50%);
+      opacity:0.8;
+      transition: 0.8s $transition;
+     
+      
+      
+      //border-radius: 6px;
+      &:hover {
+        height: 300px;
+        //background: rgba(0, 151, 19, 0.01);
+        opacity:1;
+      }
+      &:hover > p {
+        cursor: pointer;
+        display: block;
+        //background: none;
+        color:white;
+        text-decoration: underline white;
+        //color:white;
+        opacity:1;
+      }
+      &:before {
+        
+        display: block;
+        width: 100%;
+        content: "";
+        position: absolute;
+        background-color: #000;
+        opacity:0.5;
+      }
+      h2 {
+        font-family: $font-family-body;
+        margin-bottom: 5px;
+        margin-top: 6px;
+        font-weight:80;
+        color:white;
+        //font-size: $font-size-xxlarge;
+        //word-spacing: 4px;
+        //filter: brightness(200%);
+      }
+      h3 {
+        font-family: $font-family-body;
+        margin-bottom: 5px;
+        margin-top: 60px;
+        font-weight:4;
+        color:white;
+        //font-size: $font-size-xxlarge;
+        //word-spacing: 4px;
+        //filter: brightness(200%);
+      }
+      p {
+        display: none;
+        margin-top: 40px;
+        color: white;
+        opacity:1;
+        font-size: $font-size-xlarge;
+        text-transform: uppercase;
+        font-weight:bold;
+        //filter: brightness(100%);
+        
+      }
+    }
+    &__tab3{
+      
+      cursor: pointer;
+      width: 440px;
+      height: 300px;
+      position: relative;
+      display: block;
+      padding: 23px 12px;
+      font-size: 14px;
+      //color: white;
+      background-image: url("/static/images/photos/tab3.jpg");
+      opacity:0.8;
+      text-align: center;
+      //filter: brightness(50%);
+      transition: 0.8s $transition;
+      
+     
+      
+      //border-radius: 6px;
+      &:hover {
+        height: 300px;
+        //background: rgba(0, 151, 19, 0.01);
+        opacity:1;
+      }
+      &:hover > p {
+        cursor: pointer;
+        display: block;
+        //background: none;
+        color:white;
+        text-decoration: underline white;
+        //color:white;
+        opacity:1;
+      }
+      &:before {
+        
+        display: block;
+        width: 100%;
+        content: "";
+        position: absolute;
+        background-color: #000;
+        opacity:0.5;
+      }
+      h2 {
+        font-family: $font-family-body;
+        margin-bottom: 5px;
+        margin-top: 6px;
+        font-weight:80;
+        color:white;
+        //font-size: $font-size-xxlarge;
+        //word-spacing: 4px;
+        //filter: brightness(200%);
+      }
+      h3 {
+        font-family: $font-family-body;
+        margin-bottom: 5px;
+        margin-top: 60px;
+        font-weight:4;
+        color:white;
+        //font-size: $font-size-xxlarge;
+        //word-spacing: 4px;
+        //filter: brightness(200%);
+      }
+      p {
+        display: none;
+        margin-top: 40px;
+        color: white;
+        opacity:1;
+        font-size: $font-size-xlarge;
+        text-transform: uppercase;
+        font-weight:bold;
+        //filter: brightness(100%);
+        
+      }
+    }
+  }

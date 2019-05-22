@@ -1,0 +1,9 @@
+node_modules/*
+!/node_modules/@zeit/next-sass/
+!/node_modules/@zeit/next-sass/*
+.next/
+.scannerwork/
+
+
+
+static/images/property-uploads/*

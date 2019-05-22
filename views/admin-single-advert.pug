@@ -1,0 +1,84 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    link(rel='stylesheet', href='/static/admin/styles/normalize.css')
+    link(rel='stylesheet', href='/static/admin/styles/single-advert.css')
+    link(rel='stylesheet', href='/static/admin/styles/navigation.css')
+  body
+    .nav
+      a(href="/admin/payments") Payments
+      a(href="/admin/users") Users
+      a(href="/admin/adverts") Adverts
+      a(href="/admin/enquires") Enquires
+      a.logout(href="/admin/logout") Logout
+    .alert=alert
+    .advert
+      h1 Property information
+      br
+      .advert-data <i><b>#{property.date.toString().slice(0,21)}</b></i>
+      br
+      .advert-data-flex
+        .advert-data <b>Advert Id:</b> #{property._id}
+        .advert-data <b>Ref:</b> #{property.ref}
+        .advert-data <b>Advert type:</b> #{property.advert_type}
+        .advert-data <b>Age:</b> #{property.age}
+        .advert-data <b>Town:</b> #{property.town}
+        .advert-data <b>Region:</b> #{property.region}
+        .advert-data <b>Price:</b> #{property.price}
+        .advert-data <b>Email:</b> #{property.email}
+        .advert-data <b>Phone:</b> #{property.phone}
+        .advert-data <b>Url:</b> #{property.url}
+      br
+      br
+      br
+      .advert-data <b><div> # User Information:</div></b>
+      .advert-data <b>User Name:</b> #{property.user_name}
+      .advert-data <b>User Email:</b> #{property.user_email}
+      .advert-data <b>User Id:</b> #{property.user_id}
+      br
+      br
+      br
+      .advert-data <b><div># Details:</div></b>
+        pre #{property.detail}
+      br
+      br
+      br
+      .advert-data <b><div># Images:</div></b>
+      .advert-images
+        each img in property.images
+          img(src=`/static/images/property-uploads/${property.img_directory}/${img}`)
+      .advert-img-tags
+        div Thumbnail
+        div Main
+        div image 1
+        div image 2
+        div image 3
+        div image 4
+      br
+      br
+      br
+      h1 Edit Property
+      form.advert-edit(action="/admin/advert/edit" method="post")
+        input(type="hidden" name="advertId" value=`${property._id}`)
+        label Change details
+        textarea(name="details") #{property.detail}
+        label Change town
+        input(type="text" name="town" value=`${property.town}` placeholder=" Town")
+        label Change region
+        input(type="text" name="region" value=`${property.region}` placeholder=" Region")
+        label Change price
+        input(type="number" name="price" value=`${property.price}` placeholder=" 35000")
+        button(type="submit") Update
+      br
+      br
+      br
+      br
+      h1 Remove Property
+      form.advert-edit(action="/admin/advert/remove" method="post")
+        input(type="hidden" name="reference" value=`${property.reference}`)
+        input(type="hidden" name="userId" value=`${property.user_id}`)
+        input(type="hidden" name="propertyUrl" value=`${property.url}`)
+        button(type="submit") Remove
+      br
+      br

@@ -1,0 +1,120 @@
+
+
+.banner {
+  font-family: "Roboto Condensed","Noto Sans Condensed","Noto Sans JP","Noto Sans KR","Noto Sans SC Sliced",sans-serif;
+  //position: relative;
+  //width: 100%;
+  //@include navbarGap;
+  // added
+    overflow-x: hidden;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    transition: 2.5s;
+    //opacity: 0.9;
+    position: relative;
+  // added
+
+  &__form {
+    //@include absCenter;
+    
+    display: flex;
+    //top: 250px;
+    background: rgba(40, 40, 40, 0.8);
+    width: 560px;
+    padding: 15px;
+    position:relative;
+    //bottom : 30%;
+    left:50%;
+    //left:20%;
+    top:70%;
+    transform: translate(-50%, 80%);
+    
+    @include tablet {
+      top: 190px;
+    }
+    @include desktopSmall {
+      
+      //display: flex;
+      width: 900px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 8px;
+      position :flex;
+    }
+    @include desktopMedium {
+      top: 170px; 
+    }
+    @include desktopLarge {
+      top: 190px;
+    }
+    @include desktopMega {
+      top: 260px;
+    }
+    h2 {
+      @include showTextShadow;
+      font-size: $font-size-large;
+      text-align: center;
+      @include desktopSmall {
+        width: 100%;
+        font-size: $font-size-mega;
+      }
+      @include desktopMedium {
+        font-size: calculateRem(30px);
+        letter-spacing: 1.2px;
+      }
+      
+    }
+    
+    select {
+      height: 43px;
+      background: white;
+      width: 10%px;
+      border: 0px solid #bd0021;
+      color: #585858;
+      font-size: $font-size-large;
+      text-indent: 14px;
+      //width: 80%;
+      margin-left: 10%;
+      @include desktopSmall {
+        //padding-left: 20px;
+        height: 50px;
+        margin-left: 0;
+        width: 17%;
+        @include backgroundIcon("down-arrow.svg", 20px, 120px center);
+        -webkit-appearance: none;
+        appearance: none;
+        
+      }
+    }
+    
+    input  {
+      //padding: 16px;
+      border: 0px solid #bd0021;
+      width: 65.5% ;
+      //margin-left: 10%;
+      font-size: $font-size-large;
+    }
+    
+    button {
+      font-family: "Roboto Condensed","Noto Sans Condensed","Noto Sans JP","Noto Sans KR","Noto Sans SC Sliced",sans-serif;
+      width: 80%;
+      height: 42px;
+      margin-left: 10%;
+      background-color: #D73B10;
+      //outline: 1px solid #D73B10;
+      color: white;
+      font-weight: 900;
+      border: none;
+      font-size: $font-size-large;
+      letter-spacing: 0.1px;
+      //padding-top: 3px;
+      text-transform: uppercase;
+      @include desktopSmall {
+        height: 50px;
+        width: 17%;
+        margin-left: 0;
+      }
+    }
+  }
+}

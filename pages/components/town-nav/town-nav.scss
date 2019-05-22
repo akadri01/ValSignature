@@ -1,0 +1,74 @@
+.town-nav {
+  margin-top: 40px;
+  @include desktopSmall {
+    margin-top: 50px;
+  }
+  @include desktopSmall {
+    .top,
+    .middle,
+    .bottom {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+    .top {
+      .town-nav__town {
+        width:50%;
+        margin:0;
+      }
+      
+    }
+      
+    .middle {
+      .town-nav__town {
+        width: 32.5%;
+      }
+    }
+    .bottom {
+      .town-nav__town {
+        width:50%;
+        margin:0;
+      }
+    }
+  }
+  
+  
+  &__town {
+    width: 100%;
+    position: relative;
+    &:hover > div p {
+      //text-decoration: underline;
+    }
+    &-content {
+      position: absolute;
+      width: 100%;
+      margin-top: 10%;
+      h2 {
+        
+        font-size: calculateRem(17px);
+        color: white ;
+        position: absolute;
+        top: 150px;
+        left: 20%;
+        font-family: $font-family-body;
+        @include desktopSmall {
+          font-size: calculateRem(21px);
+          margin-bottom: 0;
+          font-family: $font-family-body;
+        }
+      }
+    
+      p {
+        color: gray;
+        text-align: center;
+        font-size: $font-size-mega;
+        font-weight: 900;
+        @include desktopSmall {
+          
+          margin-top: 15px;
+          font-size: $font-size-mega;
+        }
+      }
+    }
+  }
+}

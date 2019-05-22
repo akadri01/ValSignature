@@ -1,0 +1,43 @@
+.show-navigation-menu {
+  display: block !important;
+}
+.animate-burger-icon {
+  .top {
+    transform: rotate(-40deg) translateY(9px);
+  }
+  .bottom {
+    transform: rotate(40deg) translateY(-9px);
+  }
+  .middle {
+    opacity: 0 !important;
+  }
+}
+.show-location-menu {
+  display: block !important;
+}
+.replace-arrow-with-close {
+  background-image: url("/static/images/icons/close-green.svg");
+}
+.button-loader {
+  background-image: url("/static/images/icons/button-loader.gif") !important;
+  background-size: 32px !important;
+  background-repeat: no-repeat !important;
+  background-position: 95% center !important;
+  padding-right: 5% !important;
+}
+.expose-social-media-share-icons {
+  height: 50px !important;
+  opacity: 1 !important;
+}
+.expose-contact-icons {
+  transform: translateY(0) !important;
+  opacity: 1 !important;
+}
+
+.display-filter-options {
+  height: 160px !important;
+  opacity: 1 !important;
+  @include desktopSmall {
+    height: 160px !important;
+  }
+}

@@ -1,0 +1,94 @@
+.trio {
+  font-family: "Roboto Condensed","Noto Sans Condensed","Noto Sans JP","Noto Sans KR","Noto Sans SC Sliced",sans-serif;
+  //position: relative;
+  //width: 100%;
+
+  // added
+    overflow-x: hidden;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    transition: 2.5s;
+  /* [SLIDER] */
+#slider,  #slider .slide{
+  margin-right:80px;
+  //top:100px;
+  width: 900px;
+  height: 322px;
+  //top:200px;
+}
+#slider {
+  overflow: hidden;
+  //position : absolute;
+  margin: 206px auto;
+  //margin-top:0;
+  font-size: 1.2em;
+  background: rgba(0,0,0,0.5);
+  font-family: "Roboto Slab","Noto Sans","Noto Sans JP","Noto Sans KR","Noto Sans SC Sliced",serif;
+}
+#slider .container {
+  position: relative;
+  width: 9000px; /* Assign an insanely large width */
+  top: 10px;
+  right: 0;
+  animation: slide-animation 30s infinite;
+}
+#slider .slide {
+  position: relative;
+  float: left;
+  box-sizing: border-box;
+  padding: 10px 20px;
+}
+
+/* [ANIMATION] */
+@keyframes slide-animation {
+  0% { 
+    opacity: 0;
+    right: 0;
+  }
+  20% {
+    opacity: 1;
+    right: 0; 
+  }
+  40% { right: 110%; }
+  60% { right: 110%; }
+  80% { right: 220%;
+    opacity: 1;
+   }
+  100% { right: 220%; 
+    opacity: 0;
+   }
+
+  
+}
+
+
+h1 {
+  text-align: center;
+}
+h3 {
+        
+  text-align: center;
+  color:white;
+  position: absolute;
+  top: 10%;
+  //left: 20%;
+  font-family: "Roboto Slab","Noto Sans","Noto Sans JP","Noto Sans KR","Noto Sans SC Sliced",serif;;
+  font-size: 40px;
+  font-weight: 20;
+  @include desktopSmall {
+    font-size: 40px;
+    margin-bottom: 0;
+    font-family: "Roboto Slab","Noto Sans","Noto Sans JP","Noto Sans KR","Noto Sans SC Sliced",serif;;
+  }
+}
+p {
+  margin-top: 20%;
+  font-family: Roboto,"Noto Sans","Noto Sans JP","Noto Sans KR","Noto Sans SC Sliced",sans-serif;
+  font-size: $font-size-xxlarge;
+   text-align: center; 
+   color:white;
+  }
+
+  
+}
