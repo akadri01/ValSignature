@@ -16,7 +16,7 @@ class MyApp extends App {
     );
   }
   componentDidMount() {
-    checkForPopup();
+    checkForPopup() ;
   }
 }
 
