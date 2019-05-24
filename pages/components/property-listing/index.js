@@ -11,15 +11,24 @@ import SortForm from "./_sort-form.js";
 import FilterForm from "./_filter-form.js";
 import NotFoundImg from "./_not-found-img.js";
 import ImgFix from "./_img-fix.js";
+import Pmt from "./pmt.js";
+
 
 
 export default props => {
+  //window["npm"](15, 20, 68, 17,0);
+
   const notFoundStr = createFailedSearchInfo(props.searchQuery);
+
+
+
   return (
+    
     <div className="body">
     <div className="body-logo">
     <section className="listing mobile-desktop-frame">
-   
+     
+
       <FilterForm />
       
       <PageInfoTitle
@@ -29,10 +38,69 @@ export default props => {
       <ImgFix />
       <SortForm searchResultsQty={props.searchResultsQty} />
       
+      <form>
+        
+      <div className="dropdown" id="valueItemDrop">
+                                                        <button className="selectbox" id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        Critères prioritaires
+                                                        </button>
+                                                        <ul className="dropdown-menu" aria-labelledby="dLabel">
+                                                            <li className="checkbox form-group">
+                                                                <input type="checkbox" id="valuePot" value="Value Pot" name="Value Pot" />
+                                                                <label htmlFor="valuePot">critere1</label>
+                                                            </li>
+                                                            <li className="checkbox form-group">
+                                                                <input type="checkbox" id="payback" value="Payback" name="Payback" />
+                                                                <label htmlFor="payback">critere2</label>
+                                                            </li>
+                                                            
+                                                            <li className="checkbox form-group">
+                                                                <input type="checkbox" id="offset" value="Offset" name="Offset" />
+                                                                <label htmlFor="offset">critere3</label>
+                                                            </li>
+                                                            <li className="checkbox form-group">
+                                                                <input type="checkbox" id="genValuePot" value="Gen Value Pot" name="Gen Value Pot" />
+                                                                <label htmlFor="genValuePot">critere4</label>
+                                                            </li>
+                                                            <li className="checkbox form-group">
+                                                                <input type="checkbox" id="mancValuePot" value="Manc Value Pot" name="Manc Value Pot" />
+                                                                <label htmlFor="mancValuePot">critere5</label>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+</form>
+
+
+
+
       <NotFoundImg
         searchResultsQty={props.searchResultsQty}
         notFoundStr={notFoundStr}
       />
+      <div className="listing__container2">
+      <a className="listing__container-item2">
+                    
+                    <h2 className="listing__container-item-info-fbutton">
+                      SAUVEGARDER RECHERCHE
+                    </h2>
+                    <h2 className="listing__container-item-info-sbutton">
+                      Sauvegardez cette recherche pour recevoir tous les jours par email les meilleures propriétés de luxe sur le marché
+                    </h2>
+                    <h2 className="listing__container-item-info-ssbutton">
+                      Sauvegarder et recevoir une alerte email
+                    </h2>
+                    <h2 className="listing__container-item-info-ssvip">
+                      Découvrez Club VIP
+                    </h2>
+                    <img
+                        src="/static/images/icons/vip.jpeg"
+                        alt="ValorysSignature"
+                        width="250px"
+                        
+                        float="center"
+                      />
+      </a>
+      </div>
       
       <div className="listing__container">
         {props.properties.map(
@@ -61,7 +129,9 @@ export default props => {
               (advert_type === "rent" ? "Rental " : "Habiter ");
               /* + `${premises_type} in ${town}`;*/
             return (
+              
               <Link href={`/property/${url}`}>
+                
                 <a className="listing__container-item">
                   <img
                     src={associateImgPath(img_directory, images[0])}
@@ -123,12 +193,12 @@ export default props => {
 
                       <span>
                       <img
-          src="/static/images/icons/logo-small.png"
-          alt="ValorysSignature"
-          width="150px"
-          float="left"
-        />
-                    </span> 
+                        src="/static/images/icons/icon-small.png"
+                        alt="ValorysSignature"
+                        width="30px"
+                        float="left"
+                      />
+                      </span> 
 
 
                     </div>
@@ -165,7 +235,9 @@ export default props => {
                           <Fragment></Fragment>
                         )}
                   </span>
+                  
                 </a>
+                
               </Link>
             );
           }

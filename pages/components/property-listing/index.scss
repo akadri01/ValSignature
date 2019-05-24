@@ -267,22 +267,28 @@
   }
   &__container2 {
     @include desktopSmall {
-      
- 
-  
+     // margin-left:1100px;
+     float:right;
+      margin-right:10px;
       margin-left:0;
-      margin-right:0;
-      right:90%;
-      width: 40%;
+      margin-top:10px;
+      text-align: center;
+      height:40px;
+      width:250px;
+      background-color: #585858;
+      
+      //right:90%;
+      //width: 40%;
     }
   }
+  
 
   &__container {
     @include desktopSmall {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      //margin-right: 0;
+      margin-right: 0;
       //height:200px;
       
     }
@@ -292,6 +298,7 @@
       overflow: hidden;
       margin-top: 1%;
       margin-left:0;
+      margin-right:0;
       position: relative;
       background-color: white;
       //height:2500px;
@@ -301,10 +308,11 @@
        
 
         //margin-left:0;
-        border-bottom: $gray-border;
-        border-top: $gray-border;
-        border-right: $gray-border;
-        border-left: $gray-border;
+        //padding-bottom: 3px solid transparent;
+        border-top:3px solid transparent;
+        border-right:3px solid transparent;
+        border-left: 3px solid transparent;
+        box-sizing:border-box;
         //margin-bottom: 62px;
         //margin-right:0;
         &:hover {
@@ -312,11 +320,11 @@
           border-top: 3px solid  rgba(69, 69, 69, 0.3);
           border-right: 3px solid  rgba(69, 69, 69, 0.3);
           border-left: 3px solid  rgba(69, 69, 69, 0.3);
-          transition:0.3s;
+          //transition:0.3s;
         }
       }
       @include desktopSmall {
-        width: 80%;
+        width: 1000px;
       }
       &-img {
         max-width: 40%;
@@ -366,13 +374,15 @@
         &-detail {
           //text-transform: uppercase;
           //text-transform: uppercase;
-          font-size: 16px;
-          line-height: 1.2;
+          font-size: 14px;
+          //line-height: 1.2;
           color: #8f8f8f;
           overflow: hidden; 
-          font-weight: 500;
+          font-weight: 350;
           //font-size: $font-size-tiny;
-          font-family: $font-family-body;
+          font-family: $font-family-title;
+          line-height: 16.8px;
+          box-sizing: border-box;
           margin-top: 15px;
           margin-bottom: 5px;
           //color:$color-green;
@@ -380,6 +390,73 @@
             //font-size: $font-size-tiny;
             margin-bottom: 10px;
             overflow: hidden; 
+          }
+        }
+        &-fbutton {
+          //text-transform: uppercase;
+          text-transform: uppercase;
+          font-size: $font-size-medium;
+          font-family: $font-family-body;
+          margin-top: 5px;
+          text-align:center;
+          padding:10px;
+          margin-bottom: 5px;
+          color:white;
+          @include tablet {
+            font-size: $font-size-medium;
+            margin-bottom: 10px;
+          }
+        }
+        &-sbutton {
+          //text-transform: uppercase;
+          //text-transform: uppercase;
+          font-size: $font-size-medium;
+          font-family: $font-family-body;
+          margin-top: 5px;
+          text-align:center;
+          padding:10px;
+          margin-bottom: 5px;
+          font-weight: 350;
+          color:gray;
+          //background-color: #585858;
+          //border: 5px solid #bd0021;
+          
+          @include tablet {
+            font-size: $font-size-large;
+            margin-bottom: 10px;
+          }
+        }
+        &-ssbutton {
+          //text-transform: uppercase;
+          //text-transform: uppercase;
+          font-size: $font-size-medium;
+         
+          font-family: $font-family-body;
+          margin-top: 5px;
+          //text-align:center;
+          padding:10px;
+          margin-bottom: 5px;
+          color:$color-green;
+          @include tablet {
+            font-size: $font-size-large;
+            margin-bottom: 10px;
+          }
+        }
+        &-ssvip {
+          //text-transform: uppercase;
+          //text-transform: uppercase;
+          background-color: #585858;
+          text-transform: uppercase;
+          font-size: $font-size-medium;
+          font-family: $font-family-body;
+          margin-top: 50px;
+          text-align:center;
+          padding:10px;
+          margin-bottom: 5px;
+          color:white;
+          @include tablet {
+            font-size: $font-size-medium;
+            margin-bottom: 10px;
           }
         }
         &-pret {
@@ -444,7 +521,7 @@
           font-family: $font-family-body;
           font-weight: 500;
           float: left;
-          //margin-top: 16px;
+          //margin-bottom: 16px;
           @include tablet {
            // margin-top: 23px;
            //padding: 2px;
@@ -518,6 +595,7 @@
         @include backgroundIcon("360d.svg", 22px, 0 center);
       }
     }
+
   }
 
 }
@@ -529,7 +607,7 @@
 
   // added
     overflow-x: hidden;
-    height: 80vh;
+    height: 490px;
     width:1600px;
     margin-left:0;
     background-size: cover;

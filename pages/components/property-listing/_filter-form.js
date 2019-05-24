@@ -53,6 +53,7 @@ export default () => {
             <option value="house" selected>
             Critères prioritaires
             </option>
+            
             <option value="flat">TEST 2</option>
             <option value="office">TEST 3</option>
             <option value="land">TEST 4</option>
