@@ -22,6 +22,22 @@ const ssrRoutes = require("./routes/ssr.js");
 const session = require("express-session");
 const MongoDBStore = require("connect-mongodb-session")(session);
 
+"use strict";
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').config()
+  }
+
+const User = require("..//db/models/admin.js");
+
+
+
+const _user = new User();
+_user.email = 'test@test.com';
+_user.password =  _user.hashPassword('12345678');
+_user.save().then(()=>{
+  console.log('--- NEW USER SAVED ---')
+  mongoose.connection.close();
+})
 
 
 // Database

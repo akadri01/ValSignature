@@ -41,33 +41,33 @@ export default props => {
       <form>
         
       <div className="dropdown" id="valueItemDrop">
-                                                        <button className="selectbox" id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                        Critères prioritaires
-                                                        </button>
-                                                        <ul className="dropdown-menu" aria-labelledby="dLabel">
-                                                            <li className="checkbox form-group">
-                                                                <input type="checkbox" id="valuePot" value="Value Pot" name="Value Pot" />
-                                                                <label htmlFor="valuePot">critere1</label>
-                                                            </li>
-                                                            <li className="checkbox form-group">
-                                                                <input type="checkbox" id="payback" value="Payback" name="Payback" />
-                                                                <label htmlFor="payback">critere2</label>
-                                                            </li>
-                                                            
-                                                            <li className="checkbox form-group">
-                                                                <input type="checkbox" id="offset" value="Offset" name="Offset" />
-                                                                <label htmlFor="offset">critere3</label>
-                                                            </li>
-                                                            <li className="checkbox form-group">
-                                                                <input type="checkbox" id="genValuePot" value="Gen Value Pot" name="Gen Value Pot" />
-                                                                <label htmlFor="genValuePot">critere4</label>
-                                                            </li>
-                                                            <li className="checkbox form-group">
-                                                                <input type="checkbox" id="mancValuePot" value="Manc Value Pot" name="Manc Value Pot" />
-                                                                <label htmlFor="mancValuePot">critere5</label>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
+                                                            <button className="selectbox" id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            Critères prioritaires
+                                                            </button>
+                                                            <ul className="dropdown-menu" aria-labelledby="dLabel">
+                                                                <li className="checkbox form-group">
+                                                                    <input type="checkbox" id="valuePot" value="Value Pot" name="Value Pot" />
+                                                                    <label htmlFor="valuePot">critere1</label>
+                                                                </li>
+                                                                <li className="checkbox form-group">
+                                                                    <input type="checkbox" id="payback" value="Payback" name="Payback" />
+                                                                    <label htmlFor="payback">critere2</label>
+                                                                </li>
+                                                                
+                                                                <li className="checkbox form-group">
+                                                                    <input type="checkbox" id="offset" value="Offset" name="Offset" />
+                                                                    <label htmlFor="offset">critere3</label>
+                                                                </li>
+                                                                <li className="checkbox form-group">
+                                                                    <input type="checkbox" id="genValuePot" value="Gen Value Pot" name="Gen Value Pot" />
+                                                                    <label htmlFor="genValuePot">critere4</label>
+                                                                </li>
+                                                                <li className="checkbox form-group">
+                                                                    <input type="checkbox" id="mancValuePot" value="Manc Value Pot" name="Manc Value Pot" />
+                                                                    <label htmlFor="mancValuePot">critere5</label>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
 </form>
 
 
