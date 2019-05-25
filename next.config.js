@@ -4,22 +4,7 @@ const path = require("path");
 const glob = require("glob");
 const webpack = require("webpack");
 const { parsed: localEnv } = require("dotenv").config();
-module.exports = {
-  webpack: (config, { dev }) => {
-    config.module.rules.push(
-      {
-      test: /\.css$/,
-      use: ExtractTextPlugin.extract({
-        fallback: 'style-loader',
-        use: [
-          {
-            loader: 'css-loader',
-          },
-        ],
-      }),
-      include: /node_modules[/\\]react-dropdown-tree-select/,
-      })}},
-    
+
 
     
 module.exports = {
