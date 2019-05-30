@@ -117,7 +117,12 @@ export default props => {
             date,
             located_floor,
             furniture,
-            total_floor,
+            //total_floor,
+            type_chauffage,
+            type_desserte,
+            exposition,
+
+          //  proximite_com,
             garden,
             d3,
             rotate,
@@ -164,13 +169,7 @@ export default props => {
                           <Fragment>{rooms_qty} chambres</Fragment>
                         )}
                       </span>}
-                      <span className="listing__container-item-info-icons-floor">
-                        {total_floor == 0 ? (
-                          "Rez de chausée"
-                        ) : (
-                          <Fragment>{total_floor} étages</Fragment>
-                        )}
-                      </span>
+                     
                       <span className="listing__container-item-info-icons-detail">
                         {garden == "yes" ? (
                           <span className="listing__container-item-info-icons-vip">

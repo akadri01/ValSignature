@@ -57,7 +57,7 @@ class EditAdvert extends Component {
       town,
       age,
       located_floor,
-      total_floor,
+      //total_floor,
       total_bathroom,
       total_balcony,
       area,
@@ -79,7 +79,7 @@ class EditAdvert extends Component {
       town,
       age,
       located_floor,
-      total_floor,
+      //total_floor,
       total_bathroom,
       total_balcony,
       area,
@@ -231,20 +231,7 @@ class EditAdvert extends Component {
                 ))}
               </Field>
             </div>
-            <div className="desktop-flex">
-              <Field
-                name="total_floor"
-                component={renderSelectField}
-                label="Total floor of the building"
-                validate={required()}
-              >
-                {floorQtySelectField.map(option => (
-                  <option value={option.value} key={option.value}>
-                    {option.text}
-                  </option>
-                ))}
-              </Field>
-            </div>
+            
             <div className="desktop-flex">
               <Field
                 name="total_bathroom"

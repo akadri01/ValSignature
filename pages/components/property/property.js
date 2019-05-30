@@ -1,13 +1,16 @@
-import React, { Fragment } from "react";
+import React, {Component, Fragment } from "react";
 import PreviousPage from "../shared/previous-page.js";
+
 import { beautifyDate, beautifyPrice } from "../../helpers/beautify.js";
 import Carousel from "../carousel/carousel.js";
 import SocialMediaShare from "../social-media-share/social-media-share.js";
 import {
   featuresCheckboxFieldList,
-  premisesAgeSelectField
+  premisesAgeSelectField,
+  yesNoSelectField
 } from "../shared/data.js";
 const featuresList = featuresCheckboxFieldList.map(obj => obj.labelAndValue);
+
 
 export default property => {
   console.log(property);
@@ -16,6 +19,7 @@ export default property => {
     area,
     age,
     date,
+    date_livraison,
     detail,
     features,
     images,
@@ -33,7 +37,11 @@ export default property => {
     title,
     total_balcony,
     total_bathroom,
-    total_floor,
+    //total_floor,
+    type_chauffage,
+    type_desserte,
+    exposition,
+    //proximite_com,
     town,
     user_email,
     user_name
@@ -46,31 +54,26 @@ export default property => {
             <div className="property__header-info">
               <h3>{title}</h3>
               <p>
-                {town}, {region}
+                {town}
               </p>
             </div>
             <h2>{beautifyPrice(price)}</h2>
           </div>
-          <div className="property__label">
-            <span>{advert_type == "sale" ? "For Sale" : "Rental"}</span>
-            <span className="property__label-postedby">
-              Posted by {posted_by == "agency" ? "owner" : "agent"}
-            </span>
-          </div>
+          
           <Carousel images={images} directory={img_directory} />
           <div className="property__icons">
             <div className="property__icons-rooms icon-frame">
-              <span>Total rooms</span>
+              <span>Nombre de chambres </span>
               <h3>{rooms_qty == 0 ? "No rooms" : rooms_qty}</h3>
             </div>
             <div className="property__icons-area icon-frame">
-              <span>Area</span>
+              <span>Sufrace </span>
               <h3>
                 {area} M<sup>2</sup>
               </h3>
             </div>
             <div className="property__icons-floor icon-frame">
-              <span>Located floor</span>
+              <span>Situé au minimum au</span>
               <h3>{located_floor == 0 ? "Ground floor" : located_floor}</h3>
             </div>
           </div>
@@ -79,15 +82,23 @@ export default property => {
             <div className="property__info-list">
               <ul>
                 <li>
-                  <span>Advert Type</span>
-                  <b>{advert_type == "sale" ? "For Sale" : "Rental"}</b>
+                  <span>Type de biens</span>
+                  <b>{advert_type == "habiter" ? "Habiter" : "Investir"}</b>
                 </li>
+
                 <li>
-                  <span>Premises Type</span>
+                  <span>Type de biens</span>
                   <b>{premises_type}</b>
                 </li>
+
                 <li>
-                  <span>Age of Premises</span>
+                  <span>Type desserte</span>
+                  <b>{type_desserte}</b>
+                </li>
+
+               
+                <li>
+                  <span>Ancienneté</span>
                   <b>
                     {premisesAgeSelectField.map(obj => {
                       if (obj.value === age.toString()) {
@@ -96,35 +107,41 @@ export default property => {
                     })}
                   </b>
                 </li>
+                
                 <li>
-                  <span>Bathroom Quantity</span>
+                  <span>Nombre de chambres</span>
                   <b>{total_bathroom == 0 ? "No Bathrooms" : total_bathroom}</b>
                 </li>
                 <li>
-                  <span>Garden</span>
-                  <b>{garden}</b>
+                  <span>Options de biens</span>
+                  <b>{features}</b>
                 </li>
               </ul>
               <ul>
                 <li>
-                  <span>Furnished</span>
-                  <b>{furniture}</b>
+                  <span>Exposition</span>
+                  <b>{exposition}</b>
                 </li>
                 <li>
-                  <span>Balcony</span>
+                  <span>Type de chauffage</span>
+                  <b>{type_chauffage}</b>
+                </li>
+                <li>
+                  <span>Nombre de balcons</span>
                   <b>{total_balcony == 0 ? "No Balcony" : total_balcony}</b>
                 </li>
                 <li>
-                  <span>Rooms Quantity</span>
+                  <span>Nombre de chambres</span>
                   <b>{rooms_qty == 0 ? "No Rooms" : rooms_qty}</b>
                 </li>
+                
                 <li>
-                  <span>Building Floors</span>
-                  <b>{total_floor == 0 ? "No Floors" : total_floor}</b>
+                  <span>Etage</span>
+                  <b>{located_floor == 0 ? "Ground Level" : located_floor}</b>
                 </li>
                 <li>
-                  <span>Located Floor</span>
-                  <b>{located_floor == 0 ? "Ground Level" : located_floor}</b>
+                  <span>Date de livraison</span>
+                  <b>{date_livraison}</b>
                 </li>
               </ul>
             </div>
@@ -141,7 +158,7 @@ export default property => {
             </div>
           </div>
           <div className="property__details">
-            <h2 className="property-default-title">Details of the Premises</h2>
+            <h2 className="property-default-title">Plus de détails</h2>
             <h4>{title}</h4>
             <pre dangerouslySetInnerHTML={{ __html: detail }} />
           </div>
@@ -164,7 +181,7 @@ export default property => {
                   .classList.toggle("expose-social-media-share-icons");
               }}
             >
-              Share
+              Partager
             </button>
             <div id="socialMediaHidder">
               <SocialMediaShare />
@@ -181,7 +198,7 @@ export default property => {
                     .classList.toggle("expose-contact-icons");
                 }}
               >
-                Send Email
+                Nous contacter
               </button>
               <div
                 className="prop-sidebar__contact-email-hidden"
@@ -199,7 +216,7 @@ export default property => {
                     .classList.toggle("expose-contact-icons");
                 }}
               >
-                By Phone
+                Par téléphone
               </button>
               <div
                 className="prop-sidebar__contact-phone-hidden"
@@ -214,7 +231,7 @@ export default property => {
               Reference <b>{reference}</b>
             </div>
             <div>
-              Date Posted <b>{beautifyDate(date, true)}</b>
+              Date Posté <b>{beautifyDate(date, true)}</b>
             </div>
           </div>
         </aside>

@@ -35,7 +35,11 @@ export default formValues => {
       title: formValues.title,
       total_balcony: formValues.total_balcony,
       total_bathroom: formValues.total_bathroom,
-      total_floor: formValues.total_floor,
+      //total_floor: formValues.total_floor,
+      //proximite_com:formValues.proximite_com,
+      type_dessert:formValues.type_dessert,
+      type_chauffage:formValues.type_chauffage,
+      exposition:formValues.exposition,
       town: formValues.town,
       userName: name,
       userId: _id,
@@ -43,7 +47,7 @@ export default formValues => {
     })
   );
   // append if any image uploaded
-  if (formValues.mainImage || formValues.images) {
+  if (formValues.mainImage || formValues.images)  {
     formValues.mainImage =
       !formValues.mainImage || !formValues.mainImage.length
         ? [formValues.images[0]]
@@ -56,6 +60,7 @@ export default formValues => {
       const imgName = "img" + i;
       formData.append(imgName, singleImg);
     });
+    
   }
   return formData;
 };

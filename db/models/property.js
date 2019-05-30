@@ -24,11 +24,20 @@ const PropertySchema = new schema({
   title: String,
   total_balcony: Number,
   total_bathroom: Number,
-  total_floor: Number,
+  //total_floor: Number,
+  type_chauffage: String,
+  type_desserte:String,
+  exposition: String,
+
+  //proximite_com: String,
   town: String,
   img_directory: String,
   images: Array, // [thumbnail, main, ...]
   date: {
+    type: Date,
+    default: Date.now
+  },
+  date_livraison: {
     type: Date,
     default: Date.now
   },
@@ -69,7 +78,11 @@ PropertySchema.statics.createNew = function(body, session) {
     title: body.title,
     total_balcony: parseInt(body.total_balcony),
     total_bathroom: parseInt(body.total_bathroom),
-    total_floor: parseInt(body.total_floor),
+    //total_floor: parseInt(body.total_floor),
+    type_chauffage: body.type_chauffage,
+    type_desserte: body.type_desserte,
+    expostion: body.exposition,
+
     town: body.town,
     user_name: body.userName,
     user_id: body.userId,
@@ -158,7 +171,11 @@ PropertySchema.statics.editContent = function(body, cb) {
     town: body.town,
     age: parseInt(body.age),
     located_floor: parseInt(body.located_floor),
-    total_floor: parseInt(body.total_floor),
+    //total_floor: parseInt(body.total_floor),
+    type_chauffage: body.type_chauffage,
+    type_desserte: body.type_desserte,
+    expostion: body.exposition,
+    //proximite_com:parseInt(body.proximite_com),
     total_bathroom: parseInt(body.total_bathroom),
     total_balcony: parseInt(body.total_balcony),
     area: body.area,

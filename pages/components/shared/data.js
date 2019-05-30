@@ -31,20 +31,18 @@ export const seoLinks = [
 ];
 
 export const premisesTypeSelectField = [
-  { value: "", text: "Select premises type" },
+  { value: "", text: "Selectionner" },
   { value: "Maison", text: "Maison" },
   { value: "flat", text: "Appartement" },
-  { value: "shop", text: "Parking" },
-  { value: "office", text: "Bureau" },
-  { value: "land", text: "Terrain" },
-  { value: "building", text: "Local Commercial" },
+  { value: "flat", text: "Loft" },
+  { value: "building", text: "Biens de prestige" },
   { value: "surface", text: "Surfaces diverses" }
 ];
 
 export const purposeSelectField = [
-  { value: "", text: "Select advert type" },
-  { value: "sale", text: "For sale" },
-  { value: "rent", text: "To rent" }
+  { value: "", text: "Selectionner" },
+  { value: "sale", text: "Habiter" },
+  { value: "rent", text: "Investir" }
 ];
 
 export const postedBySelectField = [
@@ -54,9 +52,8 @@ export const postedBySelectField = [
 ];
 
 export const roomsSelectField = [
-  { value: "", text: "Select room quanity" },
-  { value: "0", text: "No rooms" },
-  { value: "1", text: "Studio" },
+  { value: "", text: "Selectionner" },
+  { value: "1", text: "1" },
   { value: "2", text: "2" },
   { value: "3", text: "3" },
   { value: "4", text: "4" },
@@ -65,7 +62,7 @@ export const roomsSelectField = [
   { value: "7", text: "7" },
   { value: "8", text: "8" },
   { value: "9", text: "9" },
-  { value: "10", text: "10" },
+  { value: "10", text: "10 ou plus" },
 
 ];
 
@@ -84,7 +81,7 @@ export const locationRegionSelectField = [
 ];
 
 export const locationTownSelectField = [
-  { value: "", text: "Select town" },
+  { value: "", text: "Selectionner" },
   { value: "Paris", text: "Paris" },
   { value: "La Rochelle", text: "La Rochelle" },
   { value: "Nice", text: "Nice" },
@@ -99,27 +96,15 @@ export const locationTownSelectField = [
 ];
 
 export const premisesAgeSelectField = [
-  { value: "", text: "Select age" },
-  { value: "0", text: "New" },
-  { value: "-1", text: "No age (Land)" },
-  { value: "1", text: "1 year" },
-  { value: "2", text: "2 years" },
-  { value: "3", text: "3 years" },
-  { value: "4", text: "4 years" },
-  { value: "5", text: "5 years" },
-  { value: "9", text: "5 -10 years" },
-  { value: "14", text: "10 - 15 years" },
-  { value: "19", text: "15 - 20 years" },
-  { value: "29", text: "20 - 30 years" },
-  { value: "49", text: "30 - 50 years" },
-  { value: "99", text: "50 - 100 years" },
-  { value: "199", text: "100 - 200 years" },
-  { value: "499", text: "200 - 500 years" }
+  { value: "", text: "selectionner" },
+  { value: "5", text: "Entre 0 et 5 ans" },
+  { value: "10", text: "Entre 5 et 10 ans" },
+  { value: "15", text: "Entre 10 et 15 ans" },
+  { value: "20", text: "plus de 15 ans" }
 ];
 
 export const floorQtySelectField = [
-  { value: "", text: "Select floor" },
-  { value: "0", text: "No floors" },
+  { value: "", text: "Selectionner" },
   { value: "1", text: "1" },
   { value: "2", text: "2" },
   { value: "3", text: "3" },
@@ -130,33 +115,20 @@ export const floorQtySelectField = [
   { value: "8", text: "8" },
   { value: "9", text: "9" },
   { value: "10", text: "10" },
-  { value: "11", text: "11" },
-  { value: "12", text: "12" },
-  { value: "13", text: "13" },
-  { value: "14", text: "14" },
-  { value: "15", text: "15" },
-  { value: "16", text: "16" },
-  { value: "17", text: "17" },
-  { value: "18", text: "18" },
-  { value: "19", text: "19" },
-  { value: "20", text: "20" },
-  { value: "21", text: "21" },
-  { value: "22", text: "22" },
-  { value: "23", text: "23" },
-  { value: "24", text: "24" },
-  { value: "25", text: "25" },
-  { value: "26", text: "26" },
-  { value: "27", text: "27" },
-  { value: "28", text: "28" },
-  { value: "29", text: "29" },
-  { value: "30", text: "30" },
-  { value: "31", text: "31" },
-  { value: "32", text: "32" }
+  { value: "10", text: "10 ou plus" }
 ];
 
 export const bathroomQtySelectField = [
-  { value: "", text: "Select bathroom quantity" },
-  { value: "0", text: "No bathrooms" },
+  { value: "", text: "Selectionner" },
+  { value: "1", text: "1" },
+  { value: "2", text: "2" },
+  { value: "3", text: "3" },
+  { value: "4", text: "4" },
+  { value: "5", text: "5" },
+  { value: "6", text: "6" }
+];
+export const toiletQtySelectField = [
+  { value: "", text: "Selectionner" },
   { value: "1", text: "1" },
   { value: "2", text: "2" },
   { value: "3", text: "3" },
@@ -166,44 +138,57 @@ export const bathroomQtySelectField = [
 ];
 
 export const balconyQtySelectField = [
-  { value: "", text: "Select balcony quantity" },
-  { value: "0", text: "No balcony" },
+  { value: "", text: "Balcon" },
+  { value: "0", text: "0" },
   { value: "1", text: "1" },
   { value: "2", text: "2" },
   { value: "3", text: "3" },
   { value: "4", text: "4" }
 ];
 export const yesNoSelectField = [
-  { value: "", text: "Select" },
-  { value: "no", text: "No" },
-  { value: "yes", text: "Yes" }
+  { value: "", text: "Selectionner" },
+  { value: "oui", text: "Oui" },
+  { value: "non", text: "Non" }
+];
+export const expositionSelectField = [
+ 
+  { value: "", text: "Selectionner" },
+  { value: "oui", text: "Nord" },
+  { value: "sud", text: "Sud" },
+  { value: "est", text: "Est" },
+  { value: "ouest", text: "Ouest" },
+  { value: "nord-est", text: "Nord-Est" },
+  { value: "nord-ouest", text: "Nord-Ouest" },
+  { value: "sud-est", text: "Sud-Est" },
+  { value: "sud-ouest", text: "Sud-Ouest" }
+];
+export const type_desserteSelectField = [
+  { value: "", text: "Selectionner" },
+  { value: "tram", text: "Tram" },
+  { value: "train", text: "Train" },
+  { value: "metro", text: "Metro" },
+  { value: "bus", text: "Bus" },
+];
+export const type_chauffageSelectField = [
+  { value: "", text: "Selectionner" },
+  { value: "electrique", text: "Electrique" },
+  { value: "gaz", text: "Gaz" }
 ];
 
+
 export const featuresCheckboxFieldList = [
-  { idAndName: "features1", labelAndValue: "Air conditioning" },
-  { idAndName: "features2", labelAndValue: "Private parking" },
-  { idAndName: "features3", labelAndValue: "Private terrace" },
-  { idAndName: "features4", labelAndValue: "Swimming Pool" },
-  { idAndName: "features5", labelAndValue: "Built in Barbeque" },
-  { idAndName: "features6", labelAndValue: "Private Garden" },
-  { idAndName: "features7", labelAndValue: "Jacuzzi" },
-  { idAndName: "features9", labelAndValue: "Fire Alarm" },
-  { idAndName: "features10", labelAndValue: "American Kitchen" },
-  { idAndName: "features11", labelAndValue: "Bath Tub" },
-  { idAndName: "features12", labelAndValue: "Built-In Oven" },
-  { idAndName: "features13", labelAndValue: "Built-in Closet" },
-  { idAndName: "features14", labelAndValue: "Cellar" },
-  { idAndName: "features15", labelAndValue: "Double Glazing" },
-  { idAndName: "features16", labelAndValue: "Elevators" },
-  { idAndName: "features17", labelAndValue: "Furniture" },
-  { idAndName: "features18", labelAndValue: "Built-in Kitchen" },
-  { idAndName: "features19", labelAndValue: "Laminated Flooring" },
-  { idAndName: "features20", labelAndValue: "PVC Framing" },
-  { idAndName: "features21", labelAndValue: "Parquet Floor" },
-  { idAndName: "features22", labelAndValue: "Steel Door" },
-  { idAndName: "features23", labelAndValue: "Fire Escape" },
-  { idAndName: "features24", labelAndValue: "Generator" },
-  { idAndName: "features25", labelAndValue: "Water Tank" }
+  { idAndName: "features1", labelAndValue: "Cuisine ouverte" },
+  { idAndName: "features2", labelAndValue: "Cuisine fermée" },
+  { idAndName: "features3", labelAndValue: "Ascenseur" },
+  { idAndName: "features4", labelAndValue: "Terrasse" },
+  { idAndName: "features5", labelAndValue: "Balcon" },
+  { idAndName: "features6", labelAndValue: "Parking en sous-sol" },
+  { idAndName: "features7", labelAndValue: "Centre ville" },
+  { idAndName: "features9", labelAndValue: "Proximité Transport" },
+  { idAndName: "features10", labelAndValue: "Proximité Commerces" },
+  { idAndName: "features11", labelAndValue: "Jardin privatif" },
+  { idAndName: "features12", labelAndValue: "Videophone" },
+  { idAndName: "features13", labelAndValue: "Interphone" }
 ];
 
 export const minPrice = [
