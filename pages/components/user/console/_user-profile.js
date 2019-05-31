@@ -21,7 +21,7 @@ export default class UserProfile extends Component {
         <div className="console__profile-frame">
           {(this.state.shouldUpdate ? this.state.posts : posts)
             .slice(0, 8)
-            .map(({ url, title, thumbnailImg }) => {
+            .map(({ url, title, thumbnailImg, premises_type, town }) => {
               return (
                 <div className="console__profile-frame-property">
                   <Link href={`/property/${url}`}>
@@ -31,7 +31,7 @@ export default class UserProfile extends Component {
                           src={`/static/images/property-uploads/${thumbnailImg}`}
                         />
                       </div>
-                      <h4>{title.slice(0, 60)}...</h4>
+                      <h4>{premises_type} à {town}...</h4>
                     </a>
                   </Link>
                   <div className="console__profile-frame-property-controls">

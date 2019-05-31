@@ -111,7 +111,7 @@ export default property => {
                   <b>{type_desserte}</b>
                 </li>
                 
-
+{/* 
                 <li>
                   <span>Proprietaire</span>
                   <b>{proprietaire}</b>
@@ -171,7 +171,7 @@ export default property => {
                   <b>{price_parking}</b>
                 </li>
                
-                
+       */}         
                 
                 <li>
                   <span>Nombre de chambres</span>

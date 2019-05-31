@@ -162,7 +162,7 @@ export const expositionSelectField = [
   { value: "nord-ouest", text: "Nord-Ouest" },
   { value: "sud-est", text: "Sud-Est" },
   { value: "sud-ouest", text: "Sud-Ouest" },
-  { value: "unkown", text: "Non Commuuniquée" }
+  { value: "unkown", text: "Non Communiquée" }
 ];
 export const type_desserteSelectField = [
   { value: "", text: "Selectionner" },
@@ -170,12 +170,13 @@ export const type_desserteSelectField = [
   { value: "train", text: "Train" },
   { value: "metro", text: "Metro" },
   { value: "bus", text: "Bus" },
+  { value: "bus", text: "Autorute" },
 ];
 export const type_chauffageSelectField = [
   { value: "", text: "Selectionner" },
-  { value: "electrique", text: "Electrique" },
   { value: "gaz", text: "Gaz" },
-  { value: "unkown", text: "Non Commuuniquée" }
+  { value: "electrique", text: "Electrique" },
+  { value: "unkown", text: "Non Communiqué" }
 ];
 
 
@@ -185,14 +186,17 @@ export const featuresCheckboxFieldList = [
   { idAndName: "features3", labelAndValue: "Ascenseur" },
   { idAndName: "features4", labelAndValue: "Terrasse" },
   { idAndName: "features5", labelAndValue: "Balcon" },
-  { idAndName: "features6", labelAndValue: "Parking en sous-sol" },
+  { idAndName: "features6", labelAndValue: "Parking" },
   { idAndName: "features6", labelAndValue: "Box" },
   { idAndName: "features7", labelAndValue: "Centre ville" },
-  { idAndName: "features9", labelAndValue: "Proximité Transport" },
-  { idAndName: "features10", labelAndValue: "Proximité Commerces" },
+  { idAndName: "features9", labelAndValue: "Proximité transports" },
+  { idAndName: "features10", labelAndValue: "Proximité commerces" },
   { idAndName: "features11", labelAndValue: "Jardin privatif" },
-  { idAndName: "features12", labelAndValue: "Videophone" },
-  { idAndName: "features13", labelAndValue: "Interphone" }
+  { idAndName: "features12", labelAndValue: "Vidéophone" },
+  { idAndName: "features13", labelAndValue: "2D" },
+  { idAndName: "features13", labelAndValue: "3D" },
+  { idAndName: "features13", labelAndValue: "360" },
+  { idAndName: "features13", labelAndValue: "Vue immersive" }
 ];
 
 export const minPrice = [

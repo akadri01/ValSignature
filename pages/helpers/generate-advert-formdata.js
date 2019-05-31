@@ -42,7 +42,7 @@ export default formValues => {
       exposition:formValues.exposition,
 
       
-      actabilite: formValues.actabilite,
+     /* actabilite: formValues.actabilite,
       rentabilite: formValues.rentabilite,
       loyer_marche: formValues.loyer_marche,
       loyer_pinel: formValues.loyer_pinel,
@@ -54,7 +54,7 @@ export default formValues => {
       area_terrasse: formValues.area_terrasse,
       proprietaire: formValues.proprietaire,
       constructeur: formValues.constructeur,
-      n_lot: formValues.n_lot,
+      n_lot: formValues.n_lot,*/
 
       town: formValues.town,
       userName: name,

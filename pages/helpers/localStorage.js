@@ -3,7 +3,10 @@ export const saveUserDataToLocalStorage = userDataObj => {
   localStorage.setItem("userData", JSON.stringify(userDataObj));
 };
 export const getUserDataFromLocalStorage = () => {
-  return JSON.parse(localStorage.getItem("userData"));
+  if(typeof "userData" !== 'undefined'){
+    return JSON.parse(localStorage.getItem("userData"));
+  }
+  
 };
 export const removeUserDataFromLocalStorage = () => {
   localStorage.removeItem("userData");
