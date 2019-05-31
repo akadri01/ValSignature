@@ -41,6 +41,21 @@ export default property => {
     type_chauffage,
     type_desserte,
     exposition,
+
+    actabilite,
+    rentabilite,
+    loyer_marche,
+    loyer_pinel,
+    description,
+    price_box,
+    price_parking,
+    area_jardin,
+    area_balcon,
+    area_terrasse,
+    proprietaire,
+    constructeur,
+    n_lot,
+
     //proximite_com,
     town,
     user_email,
@@ -95,18 +110,68 @@ export default property => {
                   <span>Type desserte</span>
                   <b>{type_desserte}</b>
                 </li>
+                
 
-               
                 <li>
-                  <span>Ancienneté</span>
-                  <b>
-                    {premisesAgeSelectField.map(obj => {
-                      if (obj.value === age.toString()) {
-                        return obj.text;
-                      }
-                    })}
-                  </b>
+                  <span>Proprietaire</span>
+                  <b>{proprietaire}</b>
                 </li>
+                <li>
+                  <span>Constructeur</span>
+                  <b>{constructeur}</b>
+                </li>
+                <li>
+                  <span>N de lot (constructeur)</span>
+                  <b>{n_lot}</b>
+                </li>
+                <li>
+                  <span>Surface du balcon</span>
+                  <b>{area_jardin}</b>
+                </li>
+                <li>
+                  <span>Surface de la terrasse</span>
+                  <b>{area_terrasse}</b>
+                </li>
+                <li>
+                  <span>Surface du jardin</span>
+                  <b>{area_balcon}</b>
+                </li>
+
+                <li>
+                  <span>Rentabilité</span>
+                  <b>{rentabilite}</b>
+                </li>
+                <li>
+                  <span>Rentabilité</span>
+                  <b>{rentabilite}</b>
+                </li>
+                <li>
+                  <span>actabilite</span>
+                  <b>{actabilite}</b>
+                </li>
+                <li>
+                  <span>loyer_marche</span>
+                  <b>{loyer_marche}</b>
+                </li>
+                <li>
+                  <span>loyer_pinel</span>
+                  <b>{loyer_pinel}</b>
+                </li>
+                <li>
+                  <span>description</span>
+                  <b>{description}</b>
+                </li>
+
+                <li>
+                  <span>prix du box</span>
+                  <b>{price_box}</b>
+                </li>
+                <li>
+                  <span>prix du parking</span>
+                  <b>{price_parking}</b>
+                </li>
+               
+                
                 
                 <li>
                   <span>Nombre de chambres</span>
@@ -228,7 +293,7 @@ export default property => {
           </div>
           <div className="prop-sidebar__reference">
             <div>
-              Reference <b>{reference}</b>
+              N° de lot <b>{reference}</b>
             </div>
             <div>
               Date Posté <b>{beautifyDate(date, true)}</b>

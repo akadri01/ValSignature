@@ -69,12 +69,61 @@ class PostAdvert extends Component {
             General information
           </h3>
           <section className="desktop-flex-container">
+
+          <div className="desktop-flex">
+              <Field
+                name="n_lot"
+                label="N° lot (constructeur)"
+                placeholder=" e.g. D5RT432"
+                type="number"
+                component={renderFormInput}
+                validate={[length({ min: 0, max: 19 })]}
+              />
+            </div>
+            
+            <div className="desktop-flex">
+              <Field
+                name="constructeur"
+                label="Constructeur"
+                placeholder=" ..."
+                type="text"
+                component={renderFormInput}
+                validate={[length({ min: 0, max: 19 })]}
+              />
+            </div>
+
+            <div className="desktop-flex">
+              <Field
+                name="proprietaire"
+                label="Proprietaire"
+                placeholder=" ..."
+                type="text"
+                component={renderFormInput}
+                validate={[length({ min: 0, max: 29 })]}
+              />
+            </div>
+
+            <div className="desktop-flex">
+              <Field
+                name="town"
+                component={renderSelectField}
+                label="Ville d'implantation"
+                //validate={required()}
+              >
+                {locationTownSelectField.map(option => (
+                  <option value={option.value} key={option.value}>
+                    {option.text}
+                  </option>
+                ))}
+              </Field>
+            </div>
+
             <div className="desktop-flex">
               <Field
                 name="premises_type"
                 component={renderSelectField}
                 label="Type de biens"
-                validate={required()}
+                //validate={required()}
               >
                 {premisesTypeSelectField.map(option => (
                   <option value={option.value} key={option.value}>
@@ -87,8 +136,8 @@ class PostAdvert extends Component {
               <Field
                 name="advert_type"
                 component={renderSelectField}
-                label="Type de biens"
-                validate={required()}
+                label="Destination de biens"
+                //validate={required()}
               >
                 {purposeSelectField.map(option => (
                   <option value={option.value} key={option.value}>
@@ -97,13 +146,107 @@ class PostAdvert extends Component {
                 ))}
               </Field>
             </div>
+
+            <div className="desktop-flex">
+              <Field
+                name="area"
+                label=" Surface habitable (m²)"
+                placeholder=" e.g. 130"
+                type="number"
+                component={renderFormInput}
+                validate={[length({ min: 0, max: 9 })]}
+              />
+            </div>
+
+            <div className="desktop-flex">
+              <Field
+                name="area_terrasse"
+                label=" Surface de la terrasse(m²)"
+                placeholder=" e.g. 20"
+                type="number"
+                component={renderFormInput}
+                validate={[length({ min: 0, max: 9 })]}
+              />
+            </div>
+
+            <div className="desktop-flex">
+              <Field
+                name="area_balcon"
+                label=" Surface du balcon (m²)"
+                placeholder=" e.g. 20"
+                type="number"
+                component={renderFormInput}
+                validate={[length({ min: 0, max: 9 })]}
+              />
+            </div>
+
+            <div className="desktop-flex">
+              <Field
+                name="area_jardin"
+                label=" Surface du jardin (m²)"
+                placeholder=" e.g. 20"
+                type="number"
+                component={renderFormInput}
+                validate={[length({ min: 0, max: 9 })]}
+              />
+            </div>
+
             
+            <div className="desktop-flex">
+              <Field
+                name="price"
+                label=" Prix (€)"
+                placeholder=" e.g. 85000"
+                type="number"
+                component={renderFormInput}
+                validate={[ length({ min: 0, max: 11 })]}
+              />
+            </div>
+
+            <div className="desktop-flex">
+              <Field
+                name="price_parking"
+                label=" Prix du parking (€)"
+                placeholder=" e.g. 85000"
+                type="number"
+                component={renderFormInput}
+                validate={[ length({ min: 0, max: 11 })]}
+              />
+            </div>
+
+            <div className="desktop-flex">
+              <Field
+                name="price_box"
+                label=" Prix du box (€)"
+                placeholder=" e.g. 85000"
+                type="number"
+                component={renderFormInput}
+                validate={[ length({ min: 0, max: 11 })]}
+              />
+            </div>
+
+            <div className="desktop-flex">
+              <Field
+                name="located_floor"
+                component={renderSelectField}
+                label="Etage"
+                //validate={required()}
+              >
+                {floorQtySelectField.map(option => (
+                  <option value={option.value} key={option.value}>
+                    {option.text}
+                  </option>
+                ))}
+              </Field>
+            </div>
+
+
             <div className="desktop-flex">
               <Field
                 name="rooms_qty"
                 component={renderSelectField}
-                label="Nombre de chambres min"
-                validate={required()}
+                label="Nombre de chambres"
+                //validate={required()}
               >
                 {roomsSelectField.map(option => (
                   <option value={option.value} key={option.value}>
@@ -115,98 +258,10 @@ class PostAdvert extends Component {
             
             <div className="desktop-flex">
               <Field
-                name="town"
-                component={renderSelectField}
-                label="Ville"
-                validate={required()}
-              >
-                {locationTownSelectField.map(option => (
-                  <option value={option.value} key={option.value}>
-                    {option.text}
-                  </option>
-                ))}
-              </Field>
-            </div>
-            <div className="desktop-flex">
-              <Field
-                name="age"
-                component={renderSelectField}
-                label="Ancienneté"
-                validate={required()}
-              >
-                {premisesAgeSelectField.map((option, i) => (
-                  <option value={option.value} key={option.value + i}>
-                    {option.text}
-                  </option>
-                ))}
-              </Field>
-            </div>
-            <div className="desktop-flex">
-              <Field
-                name="located_floor"
-                component={renderSelectField}
-                label="Situé au minimum au"
-                validate={required()}
-              >
-                {floorQtySelectField.map(option => (
-                  <option value={option.value} key={option.value}>
-                    {option.text}
-                  </option>
-                ))}
-              </Field>
-            </div>
-
-            <div className="desktop-flex">
-              <Field
-                name="type_chauffage"
-                component={renderSelectField}
-                label="Type de chauffage"
-                validate={required()}
-              >
-                {type_chauffageSelectField.map(option => (
-                  <option value={option.value} key={option.value}>
-                    {option.text}
-                  </option>
-                ))}
-              </Field>
-            </div>
-
-            <div className="desktop-flex">
-              <Field
-                name="type_desserte"
-                component={renderSelectField}
-                label="Type de desserte"
-                validate={required()}
-              >
-                {type_desserteSelectField.map(option => (
-                  <option value={option.value} key={option.value}>
-                    {option.text}
-                  </option>
-                ))}
-              </Field>
-            </div>
-
-            <div className="desktop-flex">
-              <Field
-                name="exposition"
-                component={renderSelectField}
-                label="Exposition"
-                validate={required()}
-              >
-                {expositionSelectField.map(option => (
-                  <option value={option.value} key={option.value}>
-                    {option.text}
-                  </option>
-                ))}
-              </Field>
-            </div>
-           
-            <div className="desktop-flex">
-              <Field
                 name="total_bathroom"
                 component={renderSelectField}
-                label="Nombre de salle de bains min"
-                validate={required()}
+                label="Nombre de salles de bains"
+                //validate={required()}
               >
                 {bathroomQtySelectField.map(option => (
                   <option value={option.value} key={option.value}>
@@ -219,8 +274,8 @@ class PostAdvert extends Component {
               <Field
                 name="total_toilet"
                 component={renderSelectField}
-                label="Nombre de salle d'eau min"
-                validate={required()}
+                label="Nombre de salles d'eau "
+                //validate={required()}
               >
                 {toiletQtySelectField.map(option => (
                   <option value={option.value} key={option.value}>
@@ -229,12 +284,77 @@ class PostAdvert extends Component {
                 ))}
               </Field>
             </div>
+
             <div className="desktop-flex">
+              <Field
+                name="exposition"
+                component={renderSelectField}
+                label="Exposition"
+                //validate={required()}
+              >
+                {expositionSelectField.map(option => (
+                  <option value={option.value} key={option.value}>
+                    {option.text}
+                  </option>
+                ))}
+              </Field>
+            </div>
+
+            <div className="desktop-flex">
+              <Field
+                name="type_chauffage"
+                component={renderSelectField}
+                label="Type de chauffage"
+                //validate={required()}
+              >
+                {type_chauffageSelectField.map(option => (
+                  <option value={option.value} key={option.value}>
+                    {option.text}
+                  </option>
+                ))}
+              </Field>
+            </div>
+
+
+            <div className="desktop-flex">
+              <Field
+                name="annee_construction"
+                label="Année de construction"
+                placeholder="YEAR"
+                type="text"
+                component={renderFormInput}
+                validate={[length({ min: 0, max: 9 })]}
+              />
+            </div>
+            
+
+           
+
+            <div className="desktop-flex">
+              <Field
+                name="type_desserte"
+                component={renderSelectField}
+                label="Type de desserte"
+                //  isMultiple={true}
+                //validate={required()}
+              >
+                {type_desserteSelectField.map(option => (
+                  <option value={option.value} key={option.value}>
+                    {option.text}
+                  </option>
+                ))}
+              </Field>
+            </div>
+
+           
+           
+            
+             <div className="desktop-flex">
               <Field
                 name="total_balcony"
                 component={renderSelectField}
                 label="Balcon"
-                validate={required()}
+                //validate={required()}
               >
                 {balconyQtySelectField.map(option => (
                   <option value={option.value} key={option.value}>
@@ -242,7 +362,7 @@ class PostAdvert extends Component {
                   </option>
                 ))}
               </Field>
-            </div>
+                </div>
             
             <div className="desktop-flex">
               <Field
@@ -251,30 +371,13 @@ class PostAdvert extends Component {
                 placeholder="JJ/MM/YEAR"
                 type="text"
                 component={renderFormInput}
-                validate={[required(), length({ min: 2, max: 11 })]}
+                validate={[length({ min: 0, max: 11 })]}
               />
             </div>
 
-            <div className="desktop-flex">
-              <Field
-                name="price"
-                label=" Prix (€)"
-                placeholder=" e.g. 85000"
-                type="number"
-                component={renderFormInput}
-                validate={[required(), length({ min: 2, max: 11 })]}
-              />
-            </div>
-            <div className="desktop-flex">
-              <Field
-                name="area"
-                label=" Surface min (m²)"
-                placeholder=" e.g. 130"
-                type="number"
-                component={renderFormInput}
-                validate={[required(), length({ min: 1, max: 9 })]}
-              />
-            </div>
+           
+
+
           </section>
           <h3 className="console__post-advert-form-section-title">
             Description
@@ -285,7 +388,7 @@ class PostAdvert extends Component {
             placeholder=" Appartement de luxe à paris"
             type="text"
             component={renderFormInput}
-            validate={[required(), length({ min: 10, max: 110 })]}
+            validate={[length({ min: 0, max: 110 })]}
           />
           <Field
             name="detail"
@@ -293,8 +396,60 @@ class PostAdvert extends Component {
             placeholder=" ..."
             type="textarea"
             component={renderTextarea}
-            validate={[required(), length({ min: 10, max: 3000 })]}
+            validate={[length({ min: 0, max: 3000 })]}
           />
+          <Field
+            name="description"
+            label=" Description du programme"
+            placeholder=" ..."
+            type="textarea"
+            component={renderTextarea}
+            validate={[length({ min: 0, max: 3000 })]}
+          />
+
+                    <section className="desktop-flex-container">
+                    <div className="desktop-flex">
+                        <Field
+                          name="loyer_marche"
+                          label="Loyer Marché"
+                          placeholder=" .."
+                          type="number"
+                          component={renderFormInput}
+                          validate={[length({ min: 0, max: 9 })]}
+                        />
+                      </div>
+                      <div className="desktop-flex">
+                        <Field
+                          name="loyer_pinel"
+                          label="Loyer Pinel"
+                          placeholder=" .."
+                          type="number"
+                          component={renderFormInput}
+                          validate={[length({ min: 0, max: 9 })]}
+                        />
+                      </div>
+                      <div className="desktop-flex">
+                        <Field
+                          name="rentabilite"
+                          label="entabilité brute prévisionnelle hors charges"
+                          placeholder=" .."
+                          type="number"
+                          component={renderFormInput}
+                          validate={[length({ min: 0, max: 9 })]}
+                        />
+                      </div>
+                      <div className="desktop-flex">
+                        <Field
+                          name="actabilite"
+                          label="Actabilité"
+                          placeholder=" .."
+                          type="text"
+                          component={renderFormInput}
+                          validate={[length({ min: 0, max: 9 })]}
+                        />
+                      </div>
+                      
+                    </section>
           <h3 className="console__post-advert-form-section-title">Features</h3>
           <div className="console__post-advert-form-features-container">
             {featuresCheckboxFieldList.map(({ labelAndValue, idAndName }) => {

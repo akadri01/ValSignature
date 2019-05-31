@@ -32,11 +32,11 @@ export const seoLinks = [
 
 export const premisesTypeSelectField = [
   { value: "", text: "Selectionner" },
+  { value: "Appartement", text: "Appartement" },
   { value: "Maison", text: "Maison" },
-  { value: "flat", text: "Appartement" },
-  { value: "flat", text: "Loft" },
-  { value: "building", text: "Biens de prestige" },
-  { value: "surface", text: "Surfaces diverses" }
+  { value: "Loft", text: "Loft" },
+  { value: "Biens de prestige", text: "Biens de prestige" },
+  { value: "Surfaces diverses", text: "Surfaces diverses" }
 ];
 
 export const purposeSelectField = [
@@ -96,7 +96,7 @@ export const locationTownSelectField = [
 ];
 
 export const premisesAgeSelectField = [
-  { value: "", text: "selectionner" },
+  { value: "", text: "Selectionner" },
   { value: "5", text: "Entre 0 et 5 ans" },
   { value: "10", text: "Entre 5 et 10 ans" },
   { value: "15", text: "Entre 10 et 15 ans" },
@@ -105,6 +105,7 @@ export const premisesAgeSelectField = [
 
 export const floorQtySelectField = [
   { value: "", text: "Selectionner" },
+  { value: "0", text: "Maison" },
   { value: "1", text: "1" },
   { value: "2", text: "2" },
   { value: "3", text: "3" },
@@ -160,7 +161,8 @@ export const expositionSelectField = [
   { value: "nord-est", text: "Nord-Est" },
   { value: "nord-ouest", text: "Nord-Ouest" },
   { value: "sud-est", text: "Sud-Est" },
-  { value: "sud-ouest", text: "Sud-Ouest" }
+  { value: "sud-ouest", text: "Sud-Ouest" },
+  { value: "unkown", text: "Non Commuuniquée" }
 ];
 export const type_desserteSelectField = [
   { value: "", text: "Selectionner" },
@@ -172,7 +174,8 @@ export const type_desserteSelectField = [
 export const type_chauffageSelectField = [
   { value: "", text: "Selectionner" },
   { value: "electrique", text: "Electrique" },
-  { value: "gaz", text: "Gaz" }
+  { value: "gaz", text: "Gaz" },
+  { value: "unkown", text: "Non Commuuniquée" }
 ];
 
 
@@ -183,6 +186,7 @@ export const featuresCheckboxFieldList = [
   { idAndName: "features4", labelAndValue: "Terrasse" },
   { idAndName: "features5", labelAndValue: "Balcon" },
   { idAndName: "features6", labelAndValue: "Parking en sous-sol" },
+  { idAndName: "features6", labelAndValue: "Box" },
   { idAndName: "features7", labelAndValue: "Centre ville" },
   { idAndName: "features9", labelAndValue: "Proximité Transport" },
   { idAndName: "features10", labelAndValue: "Proximité Commerces" },

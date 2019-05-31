@@ -40,6 +40,22 @@ export default formValues => {
       type_dessert:formValues.type_dessert,
       type_chauffage:formValues.type_chauffage,
       exposition:formValues.exposition,
+
+      
+      actabilite: formValues.actabilite,
+      rentabilite: formValues.rentabilite,
+      loyer_marche: formValues.loyer_marche,
+      loyer_pinel: formValues.loyer_pinel,
+      description: formValues.description,
+      price_box: formValues.price_box,
+      price_parking: formValues.price_parking,
+      area_jardin: formValues.area_jardin,
+      area_balcon: formValues.area_balcon,
+      area_terrasse: formValues.area_terrasse,
+      proprietaire: formValues.proprietaire,
+      constructeur: formValues.constructeur,
+      n_lot: formValues.n_lot,
+
       town: formValues.town,
       userName: name,
       userId: _id,
