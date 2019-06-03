@@ -59,14 +59,14 @@ class PostAdvert extends Component {
   render() {
     return (
       <Fragment>
-        <h1 className="section-main-title">Create new advert</h1>
+        <h1 className="section-main-title">Créer une fiche de bien</h1>
         <form
           onSubmit={this.props.handleSubmit(this.postAd)}
           id="postAdvertForm"
           className="console__post-advert-form default-redux-form"
         >
           <h3 className="console__post-advert-form-section-title">
-            General information
+            Informations 
           </h3>
           <section className="desktop-flex-container">
 

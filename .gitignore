@@ -3,7 +3,7 @@ node_modules/*
 !/node_modules/@zeit/next-sass/*
 .next/
 .scannerwork/
-
+appDebug.log
 
 
 static/images/property-uploads/*

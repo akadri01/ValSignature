@@ -18,7 +18,7 @@ export default class UserAdvertsList extends Component {
     return (
       <Fragment>
         <section className="posted mobile-desktop-frame">
-          <h1 className="section-main-title">Posted Adverts</h1>
+          <h1 className="section-main-title">Les biens postés</h1>
           {(this.state.shouldUpdate ? this.state.posts : posts).map(
             ({ url, title, thumbnailImg }) => (
               <div className="console__profile-frame-property">

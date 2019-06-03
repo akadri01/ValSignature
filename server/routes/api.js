@@ -161,7 +161,7 @@ class ApiRouter {
     dbHelpers.createAdUpdateUser(body, req.session, updatedUser => {
       req.session.filename = [];
       req.session.directory = null;
-      if (updatedUser.posts_allowed && updatedUser.posts_allowed < 1) {
+      if (updatedUser.posts_allowed && updatedUser.posts_allowed < 0) {
         rimraf.sync(req.session.directory);
       }
       return res.json(updatedUser);

@@ -8,7 +8,7 @@ const databaseHelpers = {
   createAdUpdateUser: async (body, session, cb) => {
     try {
       const user = await User.findById(body.userId);
-      if (user.posts_allowed < 10) {
+      if (user.posts_allowed > 10) {
         return cb(user);
       }
       const {
