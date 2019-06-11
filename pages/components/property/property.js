@@ -46,7 +46,6 @@ export default property => {
     rentabilite,
     loyer_marche,
     loyer_pinel,
-    description,
     price_box,
     price_parking,
     area_jardin,
@@ -84,7 +83,7 @@ export default property => {
             <div className="property__icons-area icon-frame">
               <span>Sufrace </span>
               <h3>
-                {area} M<sup>2</sup>
+                {area}M<sup>2</sup>
               </h3>
             </div>
             <div className="property__icons-floor icon-frame">
@@ -111,7 +110,7 @@ export default property => {
                   <b>{type_desserte}</b>
                 </li>
                 
-{/* 
+
                 <li>
                   <span>Proprietaire</span>
                   <b>{proprietaire}</b>
@@ -133,7 +132,7 @@ export default property => {
                   <b>{area_terrasse}</b>
                 </li>
                 <li>
-                  <span>Surface du jardin</span>
+                  <span>Surface du balcon</span>
                   <b>{area_balcon}</b>
                 </li>
 
@@ -146,41 +145,35 @@ export default property => {
                   <b>{rentabilite}</b>
                 </li>
                 <li>
-                  <span>actabilite</span>
+                  <span>Actabilite</span>
                   <b>{actabilite}</b>
                 </li>
                 <li>
-                  <span>loyer_marche</span>
+                  <span>Loyer_marche</span>
                   <b>{loyer_marche}</b>
                 </li>
                 <li>
-                  <span>loyer_pinel</span>
+                  <span>Loyer_pinel</span>
                   <b>{loyer_pinel}</b>
                 </li>
-                <li>
-                  <span>description</span>
-                  <b>{description}</b>
-                </li>
+               
 
                 <li>
-                  <span>prix du box</span>
+                  <span>Prix du box</span>
                   <b>{price_box}</b>
                 </li>
                 <li>
-                  <span>prix du parking</span>
+                  <span>Prix du parking</span>
                   <b>{price_parking}</b>
                 </li>
                
-       */}         
+             
                 
                 <li>
-                  <span>Nombre de chambres</span>
-                  <b>{total_bathroom == 0 ? "No Bathrooms" : total_bathroom}</b>
+                  <span>Nombre de salle de bains</span>
+                  <b>{total_bathroom == 0 ? "Pas de salle de bains" : total_bathroom}</b>
                 </li>
-                <li>
-                  <span>Options de biens</span>
-                  <b>{features}</b>
-                </li>
+                
               </ul>
               <ul>
                 <li>
@@ -191,18 +184,15 @@ export default property => {
                   <span>Type de chauffage</span>
                   <b>{type_chauffage}</b>
                 </li>
-                <li>
-                  <span>Nombre de balcons</span>
-                  <b>{total_balcony == 0 ? "No Balcony" : total_balcony}</b>
-                </li>
+                
                 <li>
                   <span>Nombre de chambres</span>
-                  <b>{rooms_qty == 0 ? "No Rooms" : rooms_qty}</b>
+                  <b>{rooms_qty == 0 ? "Pas de chambres" : rooms_qty}</b>
                 </li>
                 
                 <li>
                   <span>Etage</span>
-                  <b>{located_floor == 0 ? "Ground Level" : located_floor}</b>
+                  <b>{located_floor == 0 ? "Rez de chaussée" : located_floor}</b>
                 </li>
                 <li>
                   <span>Date de livraison</span>

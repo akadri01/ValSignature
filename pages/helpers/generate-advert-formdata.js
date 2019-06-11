@@ -19,7 +19,7 @@ export default formValues => {
     "inputValues",
     JSON.stringify({
       advert_type: formValues.advert_type,
-      age: formValues.age,
+      //age: formValues.age,
       area: formValues.area,
       detail: formValues.detail,
       features: sortFeatures(formValues),
@@ -33,16 +33,16 @@ export default formValues => {
       region: formValues.region,
       rooms_qty: formValues.rooms_qty,
       title: formValues.title,
-      total_balcony: formValues.total_balcony,
+      //total_balcony: formValues.total_balcony,
       total_bathroom: formValues.total_bathroom,
       //total_floor: formValues.total_floor,
       //proximite_com:formValues.proximite_com,
-      type_dessert:formValues.type_dessert,
-      type_chauffage:formValues.type_chauffage,
-      exposition:formValues.exposition,
+      type_dessert: formValues.type_dessert,
+      type_chauffage: formValues.type_chauffage,
+      exposition: formValues.exposition,
 
       
-     /* actabilite: formValues.actabilite,
+     actabilite: formValues.actabilite,
       rentabilite: formValues.rentabilite,
       loyer_marche: formValues.loyer_marche,
       loyer_pinel: formValues.loyer_pinel,
@@ -54,7 +54,7 @@ export default formValues => {
       area_terrasse: formValues.area_terrasse,
       proprietaire: formValues.proprietaire,
       constructeur: formValues.constructeur,
-      n_lot: formValues.n_lot,*/
+      n_lot: formValues.n_lot,
 
       town: formValues.town,
       userName: name,

@@ -154,7 +154,7 @@ export const yesNoSelectField = [
 export const expositionSelectField = [
  
   { value: "", text: "Selectionner" },
-  { value: "oui", text: "Nord" },
+  { value: "nord", text: "Nord" },
   { value: "sud", text: "Sud" },
   { value: "est", text: "Est" },
   { value: "ouest", text: "Ouest" },
@@ -170,7 +170,7 @@ export const type_desserteSelectField = [
   { value: "train", text: "Train" },
   { value: "metro", text: "Metro" },
   { value: "bus", text: "Bus" },
-  { value: "bus", text: "Autorute" },
+  { value: "autoroute", text: "Autorute" },
 ];
 export const type_chauffageSelectField = [
   { value: "", text: "Selectionner" },

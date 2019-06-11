@@ -8,7 +8,7 @@ const generateUrl = require("../../server/helpers").generateUrl;
 
 const PropertySchema = new schema({
   advert_type: String,
-  age: Number,
+  //age: Number,
   area: Number,
   detail: String,
   features: Array,
@@ -22,9 +22,8 @@ const PropertySchema = new schema({
   region: String,
   rooms_qty: String,
   title: String,
-  total_balcony: Number,
+  //total_balcony: Number,
   total_bathroom: Number,
-  //total_floor: Number,
   type_chauffage: String,
   type_desserte: String,
   exposition: String,
@@ -41,7 +40,7 @@ const PropertySchema = new schema({
   area_terrasse: Number,
   proprietaire: String,
   constructeur: String,
-  n_lot: Number,
+  n_lot: String,
 
   //proximite_com: String,
   town: String,
@@ -87,14 +86,14 @@ PropertySchema.statics.createNew = function(body, session) {
     region: body.region,
     rooms_qty: body.rooms_qty,
     title: body.title,
-    /*
+
     age: parseInt(body.age),
     area: parseInt(body.area),
     located_floor: parseInt(body.located_floor),
     price: parseInt(body.price),
-    total_balcony: parseInt(body.total_balcony),
+    //total_balcony: parseInt(body.total_balcony),
     total_bathroom: parseInt(body.total_bathroom),
-    total_floor: parseInt(body.total_floor),*/
+    total_floor: parseInt(body.total_floor),
 
     type_chauffage: body.type_chauffage,
     type_desserte: body.type_desserte,
@@ -104,7 +103,9 @@ PropertySchema.statics.createNew = function(body, session) {
     description: body.description,
     proprietaire: body.proprietaire,
     constructeur: body.constructeur,
-    /*
+
+    n_lot: body.n_lot,
+
     rentabilite: parseInt(body.rentabilite),
     loyer_marche: parseInt(body.loyer_marche),
     loyer_pinel: parseInt(body.loyer_pinel),
@@ -113,8 +114,7 @@ PropertySchema.statics.createNew = function(body, session) {
     area_jardin: parseInt(body.area_jardin),
     area_balcon: parseInt(body.area_balcon),
     area_terrasse: parseInt(body.area_terrasse),
-    n_lot:parseInt(body.n_lot),*/
-    
+
     town: body.town,
     user_name: body.userName,
     user_id: body.userId,
@@ -207,8 +207,7 @@ PropertySchema.statics.editContent = function(body, cb) {
     type_chauffage: body.type_chauffage,
     type_desserte: body.type_desserte,
     expostion: body.exposition,
-    
-/*
+
     actabilite: body.actabilite,
     rentabilite: parseInt(body.rentabilite),
     loyer_marche: parseInt(body.loyer_marche),
@@ -221,7 +220,7 @@ PropertySchema.statics.editContent = function(body, cb) {
     area_terrasse: parseInt(body.area_terrasse),
     proprietaire: body.proprietaire,
     constructeur: body.constructeur,
-    n_lot:parseInt(body.n_lot),*/
+    n_lot:body.n_lot,
 
     total_bathroom: parseInt(body.total_bathroom),
     total_balcony: parseInt(body.total_balcony),

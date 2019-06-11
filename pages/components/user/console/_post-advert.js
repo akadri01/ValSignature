@@ -77,7 +77,7 @@ class PostAdvert extends Component {
                 placeholder=" e.g. D5RT432"
                 type="text"
                 component={renderFormInput}
-                validate={[length({ min: 0, max: 19 })]}
+                validate={required()}
               />
             </div>
             
@@ -88,7 +88,7 @@ class PostAdvert extends Component {
                 placeholder=" ..."
                 type="text"
                 component={renderFormInput}
-                validate={[length({ min: 0, max: 19 })]}
+                validate={required()}
               />
             </div>
 
@@ -99,7 +99,7 @@ class PostAdvert extends Component {
                 placeholder=" ..."
                 type="text"
                 component={renderFormInput}
-                validate={[length({ min: 0, max: 29 })]}
+                validate={required()}
               />
             </div>
 
@@ -110,7 +110,7 @@ class PostAdvert extends Component {
                 label="Ville d'implantation"
                 type="text"
                 component={renderFormInput}
-                validate={[length({ min: 0, max: 29 })]}
+                validate={required()}
               >
               
               </Field>
@@ -121,7 +121,7 @@ class PostAdvert extends Component {
                 name="premises_type"
                 component={renderSelectField}
                 label="Type de biens"
-                //validate={required()}
+                validate={required()}
               >
                 {premisesTypeSelectField.map(option => (
                   <option value={option.value} key={option.value}>
@@ -135,7 +135,7 @@ class PostAdvert extends Component {
                 name="advert_type"
                 component={renderSelectField}
                 label="Destination de biens"
-                //validate={required()}
+                validate={required()}
               >
                 {purposeSelectField.map(option => (
                   <option value={option.value} key={option.value}>
@@ -152,7 +152,7 @@ class PostAdvert extends Component {
                 placeholder=" 130.00"
                 type="number"
                 component={renderFormInput}
-                validate={[length({ min: 0, max: 9 })]}
+                validate={required()}
               />
             </div>
 
@@ -163,7 +163,7 @@ class PostAdvert extends Component {
                 placeholder=" 20.00"
                 type="number"
                 component={renderFormInput}
-                validate={[length({ min: 0, max: 9 })]}
+                validate={required()}
               />
             </div>
 
@@ -174,7 +174,7 @@ class PostAdvert extends Component {
                 placeholder=" 20.00"
                 type="number"
                 component={renderFormInput}
-                validate={[length({ min: 0, max: 9 })]}
+                validate={required()}
               />
             </div>
 
@@ -185,7 +185,7 @@ class PostAdvert extends Component {
                 placeholder="20.00"
                 type="number"
                 component={renderFormInput}
-                validate={[length({ min: 0, max: 9 })]}
+                validate={required()}
               />
             </div>
 
@@ -197,7 +197,7 @@ class PostAdvert extends Component {
                 placeholder="74300.00"
                 type="number"
                 component={renderFormInput}
-                validate={[ length({ min: 0, max: 11 })]}
+                validate={required()}
               />
             </div>
 
@@ -208,7 +208,7 @@ class PostAdvert extends Component {
                 placeholder="1300.00"
                 type="number"
                 component={renderFormInput}
-                validate={[ length({ min: 0, max: 11 })]}
+                validate={required()}
               />
             </div>
 
@@ -219,7 +219,7 @@ class PostAdvert extends Component {
                 placeholder=" 850000.00 "
                 type="number"
                 component={renderFormInput}
-                validate={[ length({ min: 0, max: 11 })]}
+                validate={required()}
               />
             </div>
 
@@ -230,7 +230,7 @@ class PostAdvert extends Component {
                 label="Etage"
                 type="number"
                 component={renderFormInput}
-                validate={[length({ min: 0, max: 9 })]}
+                validate={required()}
               >
                 
               </Field>
@@ -244,7 +244,7 @@ class PostAdvert extends Component {
                 label="Nombre de chambres"
                 type="number"
                 component={renderFormInput}
-                validate={[length({ min: 0, max: 29 })]}
+                validate={required()}
               >
                 
               </Field>
@@ -257,7 +257,7 @@ class PostAdvert extends Component {
                 label="Nombre de salles de bains"
                 type="number"
                 component={renderFormInput}
-                validate={[length({ min: 0, max: 29 })]}
+                validate={required()}
               >
                 
               </Field>
@@ -268,7 +268,7 @@ class PostAdvert extends Component {
                 label="Nombre de salles d'eau"
                 type="number"
                 component={renderFormInput}
-                validate={[length({ min: 0, max: 29 })]}
+                validate={required()}
               >
                 
               </Field>
@@ -279,7 +279,7 @@ class PostAdvert extends Component {
                 name="exposition"
                 component={renderSelectField}
                 label="Exposition"
-                //validate={[length({ min: 0, max: 9 })]}
+                validate={required()}
               >
                 {expositionSelectField.map(option => (
                   <option value={option.value} key={option.value}>
@@ -295,7 +295,7 @@ class PostAdvert extends Component {
                 name="type_chauffage"
                 component={renderSelectField}
                 label="Type de chauffage"
-                //validate={required()}
+                validate={required()}
               >
                 {type_chauffageSelectField.map(option => (
                   <option value={option.value} key={option.value}>
@@ -313,7 +313,7 @@ class PostAdvert extends Component {
                 placeholder="YEAR"
                 type="text"
                 component={renderFormInput}
-                validate={[length({ min: 0, max: 9 })]}
+                validate={required()}
               />
             </div>
             
@@ -325,8 +325,7 @@ class PostAdvert extends Component {
                 name="type_desserte"
                 component={renderSelectField}
                 label="Type de desserte"
-                //  isMultiple={true}
-                //validate={required()}
+                validate={required()}
               >
                 {type_desserteSelectField.map(option => (
                   <option value={option.value} key={option.value}>
@@ -348,7 +347,7 @@ class PostAdvert extends Component {
                 placeholder="JJ/MM/YEAR"
                 type="text"
                 component={renderFormInput}
-                validate={[length({ min: 0, max: 11 })]}
+                validate={required()}
               />
             </div>
 
@@ -365,7 +364,7 @@ class PostAdvert extends Component {
             placeholder=" Appartement de luxe à paris"
             type="text"
             component={renderFormInput}
-            validate={[length({ min: 0, max: 110 })]}
+            validate={required()}
           />
           <Field
             name="detail"
@@ -373,7 +372,7 @@ class PostAdvert extends Component {
             placeholder=" ..."
             type="textarea"
             component={renderTextarea}
-            validate={[length({ min: 0, max: 3000 })]}
+            validate={required()}
           />
           <Field
             name="description"
@@ -381,7 +380,7 @@ class PostAdvert extends Component {
             placeholder=" ..."
             type="textarea"
             component={renderTextarea}
-            validate={[length({ min: 0, max: 3000 })]}
+            validate={required()}
           />
 
                     <section className="desktop-flex-container">
@@ -392,7 +391,7 @@ class PostAdvert extends Component {
                           placeholder=" .."
                           type="number"
                           component={renderFormInput}
-                          validate={[length({ min: 0, max: 9 })]}
+                          validate={required()}
                         />
                       </div>
                       <div className="desktop-flex">
@@ -402,7 +401,7 @@ class PostAdvert extends Component {
                           placeholder=" .."
                           type="number"
                           component={renderFormInput}
-                          validate={[length({ min: 0, max: 9 })]}
+                          validate={required()}
                         />
                       </div>
                       <div className="desktop-flex">
@@ -412,7 +411,7 @@ class PostAdvert extends Component {
                           placeholder=" .."
                           type="texte"
                           component={renderFormInput}
-                          validate={[length({ min: 0, max: 9 })]}
+                          validate={required()}
                         />
                       </div>
                       <div className="desktop-flex">
@@ -422,7 +421,7 @@ class PostAdvert extends Component {
                           placeholder="MM/YEAR"
                           type="text"
                           component={renderFormInput}
-                          validate={[length({ min: 0, max: 9 })]}
+                          validate={required()}
                         />
                       </div>
                       
@@ -451,34 +450,12 @@ class PostAdvert extends Component {
           />
           <Field
             name="images"
-            label=" Autre images"
+            label=" Autre images (2D, 3D, 360 .. )"
             isMultiple={true}
             component={RenderFileInput}
           />
-          <Field
-            name="images"
-            label="2D images"
-            isMultiple={true}
-            component={RenderFileInput}
-          />
-          <Field
-            name="images"
-            label="3D images"
-            isMultiple={true}
-            component={RenderFileInput}
-          />
-          <Field
-            name="images"
-            label="360 D images"
-            isMultiple={true}
-            component={RenderFileInput}
-          />
-          <Field
-            name="images"
-            label="Vue immersive"
-            isMultiple={true}
-            component={RenderFileInput}
-          />
+
+
           <button
             className="console__post-advert-form-submit-btn"
             id="postAdvertSubmit"
