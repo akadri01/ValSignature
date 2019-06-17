@@ -141,10 +141,6 @@ export default property => {
                   <b>{rentabilite}</b>
                 </li>
                 <li>
-                  <span>Rentabilité</span>
-                  <b>{rentabilite}</b>
-                </li>
-                <li>
                   <span>Actabilite</span>
                   <b>{actabilite}</b>
                 </li>
@@ -277,7 +273,7 @@ export default property => {
                 className="prop-sidebar__contact-phone-hidden"
                 id="phoneHidden"
               >
-                {phone}
+                0782762717
               </div>
             </div>
           </div>

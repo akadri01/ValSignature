@@ -15,11 +15,16 @@ import {
 import { editAdvert } from "../../../redux/actions";
 import {
   premisesTypeSelectField,
+  featuresCheckboxFieldList,
   yesNoSelectField,
   purposeSelectField,
   balconyQtySelectField,
   bathroomQtySelectField,
   floorQtySelectField,
+  toiletQtySelectField,
+  type_chauffageSelectField,
+  type_desserteSelectField,
+  expositionSelectField,
   postedBySelectField,
   premisesAgeSelectField,
   roomsSelectField,
@@ -46,47 +51,93 @@ class EditAdvert extends Component {
   componentWillMount() {
     // initialize form values
     const {
-      phone,
-      price,
-      detail,
       advert_type,
-      premises_type,
-      rooms_qty,
-      posted_by,
-      region,
-      town,
-      age,
-      located_floor,
-      //total_floor,
-      total_bathroom,
-      total_balcony,
       area,
-      d3,
-      rotate,
+      age,
+      date,
+      date_livraison,
+      detail,
+      features,
+      images,
+      img_directory,
+      located_floor,
+      phone,
+      premises_type,
+      price,
+      reference,
+      region,
+      posted_by,
       furniture,
       garden,
+      rooms_qty,
+      title,
+      total_balcony,
+      total_bathroom,
+      //total_floor,
+      type_chauffage,
+      type_desserte,
+      exposition,
+  
+      actabilite,
+      rentabilite,
+      loyer_marche,
+      loyer_pinel,
+      price_box,
+      price_parking,
+      area_jardin,
+      area_balcon,
+      area_terrasse,
+      proprietaire,
+      constructeur,
+      n_lot,
+  
+      //proximite_com,
+      town,
       _id
     } = this.props.property;
     this.props.initialize({
-      phone,
-      price,
-      detail,
       advert_type,
-      premises_type,
-      rooms_qty,
-      posted_by,
-      region,
-      town,
-      age,
-      located_floor,
-      //total_floor,
-      total_bathroom,
-      total_balcony,
       area,
-      d3,
-      rotate,
+      age,
+      date,
+      date_livraison,
+      detail,
+      features,
+      images,
+      img_directory,
+      located_floor,
+      phone,
+      premises_type,
+      price,
+      reference,
+      region,
+      posted_by,
       furniture,
       garden,
+      rooms_qty,
+      title,
+      total_balcony,
+      total_bathroom,
+      //total_floor,
+      type_chauffage,
+      type_desserte,
+      exposition,
+  
+      actabilite,
+      rentabilite,
+      loyer_marche,
+      loyer_pinel,
+      price_box,
+      price_parking,
+      area_jardin,
+      area_balcon,
+      area_terrasse,
+      proprietaire,
+      constructeur,
+      n_lot,
+  
+      //proximite_com,
+      town,
       _id
     });
   }
@@ -95,9 +146,9 @@ class EditAdvert extends Component {
     const { img_directory, images, title } = this.props.property;
     return [
       <section className="edit-advert mobile-desktop-frame">
-        <h1 className="section-main-title">Edit Advert</h1>
+        <h1 className="section-main-title">Modifier les informations du biens</h1>
         <p className="edit-advert--warning">
-          * For security reasons you cannot change images and advert title
+          * Pour des raisons de sécturité, vous ne pouvez pas changer les images des biens
         </p>
         <div className="edit-advert__header">
           <img
@@ -116,14 +167,60 @@ class EditAdvert extends Component {
           className="console__post-advert-form default-redux-form"
         >
           <h3 className="console__post-advert-form-section-title">
-            General information
+            Informations
           </h3>
           <section className="desktop-flex-container">
+          <div className="desktop-flex">
+              <Field
+                name="n_lot"
+                label="N° lot (constructeur)"
+                placeholder=" e.g. D5RT432"
+                type="text"
+                component={renderFormInput}
+                validate={required()}
+              />
+            </div>
+            
+            <div className="desktop-flex">
+              <Field
+                name="constructeur"
+                label="Constructeur"
+                placeholder=" ..."
+                type="text"
+                component={renderFormInput}
+                validate={required()}
+              />
+            </div>
+
+            <div className="desktop-flex">
+              <Field
+                name="proprietaire"
+                label="Proprietaire"
+                placeholder=" ..."
+                type="text"
+                component={renderFormInput}
+                validate={required()}
+              />
+            </div>
+
+            <div className="desktop-flex">
+              <Field
+                name="town"
+                //component={renderSelectField}
+                label="Ville d'implantation"
+                type="text"
+                component={renderFormInput}
+                validate={required()}
+              >
+              
+              </Field>
+            </div>
+
             <div className="desktop-flex">
               <Field
                 name="premises_type"
                 component={renderSelectField}
-                label="Type of the premises"
+                label="Type de biens"
                 validate={required()}
               >
                 {premisesTypeSelectField.map(option => (
@@ -137,7 +234,7 @@ class EditAdvert extends Component {
               <Field
                 name="advert_type"
                 component={renderSelectField}
-                label="Advert type"
+                label="Destination de biens"
                 validate={required()}
               >
                 {purposeSelectField.map(option => (
@@ -147,212 +244,233 @@ class EditAdvert extends Component {
                 ))}
               </Field>
             </div>
+
             <div className="desktop-flex">
               <Field
-                name="posted_by"
-                component={renderSelectField}
-                label="Advert posted by"
+                name="area"
+                label=" Surface habitable (m²)"
+                placeholder=" 130.00"
+                type="number"
+                component={renderFormInput}
                 validate={required()}
-              >
-                {postedBySelectField.map(option => (
-                  <option value={option.value} key={option.value}>
-                    {option.text}
-                  </option>
-                ))}
-              </Field>
+              />
             </div>
+
             <div className="desktop-flex">
               <Field
-                name="rooms_qty"
-                component={renderSelectField}
-                label="Rooms quantity"
+                name="area_terrasse"
+                label=" Surface de la terrasse(m²)"
+                placeholder=" 20.00"
+                type="number"
+                component={renderFormInput}
                 validate={required()}
-              >
-                {roomsSelectField.map(option => (
-                  <option value={option.value} key={option.value}>
-                    {option.text}
-                  </option>
-                ))}
-              </Field>
+              />
             </div>
+
             <div className="desktop-flex">
               <Field
-                name="region"
-                component={renderSelectField}
-                label="Region of the premises"
+                name="area_balcon"
+                label=" Surface du balcon (m²)"
+                placeholder=" 20.00"
+                type="number"
+                component={renderFormInput}
                 validate={required()}
-              >
-                {locationRegionSelectField.map(option => (
-                  <option value={option.value} key={option.value}>
-                    {option.text}
-                  </option>
-                ))}
-              </Field>
+              />
             </div>
+
             <div className="desktop-flex">
               <Field
-                name="town"
-                component={renderSelectField}
-                label="Town of the premises"
+                name="area_jardin"
+                label=" Surface du jardin (m²)"
+                placeholder="20.00"
+                type="number"
+                component={renderFormInput}
                 validate={required()}
-              >
-                {locationTownSelectField.map(option => (
-                  <option value={option.value} key={option.value}>
-                    {option.text}
-                  </option>
-                ))}
-              </Field>
+              />
             </div>
+
+            
             <div className="desktop-flex">
               <Field
-                name="age"
-                component={renderSelectField}
-                label="Age of the premises"
+                name="price"
+                label=" Prix (€)"
+                placeholder="74300.00"
+                type="number"
+                component={renderFormInput}
                 validate={required()}
-              >
-                {premisesAgeSelectField.map((option, i) => (
-                  <option value={option.value} key={option.value + i}>
-                    {option.text}
-                  </option>
-                ))}
-              </Field>
+              />
             </div>
+
+            <div className="desktop-flex">
+              <Field
+                name="price_parking"
+                label=" Prix du parking (€)"
+                placeholder="1300.00"
+                type="number"
+                component={renderFormInput}
+                validate={required()}
+              />
+            </div>
+
+            <div className="desktop-flex">
+              <Field
+                name="price_box"
+                label=" Prix du box (€)"
+                placeholder=" 850000.00 "
+                type="number"
+                component={renderFormInput}
+                validate={required()}
+              />
+            </div>
+
             <div className="desktop-flex">
               <Field
                 name="located_floor"
                 component={renderSelectField}
-                label="Located floor of the premises"
+                label="Etage"
+                type="number"
+                component={renderFormInput}
                 validate={required()}
               >
-                {floorQtySelectField.map(option => (
-                  <option value={option.value} key={option.value}>
-                    {option.text}
-                  </option>
-                ))}
+                
+              </Field>
+            </div>
+
+
+            <div className="desktop-flex">
+              <Field
+                name="rooms_qty"
+                //component={renderSelectField}
+                label="Nombre de chambres"
+                type="number"
+                component={renderFormInput}
+                validate={required()}
+              >
+                
               </Field>
             </div>
             
             <div className="desktop-flex">
               <Field
                 name="total_bathroom"
-                component={renderSelectField}
-                label="Bathroom quantity"
-                validate={required()}
-              >
-                {bathroomQtySelectField.map(option => (
-                  <option value={option.value} key={option.value}>
-                    {option.text}
-                  </option>
-                ))}
-              </Field>
-            </div>
-            <div className="desktop-flex">
-              <Field
-                name="total_balcony"
-                component={renderSelectField}
-                label="Balcony quantity"
-                validate={required()}
-              >
-                {balconyQtySelectField.map(option => (
-                  <option value={option.value} key={option.value}>
-                    {option.text}
-                  </option>
-                ))}
-              </Field>
-            </div>
-            <div className="desktop-flex">
-              <Field
-                name="garden"
-                component={renderSelectField}
-                label="Garden"
-                validate={required()}
-              >
-                {yesNoSelectField.map(option => (
-                  <option value={option.value} key={option.value}>
-                    {option.text}
-                  </option>
-                ))}
-              </Field>
-              <Field
-                name="d3"
-                component={renderSelectField}
-                label="d3"
-                validate={required()}
-              >
-                {yesNoSelectField.map(option => (
-                  <option value={option.value} key={option.value}>
-                    {option.text}
-                  </option>
-                ))}
-              </Field>
-              <Field
-                name="rotate"
-                component={renderSelectField}
-                label="rotate"
-                validate={required()}
-              >
-                {yesNoSelectField.map(option => (
-                  <option value={option.value} key={option.value}>
-                    {option.text}
-                  </option>
-                ))}
-              </Field>
-            </div>
-            <div className="desktop-flex">
-              <Field
-                name="furniture"
-                component={renderSelectField}
-                label="Furnished"
-                validate={required()}
-              >
-                {yesNoSelectField.map(option => (
-                  <option value={option.value} key={option.value}>
-                    {option.text}
-                  </option>
-                ))}
-              </Field>
-            </div>
-            <div className="desktop-flex">
-              <Field
-                name="phone"
-                label=" Phone number"
-                placeholder=" e.g.  0200 290 823"
+                //component={renderSelectField}
+                label="Nombre de salles de bains"
                 type="number"
                 component={renderFormInput}
-                validate={[required(), length({ min: 8, max: 14 })]}
+                validate={required()}
+              >
+                
+              </Field>
+            </div>
+            <div className="desktop-flex">
+              <Field
+                name="total_toilet"
+                label="Nombre de salles d'eau"
+                type="number"
+                component={renderFormInput}
+                validate={required()}
+              >
+                
+              </Field>
+            </div>
+
+            <div className="desktop-flex">
+              <Field
+                name="exposition"
+                component={renderSelectField}
+                label="Exposition"
+                validate={required()}
+              >
+                {expositionSelectField.map(option => (
+                  <option value={option.value} key={option.value}>
+                    {option.text}
+                  </option>
+                ))}
+                
+              </Field>
+            </div>
+
+            <div className="desktop-flex">
+              <Field
+                name="type_chauffage"
+                component={renderSelectField}
+                label="Type de chauffage"
+                validate={required()}
+              >
+                {type_chauffageSelectField.map(option => (
+                  <option value={option.value} key={option.value}>
+                    {option.text}
+                  </option>
+                ))}
+              </Field>
+            </div>
+
+
+            <div className="desktop-flex">
+              <Field
+                name="annee_construction"
+                label="Année de construction"
+                placeholder="YEAR"
+                type="text"
+                component={renderFormInput}
+                validate={required()}
               />
             </div>
+            
+
+           
+
             <div className="desktop-flex">
               <Field
-                name="price"
-                label=" Price (GH₵)"
-                placeholder=" e.g. 85000"
-                type="number"
-                component={renderFormInput}
-                validate={[required(), length({ min: 2, max: 11 })]}
-              />
+                name="type_desserte"
+                component={renderSelectField}
+                label="Type de desserte"
+                validate={required()}
+              >
+                {type_desserteSelectField.map(option => (
+                  <option value={option.value} key={option.value}>
+                    {option.text}
+                  </option>
+                ))}
+              </Field>
             </div>
             <div className="desktop-flex">
               <Field
-                name="area"
-                label=" Area of the premises (m2)"
-                placeholder=" e.g. 130"
-                type="number"
+                name="date_livraison"
+                label=" Date de livraison"
+                placeholder="JJ/MM/YEAR"
+                type="text"
                 component={renderFormInput}
-                validate={[required(), length({ min: 1, max: 9 })]}
+                validate={required()}
               />
             </div>
           </section>
           <h3 className="console__post-advert-form-section-title">
-            Description
+            Description du bien
           </h3>
           <Field
+            name="title"
+            label="Titre"
+            placeholder=" Appartement de luxe à paris"
+            type="text"
+            component={renderFormInput}
+            validate={required()}
+          />
+          <Field
             name="detail"
-            label=" Tell more about the premises"
+            label=" Description du bien"
             placeholder=" ..."
             type="textarea"
             component={renderTextarea}
-            validate={[required(), length({ min: 10, max: 3000 })]}
+            validate={required()}
+          />
+          <Field
+            name="description"
+            label=" Description du programme"
+            placeholder=" ..."
+            type="textarea"
+            component={renderTextarea}
+            validate={required()}
           />
           <button
             className="console__post-advert-form-submit-btn"
