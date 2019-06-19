@@ -20,7 +20,7 @@ const Index = () => (
     </Head>
     <Navigation />
     <Banner />
-    <Angolia />
+
     <TownNavigation />
     <BuySellRentTabs />
     <Txt />

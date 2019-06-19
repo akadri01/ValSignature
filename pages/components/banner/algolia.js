@@ -13,13 +13,13 @@ const Hit = ({ hit }) => (
     <Link href={`/properties/latest?${hit.type}=${hit.value}&advert_type=sale`}>
       <a>
         <Highlight attribute="text" hit={hit} />
-        <small>For Sale</small>
+        <small>Pour Habiter</small>
       </a>
     </Link>
     <Link href={`/properties/latest?${hit.type}=${hit.value}&advert_type=rent`}>
       <a>
         <Highlight attribute="text" hit={hit} />
-        <small>To Rent</small>
+        <small>Pour Investir</small>
       </a>
     </Link>
   </div>
@@ -49,8 +49,8 @@ export default class Angolia extends Component {
           appId="DBHMJQTDMY"
           indexName="towns-regions"
         >
-          <SearchBox translations={{ placeholder: "Search for location..." }} />
-          <Stats />
+          <SearchBox translations={{ placeholder: "Localité .." }} />
+          
           <Hits hitComponent={Hit} />
           <style>{`
           .searched em {

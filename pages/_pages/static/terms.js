@@ -7,7 +7,7 @@ export default () => {
   return (
     <section>
       <Head>
-        <title>Valorys Autotrader</title>
+        <title>Valorys</title>
         <meta name="description" content="Valorys Signature web platform " />
       </Head>
       <Navigation />

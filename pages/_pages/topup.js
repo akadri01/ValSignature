@@ -20,7 +20,7 @@ export default () => (
           Router.push("/user/adverts");
         }}
       >
-        Posted ads
+        Les biens postés
       </button>
     </div>
     <Footer />

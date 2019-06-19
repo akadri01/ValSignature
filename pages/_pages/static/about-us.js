@@ -7,12 +7,12 @@ export default () => {
   return (
     <section>
       <Head>
-        <title>Valorys Signature Autotrader</title>
+        <title>Valorys Signature </title>
         <meta name="description" content="Valorys Signature auto trading web platform" />
       </Head>
       <Navigation />
       <div className="static">
-        <h2>About WeGhana Auto Trader</h2>
+        <h2>Valorys Signature</h2>
         <p>
           Efficiently streamline intermandated metrics after impactful
           deliverables. Quickly scale bricks-and-clicks experiences via
