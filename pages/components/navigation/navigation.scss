@@ -16,23 +16,22 @@
   &__brand {
     display: flex;
     justify-content: space-between;
-    
+
     @include desktopSmall {
       width: 30%;
     }
     &-logo {
       @include absCenter;
-      margin-top: 8px;
       @include desktopSmall {
-        margin-top: 6px;
+        top: 40px;
+        left: 50%;
       }
       img {
         width: 450px;
         margin-top: 120px;
         @include desktopSmall {
-           margin-top: 80px;
+          margin-top: 80px;
           width: 350px;
-          //positition:fixed;
         }
       }
     }
@@ -56,13 +55,13 @@
     //padding-top: -30px;
     //padding-bottom: -300px;
     margin-top: 0;
-    position : absolute;
+    position: absolute;
     margin-left: 10px;
     overflow: hidden;
     //position:relative;
-    float:right;
+    float: right;
     //float: left;
-   // z-index:99999;
+    // z-index:99999;
     //display: none;
     @include desktopSmall {
       display: block;
@@ -78,7 +77,7 @@
       //display: flex;
       //justify-content: space-between;
     }
-  
+
     .links,
     .navigation__navbar-location-title,
     button {
@@ -90,14 +89,13 @@
       font-family: $font-family-title;
       padding: 2px 0;
       //width : 50%;
-     
+
       //background-color: #4CAF50;
       //margin-bottom: 15px;
-      color: #D73B10;
+      color: #d73b10;
       //text-size-adjust: 2px;
       //@include hoverGreen;
       @include desktopSmall {
-        
         margin-top: 15px;
         background-color: transparent;
       }
@@ -125,7 +123,7 @@
         }
         &-items {
           width: 47%;
-          h2 { 
+          h2 {
             font-weight: 900;
             text-transform: uppercase;
             font-size: $font-size-xlarge;
@@ -150,10 +148,10 @@
         margin-top: 10px;
         padding: 13px 23px;
         display: block;
-        float:left;
+        float: left;
         border: none;
-        background: rgba(255, 255, 255, .0);
-        margin : 2px;
+        background: rgba(255, 255, 255, 0);
+        margin: 2px;
         text-size-adjust: auto;
         mix-blend-mode: exclusion;
         @include desktopSmall {
@@ -165,11 +163,11 @@
         margin-top: 10px;
         padding: 13px 23px;
         display: block;
-        float:left;
+        float: left;
         border: none;
-        background:rgba(40, 40, 40, 0.5);
+        background: rgba(40, 40, 40, 0.5);
         opacity: 1;
-        margin : 2px;
+        margin: 2px;
         text-size-adjust: auto;
         @include desktopSmall {
           transform: translateY(3px);

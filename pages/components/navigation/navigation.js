@@ -10,7 +10,7 @@ import {
 } from "../shared/data.js";
 
 class Navigation extends Component {
-  render() { 
+  render() {
     return (
       <section className="navigation">
         <div className="mobile-desktop-frame">
@@ -21,7 +21,6 @@ class Navigation extends Component {
                   src="/static/images/icons/logo-small.png"
                   alt="Valorys Signature logo"
                   title="Go to home page"
-                  
                 />
               </a>
             </Link>
@@ -43,17 +42,16 @@ class Navigation extends Component {
             </div>
           </div>
           <nav className="navigation__navbar" id="navMenu">
-
-          {this.props.localUser ? (
+            {this.props.localUser ? (
               this.isProfilePage
             ) : (
               <Link href="/user/console">
                 <a className="navigation__navbar-btn">
-                <button>Espace VIP</button>
+                  <button>Espace VIP</button>
                 </a>
               </Link>
             )}
-          
+
             <Link href="/user/auth">
               <a className="navigation__navbar-btn">
                 <button>Proposez votre bien</button>
@@ -84,6 +82,12 @@ class Navigation extends Component {
 
   componentDidMount() {
     this.props.dispatch(adjustNavForLocalUser());
+    // locate logo to right side of the page on property listing page
+    if (window.location.pathname.includes("properties")) {
+      return document
+        .querySelector(".navigation__brand-logo")
+        .classList.add("move-logo-right");
+    }
   }
 
   logout = () => {

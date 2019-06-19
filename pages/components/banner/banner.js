@@ -29,7 +29,7 @@ export default class banner extends Component {
           })`
         }}
       >
-        <SearchForm />
+        {/* <SearchForm /> */}
         <Algolia />
       </section>
     );

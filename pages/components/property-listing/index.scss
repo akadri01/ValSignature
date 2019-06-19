@@ -1,21 +1,21 @@
-.body{ //background-color: rgba(230, 230, 230, 1);
+.body {
+  //background-color: rgba(230, 230, 230, 1);
   background-color: white;
-   
 }
 
 .nav {
-  background-color:  rgba(69, 69, 69, 1);
-  margin-top : 0px;
+  background-color: rgba(69, 69, 69, 1);
+  margin-top: 0px;
   width: 130vw;
-  height:140px;
+  height: 140px;
   //left: 50%;
   transform: translateX(-8%);
-  margin-left:0;
+  margin-left: 0;
 }
 
 .listing {
   @include navbarGap;
-  
+
   margin-top: 60px;
   color: $color-black;
   padding-top: 10px;
@@ -25,22 +25,22 @@
   }
   &--title {
     font-size: $font-size-xlarge;
-   text-align: left;
-   padding-left:80px;
-   padding-top:10px;
+    text-align: left;
+    padding-left: 80px;
+    padding-top: 10px;
     margin-top: 0px;
     margin-bottom: 10px;
-    background-color:  white;
+    background-color: white;
     font-weight: 150;
     width: 120vw;
-    height:50px;
+    height: 50px;
     left: 50%;
-    transform: translateX(-7%  );
+    transform: translateX(-7%);
     font-family: $font-family-title;
     &--titre {
-      font-weight:550;
+      font-weight: 550;
       font-family: $font-family-title;
-      font-size:18px;
+      font-size: 18px;
     }
   }
   &--no-result-img {
@@ -50,8 +50,6 @@
   }
   &__filter {
     &__form {
-     
-      
       width: 1000px;
       //padding: 15px;
       //position:flex;
@@ -61,19 +59,11 @@
       //
       //background-color: transparent;
       text-align: center;
-      //border: $gray-border;
-      //display: block;
-      //width: 150px;
-      //height: 44px;
-      //text-transform: uppercase;
-      //font-size: $font-size-small;
-      //margin-left: calc(8% - 50px);
-      margin-top: calc(10% - 50px);
+      margin-top: 65px;
       @include tablet {
         top: 190px;
       }
       @include desktopSmall {
-        
         display: flex;
         width: 1000px;
         flex-wrap: wrap;
@@ -81,10 +71,10 @@
         //padding-right: 100px;
         //padding-left: 100px;
         //padding: 8px;
-        position :flex;
+        position: flex;
       }
       @include desktopMedium {
-        top: 170px; 
+        top: 170px;
       }
       @include desktopLarge {
         top: 190px;
@@ -104,9 +94,8 @@
           font-size: calculateRem(30px);
           letter-spacing: 1.2px;
         }
-        
       }
-      
+
       select {
         height: 43px;
         background: white;
@@ -125,36 +114,36 @@
           //@include backgroundIcon("down-arrow.svg", 20px, 120px center);
           -webkit-appearance: none;
           appearance: none;
-          
         }
       }
-      
-      input  {
+
+      input {
         //padding: 16px;
         border: 0px solid #bd0021;
-        width: 15.2% ;
-        
+        width: 15.2%;
+
         //margin-left: 10%;
         font-size: $font-size-large;
       }
 
-      input[type=number]::-webkit-inner-spin-button, 
-      input[type=number]::-webkit-outer-spin-button { 
-        -webkit-appearance: none; 
-         margin: 0; 
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
       }
 
       /* For Firefox */
-      input[type='number'] {
-        -moz-appearance:textfield;
+      input[type="number"] {
+        -moz-appearance: textfield;
       }
-      
+
       button {
-        font-family: "Roboto Condensed","Noto Sans Condensed","Noto Sans JP","Noto Sans KR","Noto Sans SC Sliced",sans-serif;
+        font-family: "Roboto Condensed", "Noto Sans Condensed", "Noto Sans JP",
+          "Noto Sans KR", "Noto Sans SC Sliced", sans-serif;
         width: 80%;
         height: 42px;
         margin-left: 10%;
-        background-color: #D73B10;
+        background-color: #d73b10;
         //outline: 1px solid #D73B10;
         color: white;
         font-weight: 900;
@@ -169,13 +158,14 @@
           margin-left: 2%;
         }
         &:hover {
-          background: rgba(180,51,14,1)
+          background: rgba(180, 51, 14, 1);
         }
       }
     }
     &--expose-filter-btn {
       //@include backgroundIcon("controls.svg", 24px, 5px 10px);
-      font-family: "Roboto Condensed","Noto Sans Condensed","Noto Sans JP","Noto Sans KR","Noto Sans SC Sliced",sans-serif;
+      font-family: "Roboto Condensed", "Noto Sans Condensed", "Noto Sans JP",
+        "Noto Sans KR", "Noto Sans SC Sliced", sans-serif;
       background-color: transparent;
       text-align: center;
       border: transparent;
@@ -190,7 +180,7 @@
       color: white;
       &:hover {
         border-color: transparent;
-        text-decoration: underline; 
+        text-decoration: underline;
       }
     }
     &-form {
@@ -204,16 +194,15 @@
       transform: translate(28%, 5%);
       //margin-left:285px;
       //position: flex;
-    //margin-left:10%;
+      //margin-left:10%;
       //margin-right: 10% ;
       @include desktopSmall {
         max-width: 1000px;
-        
       }
       .redux-input-container {
         width: 80%;
         //height: 150;
-        
+
         @include desktopSmall {
           margin-bottom: 0;
           width: 15.1%;
@@ -221,22 +210,21 @@
         }
       }
       &-btn {
-        width: 80% ;
+        width: 80%;
         margin-top: 20px;
-        background: $color-green no-repeat 16% center ;
-        background-size: 80px ;
-        font-size: $font-size-large ;
-        height:20%;
+        background: $color-green no-repeat 16% center;
+        background-size: 80px;
+        font-size: $font-size-large;
+        height: 20%;
         @include desktopSmall {
-          width: 20% ;
-          margin-left : 2%;
+          width: 20%;
+          margin-left: 2%;
           //background-size: 80px ;
           //height: 380px ;
           //height:20%;
-          
         }
         &:hover {
-          background: rgba(180,51,14,1)
+          background: rgba(180, 51, 14, 1);
         }
       }
     }
@@ -244,7 +232,7 @@
   &__sort {
     width: 250px;
     position: flex;
-    margin-left:80%;
+    margin-left: 80%;
     display: flex;
     justify-content: space-between;
     font-family: $font-family-title;
@@ -267,21 +255,20 @@
   }
   &__container2 {
     @include desktopSmall {
-     // margin-left:1100px;
-     float:right;
-      margin-right:10px;
-      margin-left:0;
-      margin-top:10px;
+      // margin-left:1100px;
+      float: right;
+      margin-right: 10px;
+      margin-left: 0;
+      margin-top: 10px;
       text-align: center;
-      height:40px;
-      width:250px;
+      height: 40px;
+      width: 250px;
       background-color: #585858;
-      
+
       //right:90%;
       //width: 40%;
     }
   }
-  
 
   &__container {
     @include desktopSmall {
@@ -290,36 +277,33 @@
       justify-content: space-between;
       margin-right: 0;
       //height:200px;
-      
     }
     &-item {
-      
       display: flex;
       overflow: hidden;
       margin-top: 1%;
-      margin-left:0;
-      margin-right:0;
+      margin-left: 0;
+      margin-right: 0;
       position: relative;
       background-color: white;
       //height:2500px;
       //width: 1000px;
       @include tablet {
-       display:  flex;
-       
+        display: flex;
 
         //margin-left:0;
         //padding-bottom: 3px solid transparent;
-        border-top:3px solid transparent;
-        border-right:3px solid transparent;
+        border-top: 3px solid transparent;
+        border-right: 3px solid transparent;
         border-left: 3px solid transparent;
-        box-sizing:border-box;
+        box-sizing: border-box;
         //margin-bottom: 62px;
         //margin-right:0;
         &:hover {
-          border-bottom: 3px solid  rgba(69, 69, 69, 0.3);
-          border-top: 3px solid  rgba(69, 69, 69, 0.3);
-          border-right: 3px solid  rgba(69, 69, 69, 0.3);
-          border-left: 3px solid  rgba(69, 69, 69, 0.3);
+          border-bottom: 3px solid rgba(69, 69, 69, 0.3);
+          border-top: 3px solid rgba(69, 69, 69, 0.3);
+          border-right: 3px solid rgba(69, 69, 69, 0.3);
+          border-left: 3px solid rgba(69, 69, 69, 0.3);
           //transition:0.3s;
         }
       }
@@ -328,25 +312,24 @@
       }
       &-img {
         max-width: 40%;
-        
+
         //max-width: 200%;
         //max-height:800px;
         @include desktopSmall {
           width: 50%;
-          
         }
       }
       &-icons2 {
         margin-top: 12px;
-        
+
         @include tablet {
           margin-top: 25px;
-          margin-left : 1500px;
+          margin-left: 1500px;
         }
         &-3d {
           @include backgroundIcon("3d.svg", 20px, 0 center);
           //margin-left : 500px;
-          float:left;
+          float: left;
         }
       }
       &-info {
@@ -365,7 +348,7 @@
           font-family: $font-family-body;
           margin-top: 0;
           margin-bottom: 5px;
-          color:$color-green;
+          color: $color-green;
           @include tablet {
             font-size: $font-size-xlarge;
             margin-bottom: 10px;
@@ -377,7 +360,7 @@
           font-size: 14px;
           //line-height: 1.2;
           color: #8f8f8f;
-          overflow: hidden; 
+          overflow: hidden;
           font-weight: 350;
           //font-size: $font-size-tiny;
           font-family: $font-family-title;
@@ -389,7 +372,7 @@
           @include tablet {
             //font-size: $font-size-tiny;
             margin-bottom: 10px;
-            overflow: hidden; 
+            overflow: hidden;
           }
         }
         &-fbutton {
@@ -398,10 +381,10 @@
           font-size: $font-size-medium;
           font-family: $font-family-body;
           margin-top: 5px;
-          text-align:center;
-          padding:10px;
+          text-align: center;
+          padding: 10px;
           margin-bottom: 5px;
-          color:white;
+          color: white;
           @include tablet {
             font-size: $font-size-medium;
             margin-bottom: 10px;
@@ -413,14 +396,14 @@
           font-size: $font-size-medium;
           font-family: $font-family-body;
           margin-top: 5px;
-          text-align:center;
-          padding:10px;
+          text-align: center;
+          padding: 10px;
           margin-bottom: 5px;
           font-weight: 350;
-          color:gray;
+          color: gray;
           //background-color: #585858;
           //border: 5px solid #bd0021;
-          
+
           @include tablet {
             font-size: $font-size-large;
             margin-bottom: 10px;
@@ -430,13 +413,13 @@
           //text-transform: uppercase;
           //text-transform: uppercase;
           font-size: $font-size-medium;
-         
+
           font-family: $font-family-body;
           margin-top: 5px;
           //text-align:center;
-          padding:10px;
+          padding: 10px;
           margin-bottom: 5px;
-          color:$color-green;
+          color: $color-green;
           @include tablet {
             font-size: $font-size-large;
             margin-bottom: 10px;
@@ -450,10 +433,10 @@
           font-size: $font-size-medium;
           font-family: $font-family-body;
           margin-top: 50px;
-          text-align:center;
-          padding:10px;
+          text-align: center;
+          padding: 10px;
           margin-bottom: 5px;
-          color:white;
+          color: white;
           @include tablet {
             font-size: $font-size-medium;
             margin-bottom: 10px;
@@ -462,7 +445,7 @@
         &-pret {
           //text-transform: uppercase;
           //text-transform: uppercase;
-          overflow: hidden; 
+          overflow: hidden;
           font-weight: 400;
           font-size: $font-size-medium;
           font-family: $font-family-body;
@@ -473,7 +456,7 @@
           @include tablet {
             font-size: $font-size-medium;
             margin-bottom: 10px;
-            overflow: hidden; 
+            overflow: hidden;
           }
         }
         &-location {
@@ -482,7 +465,7 @@
           text-transform: capitalize;
           margin-bottom: 0px;
         }
-        
+
         &-icons {
           margin-top: 12px;
           @include tablet {
@@ -504,8 +487,8 @@
             @include backgroundIcon("floor.svg", 22px, 0 center);
           }
           &-vip {
-            margin-left:155px;
-            
+            margin-left: 155px;
+
             @include backgroundIcon("vip.svg", 28px, 0 center);
           }
           &-3d {
@@ -523,8 +506,8 @@
           float: left;
           //margin-bottom: 16px;
           @include tablet {
-           // margin-top: 23px;
-           //padding: 2px;
+            // margin-top: 23px;
+            //padding: 2px;
           }
         }
         &-date {
@@ -595,35 +578,32 @@
         @include backgroundIcon("360d.svg", 22px, 0 center);
       }
     }
-
   }
-
 }
 
 .trios {
-  font-family: "Roboto Condensed","Noto Sans Condensed","Noto Sans JP","Noto Sans KR","Noto Sans SC Sliced",sans-serif;
+  font-family: "Roboto Condensed", "Noto Sans Condensed", "Noto Sans JP",
+    "Noto Sans KR", "Noto Sans SC Sliced", sans-serif;
   //position: relative;
   //width: 100%;
 
   // added
-    overflow-x: hidden;
-    height: 490px;
-    width:1600px;
-    margin-left:0;
-    background-size: cover;
-    background-position: center;
-    transition: 3.5s;
-    transform: translateX(-10%  );
-    margin-top : 40px;
+  overflow-x: hidden;
+  height: 490px;
+  width: 1600px;
+  margin-left: 0;
+  background-size: cover;
+  background-position: center;
+  transition: 3.5s;
+  transform: translateX(-10%);
+  margin-top: 40px;
 
-
-p {
-  margin-top: 20%;
-  font-family: Roboto,"Noto Sans","Noto Sans JP","Noto Sans KR","Noto Sans SC Sliced",sans-serif;
-  font-size: $font-size-xxlarge;
-   text-align: center; 
-   color:white;
+  p {
+    margin-top: 20%;
+    font-family: Roboto, "Noto Sans", "Noto Sans JP", "Noto Sans KR",
+      "Noto Sans SC Sliced", sans-serif;
+    font-size: $font-size-xxlarge;
+    text-align: center;
+    color: white;
   }
-
-  
 }
