@@ -4,6 +4,7 @@ node_modules/*
 .next/
 .scannerwork/
 appDebug.log
-
+.env
+.sonar-project.properties
 
 static/images/property-uploads/*
